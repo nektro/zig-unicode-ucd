@@ -13,7 +13,7 @@ pub const default = common.Main(struct {
         \\    name: []const u8,
         \\};
         \\
-        \\pub const blocks = [_]Block{
+        \\pub const data = [_]Block{
         \\
     ;
 

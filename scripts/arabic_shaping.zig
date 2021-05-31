@@ -130,7 +130,7 @@ pub const default = common.Main(struct {
         \\    };
         \\};
         \\
-        \\pub const arabic_shaping = [_]Shaping{
+        \\pub const data = [_]Shaping{
         \\
     ;
 

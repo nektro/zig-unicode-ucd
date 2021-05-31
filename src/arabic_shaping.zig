@@ -125,7 +125,7 @@ pub const Joining = struct {
     };
 };
 
-pub const arabic_shaping = [_]Shaping{
+pub const data = [_]Shaping{
     .{ .codepoint = 0x0600, .schematic_name = "ARABIC NUMBER SIGN", .joining_type = .U, .joining_group = .No_Joining_Group },
     .{ .codepoint = 0x0601, .schematic_name = "ARABIC SIGN SANAH", .joining_type = .U, .joining_group = .No_Joining_Group },
     .{ .codepoint = 0x0602, .schematic_name = "ARABIC FOOTNOTE MARKER", .joining_type = .U, .joining_group = .No_Joining_Group },

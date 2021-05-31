@@ -6,11 +6,11 @@ pub fn main() !void {
     std.log.info("All your codebase are belong to us.", .{});
 
     const data = .{
-        ucd.blocks.blocks,
-        ucd.arabic_shaping.arabic_shaping,
+        ucd.blocks,
+        ucd.arabic_shaping,
     };
 
     inline for (data) |b| {
-        _ = b;
+        _ = b.data;
     }
 }

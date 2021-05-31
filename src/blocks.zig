@@ -8,7 +8,7 @@ pub const Block = struct {
     name: []const u8,
 };
 
-pub const blocks = [_]Block{
+pub const data = [_]Block{
     .{ .from = 0x0000, .to = 0x007F, .name = "Basic Latin" },
     .{ .from = 0x0080, .to = 0x00FF, .name = "Latin-1 Supplement" },
     .{ .from = 0x0100, .to = 0x017F, .name = "Latin Extended-A" },
