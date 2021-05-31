@@ -22,6 +22,13 @@ pub fn Main(comptime T: type) type {
             defer file.close();
             const w = file.writer();
 
+            try w.writeAll(
+                \\// This file is part of the Unicode Character Database
+                \\// See http://www.unicode.org/reports/tr44/ for more information.
+                \\//
+                \\
+                \\
+            );
             try w.writeAll(T.dest_header);
 
             const req = try zfetch.Request.init(alloc, T.source_url, null);

@@ -3,16 +3,13 @@ const std = @import("std");
 const common = @import("scripts/_common.zig");
 
 pub fn main() !void {
+    // Blocks
     try common.Main(struct {
         pub const source_url = "https://unicode.org/Public/UCD/latest/ucd/Blocks.txt";
 
         pub const dest_file = "src/blocks.zig";
 
         pub const dest_header =
-            \\// This file is part of the Unicode Character Database
-            \\// See http://www.unicode.org/reports/tr44/ for more information.
-            \\//
-            \\
             \\pub const Block = struct {
             \\    from: u21,
             \\    to: u21,
