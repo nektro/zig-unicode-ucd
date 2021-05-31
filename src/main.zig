@@ -8,6 +8,7 @@ pub fn main() !void {
     const data = .{
         ucd.blocks,
         ucd.arabic_shaping,
+        ucd.bidi_brackets,
     };
 
     inline for (data) |b| {
