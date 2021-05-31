@@ -13,6 +13,8 @@ pub fn Main(comptime T: type) type {
         pub fn do() !void {
             var gpa = std.heap.GeneralPurposeAllocator(.{}){};
             const alloc = &gpa.allocator;
+            defer _ = gpa.deinit();
+
             const max_size = std.math.maxInt(usize);
 
             //
@@ -38,8 +40,12 @@ pub fn Main(comptime T: type) type {
 
             var line_num: usize = 1;
             std.debug.print("\n", .{});
+
+            const arena = &std.heap.ArenaAllocator.init(alloc);
             while (true) {
                 const line = r.readUntilDelimiterAlloc(alloc, '\n', max_size) catch |e| if (e == error.EndOfStream) break else return e;
+                defer alloc.free(line);
+
                 if (line.len == 0) {
                     continue;
                 }
@@ -47,7 +53,8 @@ pub fn Main(comptime T: type) type {
                     continue;
                 }
 
-                if (!(try T.exec(alloc, line, w))) {
+                if (!(try T.exec(&arena.allocator, line, w))) {
+                    arena.deinit();
                     break;
                 }
 
