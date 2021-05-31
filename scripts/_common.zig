@@ -42,6 +42,7 @@ pub fn Main(comptime T: type) type {
             std.debug.print("\n", .{});
 
             const arena = &std.heap.ArenaAllocator.init(alloc);
+            defer arena.deinit();
             while (true) {
                 const line = r.readUntilDelimiterAlloc(alloc, '\n', max_size) catch |e| if (e == error.EndOfStream) break else return e;
                 defer alloc.free(line);
@@ -54,7 +55,6 @@ pub fn Main(comptime T: type) type {
                 }
 
                 if (!(try T.exec(&arena.allocator, line, w))) {
-                    arena.deinit();
                     break;
                 }
 
