@@ -21,6 +21,12 @@ https://unicode.org/Public/UCD/latest/ucd/
 zigmod aq add 1/nektro/unicode-ucd
 ```
 
+## Development
+```
+zig build run -Dstep=generate
+zig build run -Dstep=generate
+```
+
 ## License
 Code here is MIT
 
