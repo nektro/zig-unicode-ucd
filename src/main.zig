@@ -7,6 +7,7 @@ pub fn main() !void {
 
     const data = .{
         ucd.blocks.blocks,
+        ucd.arabic_shaping.arabic_shaping,
     };
 
     inline for (data) |b| {

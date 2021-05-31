@@ -1,4 +1,4 @@
-//
+pub const arabic_shaping = @import("./arabic_shaping.zig");
 //
 //
 //
