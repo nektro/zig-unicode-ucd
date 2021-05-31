@@ -13,7 +13,7 @@ pub const default = common.Main(struct {
         \\    name: []const u8,
         \\};
         \\
-        \\pub const blocks: []Block = &.{
+        \\pub const blocks = [_]Block{
         \\
     ;
 
@@ -29,7 +29,7 @@ pub const default = common.Main(struct {
         const to = it2.next().?;
         const name = it1.next().?;
 
-        try writer.print("    .{{ 0x{s}, 0x{s}, \"{s}\" }},\n", .{ from, to, name });
+        try writer.print("    .{{ .from = 0x{s}, .to = 0x{s}, .name = \"{s}\" }},\n", .{ from, to, name });
         return true;
     }
 });
