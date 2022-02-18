@@ -1,7 +1,7 @@
 const std = @import("std");
 const common = @import("./_common.zig");
 
-pub const default = common.Main(struct {
+pub usingnamespace common.Main(struct {
     pub const source_url = "https://unicode.org/Public/" ++ common.version ++ "/ucd/BidiBrackets.txt";
 
     pub const dest_file = "src/bidi_brackets.zig";

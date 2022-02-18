@@ -8,6 +8,6 @@ const files = [_]type{
 
 pub fn main() !void {
     inline for (files) |f| {
-        try f.default.do();
+        try f.do();
     }
 }
