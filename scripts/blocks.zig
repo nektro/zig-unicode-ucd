@@ -2,7 +2,7 @@ const std = @import("std");
 const common = @import("./_common.zig");
 
 pub const default = common.Main(struct {
-    pub const source_url = "https://unicode.org/Public/UCD/latest/ucd/Blocks.txt";
+    pub const source_url = "https://unicode.org/Public/" ++ common.version ++ "/ucd/Blocks.txt";
 
     pub const dest_file = "src/blocks.zig";
 
