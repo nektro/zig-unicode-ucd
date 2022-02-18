@@ -3,7 +3,7 @@ name: unicode-ucd
 main: src/lib.zig
 license: MIT
 description: Zig bindings for the Unicode Character Database
-dev_dependencies:
+root_dependencies:
   - src: git https://github.com/truemedian/zfetch
   - src: git https://github.com/nektro/zig-ansi
   - src: git https://github.com/nektro/zig-fmt-valueliteral
