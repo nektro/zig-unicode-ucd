@@ -28,8 +28,10 @@ pub const default = common.Main(struct {
         \\
     ;
 
-    pub fn exec(alloc: *std.mem.Allocator, line: []const u8, writer: anytype) !bool {
-        var it = std.mem.split(line, ";");
+    pub fn exec(alloc: std.mem.Allocator, line: []const u8, writer: anytype) !bool {
+        _ = alloc;
+
+        var it = std.mem.split(u8, line, ";");
         const a = std.mem.trim(u8, it.next().?, " ");
         const b = std.mem.trim(u8, it.next().?, " ");
         const c = std.mem.trim(u8, it.next().?, " ");

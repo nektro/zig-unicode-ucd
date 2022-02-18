@@ -12,7 +12,7 @@ pub fn Main(comptime T: type) type {
     return struct {
         pub fn do() !void {
             var gpa = std.heap.GeneralPurposeAllocator(.{}){};
-            const alloc = &gpa.allocator;
+            const alloc = gpa.allocator();
             defer _ = gpa.deinit();
 
             const max_size = std.math.maxInt(usize);
@@ -41,7 +41,7 @@ pub fn Main(comptime T: type) type {
             var line_num: usize = 1;
             std.debug.print("\n", .{});
 
-            const arena = &std.heap.ArenaAllocator.init(alloc);
+            var arena = std.heap.ArenaAllocator.init(alloc);
             defer arena.deinit();
             while (true) {
                 const line = r.readUntilDelimiterAlloc(alloc, '\n', max_size) catch |e| if (e == error.EndOfStream) break else return e;
@@ -54,7 +54,7 @@ pub fn Main(comptime T: type) type {
                     continue;
                 }
 
-                if (!(try T.exec(&arena.allocator, line, w))) {
+                if (!(try T.exec(arena.allocator(), line, w))) {
                     break;
                 }
 
