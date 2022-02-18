@@ -6,7 +6,7 @@ pub fn build(b: *std.build.Builder) void {
 
     const mode = b.standardReleaseOptions();
 
-    const step = b.option([]const u8, "step", "") orelse "run";
+    const step = b.option([]const u8, "step", "") orelse "generate";
 
     if (std.mem.eql(u8, step, "run")) {
         addExeStep(b, target, mode, "zig-unicode-ucd", "src/main.zig", "Run the app");
