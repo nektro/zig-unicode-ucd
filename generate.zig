@@ -4,6 +4,7 @@ const files = [_]type{
     @import("./scripts/blocks.zig"),
     @import("./scripts/arabic_shaping.zig"),
     @import("./scripts/bidi_brackets.zig"),
+    @import("./scripts/BidiMirroring.zig"),
 };
 
 pub fn main() !void {
