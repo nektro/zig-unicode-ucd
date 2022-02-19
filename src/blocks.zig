@@ -1,6 +1,8 @@
 // This file is part of the Unicode Character Database
 // See http://www.unicode.org/reports/tr44/ for more information.
 //
+// Based on the source file: https://unicode.org/Public/13.0.0/ucd/Blocks.txt
+//
 
 pub const Block = struct {
     from: u21,

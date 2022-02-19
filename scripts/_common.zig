@@ -31,8 +31,13 @@ pub fn Main(comptime T: type) type {
                 \\// See http://www.unicode.org/reports/tr44/ for more information.
                 \\//
                 \\
-                \\
             );
+            try w.print(
+                \\// Based on the source file: {s}
+                \\//
+                \\
+                \\
+            , .{T.source_url});
             try w.writeAll(T.dest_header);
 
             const req = try zfetch.Request.init(alloc, T.source_url, null);
