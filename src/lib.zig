@@ -1,39 +1,3 @@
 pub const arabic_shaping = @import("./arabic_shaping.zig");
 pub const bidi_brackets = @import("./bidi_brackets.zig");
-//
-//
-//
 pub const blocks = @import("./blocks.zig");
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
