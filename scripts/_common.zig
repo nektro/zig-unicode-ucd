@@ -60,8 +60,8 @@ pub fn Main(comptime T: type) type {
                     break;
                 }
 
-                std.debug.print("{s}", .{comptime ansi.csi.CursorUp(1)});
-                std.debug.print("{s}", .{comptime ansi.csi.EraseInLine(0)});
+                std.debug.print("{s}", .{ansi.csi.CursorUp(1)});
+                std.debug.print("{s}", .{ansi.csi.EraseInLine(0)});
                 std.debug.print("{d}\n", .{line_num});
                 line_num += 1;
             }
