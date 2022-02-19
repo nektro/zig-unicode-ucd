@@ -1,5 +1,5 @@
 // This file is part of the Unicode Character Database
-// See http://www.unicode.org/reports/tr44/ for more information.
+// For documentation, see http://www.unicode.org/reports/tr44/
 //
 // Based on the source file: https://unicode.org/Public/13.0.0/ucd/BidiMirroring.txt
 //

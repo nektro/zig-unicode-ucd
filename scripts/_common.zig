@@ -28,7 +28,7 @@ pub fn Main(comptime T: type) type {
 
             try w.writeAll(
                 \\// This file is part of the Unicode Character Database
-                \\// See http://www.unicode.org/reports/tr44/ for more information.
+                \\// For documentation, see http://www.unicode.org/reports/tr44/
                 \\//
                 \\
             );
