@@ -3,10 +3,9 @@ const deps = @import("./deps.zig");
 
 pub fn build(b: *std.build.Builder) void {
     const target = b.standardTargetOptions(.{});
-
     const mode = b.standardReleaseOptions();
-
     const step = b.option([]const u8, "step", "") orelse "generate";
+    b.use_stage1 = true;
 
     if (std.mem.eql(u8, step, "run")) {
         addExeStep(b, target, mode, "zig-unicode-ucd", "src/main.zig", "Run the app");
