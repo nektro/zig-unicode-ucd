@@ -2,38 +2,18 @@ const std = @import("std");
 const common = @import("./_common.zig");
 
 pub usingnamespace common.Main(struct {
-    pub const source_file = "DerivedCoreProperties";
+    pub const source_file = "EastAsianWidth";
 
-    pub const dest_file = "src/derived_core_properties.zig";
+    pub const dest_file = "src/east_asian_width.zig";
 
     pub const dest_header =
-        \\pub const CoreProperty = struct {
+        \\pub const EastAsianWidth = struct {
         \\    from: u21,
         \\    to: u21,
-        \\    prop: enum {
-        \\        Math,
-        \\        Alphabetic,
-        \\        Lowercase,
-        \\        Uppercase,
-        \\        Cased,
-        \\        Case_Ignorable,
-        \\        Changes_When_Lowercased,
-        \\        Changes_When_Uppercased,
-        \\        Changes_When_Titlecased,
-        \\        Changes_When_Casefolded,
-        \\        Changes_When_Casemapped,
-        \\        ID_Start,
-        \\        ID_Continue,
-        \\        XID_Start,
-        \\        XID_Continue,
-        \\        Default_Ignorable_Code_Point,
-        \\        Grapheme_Extend,
-        \\        Grapheme_Base,
-        \\        Grapheme_Link,
-        \\    },
+        \\    prop: enum { A, F, H, N, Na, W },
         \\};
         \\
-        \\pub const data = [_]CoreProperty{
+        \\pub const data = [_]EastAsianWidth{
         \\
     ;
 

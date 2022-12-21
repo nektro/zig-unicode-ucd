@@ -10,6 +10,7 @@ const files = [_]type{
     @import("./scripts/CompositionExclusions.zig"),
     @import("./scripts/DerivedAge.zig"),
     @import("./scripts/DerivedCoreProperties.zig"),
+    @import("./scripts/EastAsianWidth.zig"),
 };
 
 pub fn main() !void {

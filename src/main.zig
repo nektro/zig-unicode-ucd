@@ -15,6 +15,7 @@ pub fn main() !void {
         ucd.composition_exclusions,
         ucd.derived_age,
         ucd.derived_core_properties,
+        ucd.east_asian_width,
     };
 
     inline for (data) |b| {
