@@ -10,21 +10,11 @@ https://www.unicode.org/versions/latest/
 
 https://unicode.org/Public/UCD/latest/ucd/
 
-<!--
-[DIR]	auxiliary/
-[DIR]	emoji/
-[DIR]	extracted/
--->
-
-## Installation
-```
-zigmod aq add 1/nektro/unicode-ucd
-```
-
 ## Development
+
 ```
 zig build run -Dstep=generate
-zig build run -Dstep=generate
+zig build run -Dstep=run
 ```
 
 ## License
