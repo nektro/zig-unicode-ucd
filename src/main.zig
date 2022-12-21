@@ -11,6 +11,7 @@ pub fn main() !void {
         ucd.bidi_mirroring,
         ucd.blocks,
         ucd.cjk_radicals,
+        ucd.case_folding,
     };
 
     inline for (data) |b| {
