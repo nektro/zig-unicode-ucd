@@ -1,9 +1,9 @@
 const std = @import("std");
 
 const files = [_]type{
-    @import("./scripts/blocks.zig"),
-    @import("./scripts/arabic_shaping.zig"),
-    @import("./scripts/bidi_brackets.zig"),
+    @import("./scripts/Blocks.zig"),
+    @import("./scripts/ArabicShaping.zig"),
+    @import("./scripts/BidiBrackets.zig"),
     @import("./scripts/BidiMirroring.zig"),
     @import("./scripts/CJKRadicals.zig"),
     @import("./scripts/CaseFolding.zig"),
