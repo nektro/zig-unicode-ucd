@@ -2,7 +2,7 @@ const std = @import("std");
 const common = @import("./_common.zig");
 
 pub usingnamespace common.Main(struct {
-    pub const source_url = "https://unicode.org/Public/" ++ common.version ++ "/ucd/BidiMirroring.txt";
+    pub const source_file = "BidiMirroring";
 
     pub const dest_file = "src/bidi_mirroring.zig";
 

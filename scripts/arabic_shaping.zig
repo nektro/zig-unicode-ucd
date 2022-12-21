@@ -2,7 +2,7 @@ const std = @import("std");
 const common = @import("./_common.zig");
 
 pub usingnamespace common.Main(struct {
-    pub const source_url = "https://unicode.org/Public/" ++ common.version ++ "/ucd/ArabicShaping.txt";
+    pub const source_file = "ArabicShaping";
 
     pub const dest_file = "src/arabic_shaping.zig";
 

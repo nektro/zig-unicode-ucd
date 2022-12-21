@@ -6,7 +6,7 @@ const ansi = @import("ansi");
 pub const version = "13.0.0";
 
 pub fn Main(comptime T: type) type {
-    comptime std.debug.assert(@hasDecl(T, "source_url"));
+    comptime std.debug.assert(@hasDecl(T, "source_file"));
     comptime std.debug.assert(@hasDecl(T, "dest_file"));
     comptime std.debug.assert(@hasDecl(T, "dest_header"));
     comptime std.debug.assert(@hasDecl(T, "dest_footer"));
@@ -18,6 +18,7 @@ pub fn Main(comptime T: type) type {
             defer _ = gpa.deinit();
 
             const max_size = std.math.maxInt(usize);
+            const source_url = "https://unicode.org/Public/" ++ version ++ "/ucd/" ++ T.source_file ++ ".txt";
 
             //
             std.log.info("{s}", .{T.dest_file});
@@ -39,10 +40,10 @@ pub fn Main(comptime T: type) type {
                 \\// zig fmt: off
                 \\
                 \\
-            , .{T.source_url});
+            , .{source_url});
             try w.writeAll(T.dest_header);
 
-            const req = try zfetch.Request.init(alloc, T.source_url, null);
+            const req = try zfetch.Request.init(alloc, source_url, null);
             defer req.deinit();
             try req.do(.GET, null, null);
             const r = req.reader();
