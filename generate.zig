@@ -9,6 +9,7 @@ const files = [_]type{
     @import("./scripts/CaseFolding.zig"),
     @import("./scripts/CompositionExclusions.zig"),
     @import("./scripts/DerivedAge.zig"),
+    @import("./scripts/DerivedCoreProperties.zig"),
 };
 
 pub fn main() !void {

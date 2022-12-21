@@ -6,3 +6,4 @@ pub const cjk_radicals = @import("./cjk_radicals.zig");
 pub const case_folding = @import("./case_folding.zig");
 pub const composition_exclusions = @import("./composition_exclusions.zig");
 pub const derived_age = @import("./derived_age.zig");
+pub const derived_core_properties = @import("./derived_core_properties.zig");

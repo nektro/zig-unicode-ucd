@@ -14,6 +14,7 @@ pub fn main() !void {
         ucd.case_folding,
         ucd.composition_exclusions,
         ucd.derived_age,
+        ucd.derived_core_properties,
     };
 
     inline for (data) |b| {
