@@ -13,6 +13,7 @@ pub fn main() !void {
         ucd.cjk_radicals,
         ucd.case_folding,
         ucd.composition_exclusions,
+        ucd.derived_age,
     };
 
     inline for (data) |b| {

@@ -8,6 +8,7 @@ const files = [_]type{
     @import("./scripts/CJKRadicals.zig"),
     @import("./scripts/CaseFolding.zig"),
     @import("./scripts/CompositionExclusions.zig"),
+    @import("./scripts/DerivedAge.zig"),
 };
 
 pub fn main() !void {
