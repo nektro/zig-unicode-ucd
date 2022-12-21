@@ -3,6 +3,7 @@
 //
 // Based on the source file: https://unicode.org/Public/13.0.0/ucd/ArabicShaping.txt
 //
+// zig fmt: off
 
 pub const Shaping = struct {
     codepoint: u21,

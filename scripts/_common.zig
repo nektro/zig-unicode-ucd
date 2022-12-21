@@ -36,6 +36,7 @@ pub fn Main(comptime T: type) type {
             try w.print(
                 \\// Based on the source file: {s}
                 \\//
+                \\// zig fmt: off
                 \\
                 \\
             , .{T.source_url});

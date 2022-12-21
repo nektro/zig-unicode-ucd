@@ -3,6 +3,7 @@
 //
 // Based on the source file: https://unicode.org/Public/13.0.0/ucd/Blocks.txt
 //
+// zig fmt: off
 
 pub const Block = struct {
     from: u21,
