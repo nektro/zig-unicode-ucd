@@ -11,6 +11,7 @@ const files = [_]type{
     @import("./scripts/DerivedAge.zig"),
     @import("./scripts/DerivedCoreProperties.zig"),
     @import("./scripts/EastAsianWidth.zig"),
+    @import("./scripts/EmojiSources.zig"),
 };
 
 pub fn main() !void {

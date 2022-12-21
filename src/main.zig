@@ -16,6 +16,7 @@ pub fn main() !void {
         ucd.derived_age,
         ucd.derived_core_properties,
         ucd.east_asian_width,
+        ucd.emoji_sources,
     };
 
     inline for (data) |b| {

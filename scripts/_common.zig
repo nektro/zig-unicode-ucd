@@ -84,3 +84,7 @@ pub fn stringToEnum(comptime T: type, str: []const u8) void {
         std.log.warn("{s} is not part of the type {s}", .{ str, @typeName(T) });
     }
 }
+
+pub fn nullify(input: []const u8) ?[]const u8 {
+    return if (input.len == 0) null else input;
+}
