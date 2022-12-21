@@ -24,7 +24,8 @@ pub fn Main(comptime T: type) type {
 
             const file = try std.fs.cwd().createFile(T.dest_file, .{});
             defer file.close();
-            const w = file.writer();
+            var bufw = std.io.bufferedWriter(file.writer());
+            const w = bufw.writer();
 
             try w.writeAll(
                 \\// This file is part of the Unicode Character Database
@@ -71,6 +72,7 @@ pub fn Main(comptime T: type) type {
                 line_num += 1;
             }
             try w.writeAll(T.dest_footer);
+            try bufw.flush();
         }
     };
 }
