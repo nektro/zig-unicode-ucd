@@ -4,3 +4,4 @@ pub const bidi_mirroring = @import("./bidi_mirroring.zig");
 pub const blocks = @import("./blocks.zig");
 pub const cjk_radicals = @import("./cjk_radicals.zig");
 pub const case_folding = @import("./case_folding.zig");
+pub const composition_exclusions = @import("./composition_exclusions.zig");

@@ -12,6 +12,7 @@ pub fn main() !void {
         ucd.blocks,
         ucd.cjk_radicals,
         ucd.case_folding,
+        ucd.composition_exclusions,
     };
 
     inline for (data) |b| {

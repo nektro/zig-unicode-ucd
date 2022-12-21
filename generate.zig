@@ -7,6 +7,7 @@ const files = [_]type{
     @import("./scripts/BidiMirroring.zig"),
     @import("./scripts/CJKRadicals.zig"),
     @import("./scripts/CaseFolding.zig"),
+    @import("./scripts/CompositionExclusions.zig"),
 };
 
 pub fn main() !void {
