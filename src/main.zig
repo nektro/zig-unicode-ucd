@@ -23,6 +23,7 @@ pub fn main() !void {
         ucd.indic_syllabic_category,
         ucd.jamo,
         ucd.line_break,
+        ucd.name_aliases,
     };
 
     inline for (data) |b| {

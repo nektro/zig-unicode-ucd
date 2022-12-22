@@ -18,6 +18,7 @@ const files = [_]type{
     @import("./scripts/IndicSyllabicCategory.zig"),
     @import("./scripts/Jamo.zig"),
     @import("./scripts/LineBreak.zig"),
+    @import("./scripts/NameAliases.zig"),
 };
 
 pub fn main() !void {
