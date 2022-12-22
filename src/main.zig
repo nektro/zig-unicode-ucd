@@ -17,6 +17,7 @@ pub fn main() !void {
         ucd.derived_core_properties,
         ucd.east_asian_width,
         ucd.emoji_sources,
+        ucd.equivalent_unified_ideograph,
     };
 
     inline for (data) |b| {

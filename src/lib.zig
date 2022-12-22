@@ -10,3 +10,4 @@ pub const derived_core_properties = @import("./derived_core_properties.zig");
 
 pub const east_asian_width = @import("./east_asian_width.zig");
 pub const emoji_sources = @import("./emoji_sources.zig");
+pub const equivalent_unified_ideograph = @import("./equivalent_unified_ideograph.zig");

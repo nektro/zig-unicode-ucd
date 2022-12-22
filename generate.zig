@@ -12,6 +12,7 @@ const files = [_]type{
     @import("./scripts/DerivedCoreProperties.zig"),
     @import("./scripts/EastAsianWidth.zig"),
     @import("./scripts/EmojiSources.zig"),
+    @import("./scripts/EquivalentUnifiedIdeograph.zig"),
 };
 
 pub fn main() !void {
