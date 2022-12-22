@@ -15,3 +15,4 @@ pub const emoji_sources = @import("./emoji_sources.zig");
 pub const equivalent_unified_ideograph = @import("./equivalent_unified_ideograph.zig");
 pub const hangul_syllable_type = @import("./hangul_syllable_type.zig");
 // Index.txt
+pub const indic_positional_category = @import("./indic_positional_category.zig");

@@ -19,6 +19,7 @@ pub fn main() !void {
         ucd.emoji_sources,
         ucd.equivalent_unified_ideograph,
         ucd.hangul_syllable_type,
+        ucd.indic_positional_category,
     };
 
     inline for (data) |b| {

@@ -14,6 +14,7 @@ const files = [_]type{
     @import("./scripts/EmojiSources.zig"),
     @import("./scripts/EquivalentUnifiedIdeograph.zig"),
     @import("./scripts/HangulSyllableType.zig"),
+    @import("./scripts/IndicPositionalCategory.zig"),
 };
 
 pub fn main() !void {
