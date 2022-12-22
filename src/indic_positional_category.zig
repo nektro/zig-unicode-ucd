@@ -8,7 +8,6 @@
 pub const IndicPositionalCategory = struct {
     code: u21,
     category: enum {
-        NA,
         Right,
         Left,
         Visual_Order_Left,
