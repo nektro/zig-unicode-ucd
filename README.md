@@ -8,8 +8,6 @@ http://www.unicode.org/reports/tr44/
 
 https://www.unicode.org/versions/latest/
 
-https://unicode.org/Public/UCD/latest/ucd/
-
 ## Development
 
 ```
