@@ -18,6 +18,7 @@ pub fn main() !void {
         ucd.east_asian_width,
         ucd.emoji_sources,
         ucd.equivalent_unified_ideograph,
+        ucd.hangul_syllable_type,
     };
 
     inline for (data) |b| {

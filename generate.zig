@@ -13,6 +13,7 @@ const files = [_]type{
     @import("./scripts/EastAsianWidth.zig"),
     @import("./scripts/EmojiSources.zig"),
     @import("./scripts/EquivalentUnifiedIdeograph.zig"),
+    @import("./scripts/HangulSyllableType.zig"),
 };
 
 pub fn main() !void {
