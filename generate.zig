@@ -16,6 +16,7 @@ const files = [_]type{
     @import("./scripts/HangulSyllableType.zig"),
     @import("./scripts/IndicPositionalCategory.zig"),
     @import("./scripts/IndicSyllabicCategory.zig"),
+    @import("./scripts/Jamo.zig"),
 };
 
 pub fn main() !void {

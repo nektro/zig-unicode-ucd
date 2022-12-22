@@ -21,6 +21,7 @@ pub fn main() !void {
         ucd.hangul_syllable_type,
         ucd.indic_positional_category,
         ucd.indic_syllabic_category,
+        ucd.jamo,
     };
 
     inline for (data) |b| {
