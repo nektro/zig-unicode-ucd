@@ -1,6 +1,8 @@
 pub const arabic_shaping = @import("./arabic_shaping.zig");
 pub const bidi_brackets = @import("./bidi_brackets.zig");
+// BidiCharacterTest.txt
 pub const bidi_mirroring = @import("./bidi_mirroring.zig");
+// BidiTest.txt
 pub const blocks = @import("./blocks.zig");
 pub const cjk_radicals = @import("./cjk_radicals.zig");
 pub const case_folding = @import("./case_folding.zig");
