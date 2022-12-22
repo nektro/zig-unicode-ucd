@@ -22,6 +22,7 @@ pub fn main() !void {
         ucd.indic_positional_category,
         ucd.indic_syllabic_category,
         ucd.jamo,
+        ucd.line_break,
     };
 
     inline for (data) |b| {

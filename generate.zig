@@ -17,6 +17,7 @@ const files = [_]type{
     @import("./scripts/IndicPositionalCategory.zig"),
     @import("./scripts/IndicSyllabicCategory.zig"),
     @import("./scripts/Jamo.zig"),
+    @import("./scripts/LineBreak.zig"),
 };
 
 pub fn main() !void {
