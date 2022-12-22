@@ -20,6 +20,7 @@ pub fn main() !void {
         ucd.equivalent_unified_ideograph,
         ucd.hangul_syllable_type,
         ucd.indic_positional_category,
+        ucd.indic_syllabic_category,
     };
 
     inline for (data) |b| {
