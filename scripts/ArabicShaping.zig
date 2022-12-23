@@ -147,9 +147,6 @@ pub usingnamespace common.Main(struct {
         const g = std.mem.trim(u8, it.next().?, " ");
         const g2 = try std.mem.replaceOwned(u8, alloc, g, " ", "_");
 
-        try common.stringToEnum(@import("../src/lib.zig").arabic_shaping.Joining.Type, t);
-        try common.stringToEnum(@import("../src/lib.zig").arabic_shaping.Joining.Group, g2);
-
         try writer.print("    .{{ .codepoint = 0x{s}, .schematic_name = \"{s}\", .joining_type = .{s}, .joining_group = .{s} }},\n", .{ c, n, t, g2 });
         return true;
     }
