@@ -20,3 +20,4 @@ pub const indic_syllabic_category = @import("./indic_syllabic_category.zig");
 pub const jamo = @import("./jamo.zig");
 pub const line_break = @import("./line_break.zig");
 pub const name_aliases = @import("./name_aliases.zig");
+pub const named_sequences = @import("./named_sequences.zig");

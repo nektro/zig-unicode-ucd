@@ -19,6 +19,7 @@ const files = [_]type{
     @import("./scripts/Jamo.zig"),
     @import("./scripts/LineBreak.zig"),
     @import("./scripts/NameAliases.zig"),
+    @import("./scripts/NamedSequences.zig"),
 };
 
 pub fn main() !void {

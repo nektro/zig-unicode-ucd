@@ -24,6 +24,7 @@ pub fn main() !void {
         ucd.jamo,
         ucd.line_break,
         ucd.name_aliases,
+        ucd.named_sequences,
     };
 
     inline for (data) |b| {
