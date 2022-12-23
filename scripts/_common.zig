@@ -82,3 +82,25 @@ pub fn Main(comptime T: type) type {
 pub fn nullify(input: []const u8) ?[]const u8 {
     return if (input.len == 0) null else input;
 }
+
+pub fn RangeEnum(comptime prop: []const u8) type {
+    return struct {
+        pub fn exec(alloc: std.mem.Allocator, line: []const u8, writer: anytype) !bool {
+            _ = alloc;
+            var it = std.mem.tokenize(u8, line, "; ");
+
+            const first = it.next().?;
+            const next = std.mem.trimRight(u8, it.next().?, "#");
+
+            if (std.mem.indexOf(u8, first, "..")) |index| {
+                const start = first[0..index];
+                const end = first[index + 2 ..];
+                try writer.print("    .{{ .from = 0x{s}, .to = 0x{s}, .{s} = .{s} }},\n", .{ start, end, prop, next });
+            } else {
+                try writer.print("    .{{ .from = 0x{s}, .to = 0x{s}, .{s} = .{s} }},\n", .{ first, first, prop, next });
+            }
+
+            return true;
+        }
+    };
+}

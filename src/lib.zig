@@ -37,3 +37,4 @@ pub const scripts = @import("./scripts.zig");
 // USourceData.txt
 // UnicodeData.txt
 pub const vertical_orientation = @import("./vertical_orientation.zig");
+pub const emoji = @import("./emoji.zig");
