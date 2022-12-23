@@ -20,6 +20,7 @@ const files = [_]type{
     @import("./scripts/LineBreak.zig"),
     @import("./scripts/NameAliases.zig"),
     @import("./scripts/NamedSequences.zig"),
+    @import("./scripts/NamedSequencesProv.zig"),
 };
 
 pub fn main() !void {

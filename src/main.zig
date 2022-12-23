@@ -25,6 +25,7 @@ pub fn main() !void {
         ucd.line_break,
         ucd.name_aliases,
         ucd.named_sequences,
+        ucd.named_sequences_prov,
     };
 
     inline for (data) |b| {
