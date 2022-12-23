@@ -28,6 +28,7 @@ pub fn main() !void {
         ucd.named_sequences_prov,
         ucd.prop_list,
         ucd.scripts,
+        ucd.vertical_orientation,
     };
 
     inline for (data) |b| {

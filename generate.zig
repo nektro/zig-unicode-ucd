@@ -23,6 +23,7 @@ const files = [_]type{
     @import("./scripts/NamedSequencesProv.zig"),
     @import("./scripts/PropList.zig"),
     @import("./scripts/Scripts.zig"),
+    @import("./scripts/VerticalOrientation.zig"),
 };
 
 pub fn main() !void {

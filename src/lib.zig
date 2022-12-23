@@ -36,4 +36,4 @@ pub const scripts = @import("./scripts.zig");
 // TangutSources.txt
 // USourceData.txt
 // UnicodeData.txt
-// VerticalOrientation.txt
+pub const vertical_orientation = @import("./vertical_orientation.zig");
