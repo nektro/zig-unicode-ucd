@@ -27,3 +27,7 @@ pub const named_sequences_prov = @import("./named_sequences_prov.zig");
 // NormalizationTest.txt
 // NushuSources.txt
 pub const prop_list = @import("./prop_list.zig");
+// PropertyAliases.txt
+// PropertyValueAliases.txt
+// ScriptExtensions.txt
+pub const scripts = @import("./scripts.zig");
