@@ -22,3 +22,8 @@ pub const line_break = @import("./line_break.zig");
 pub const name_aliases = @import("./name_aliases.zig");
 pub const named_sequences = @import("./named_sequences.zig");
 pub const named_sequences_prov = @import("./named_sequences_prov.zig");
+// NamesList.txt
+// NormalizationCorrections.txt
+// NormalizationTest.txt
+// NushuSources.txt
+pub const prop_list = @import("./prop_list.zig");

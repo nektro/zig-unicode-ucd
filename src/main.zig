@@ -26,6 +26,7 @@ pub fn main() !void {
         ucd.name_aliases,
         ucd.named_sequences,
         ucd.named_sequences_prov,
+        ucd.prop_list,
     };
 
     inline for (data) |b| {
