@@ -1,6 +1,7 @@
 const std = @import("std");
 
 const files = [_]type{
+    @import("./scripts/ScriptExtensions.zig"),
     @import("./scripts/emoji.zig"),
     @import("./scripts/Blocks.zig"),
     @import("./scripts/ArabicShaping.zig"),
