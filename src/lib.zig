@@ -1,8 +1,6 @@
 pub const arabic_shaping = @import("./arabic_shaping.zig");
 pub const bidi_brackets = @import("./bidi_brackets.zig");
-// BidiCharacterTest.txt               // test, skipping
 pub const bidi_mirroring = @import("./bidi_mirroring.zig");
-// BidiTest.txt                        // test, skipping
 pub const blocks = @import("./blocks.zig");
 pub const cjk_radicals = @import("./cjk_radicals.zig");
 pub const case_folding = @import("./case_folding.zig");
@@ -24,7 +22,6 @@ pub const named_sequences = @import("./named_sequences.zig");
 pub const named_sequences_prov = @import("./named_sequences_prov.zig");
 // NamesList.txt
 // NormalizationCorrections.txt        // not likely very useful for us
-// NormalizationTest.txt               // test, skipping
 // NushuSources.txt
 pub const prop_list = @import("./prop_list.zig");
 // PropertyAliases.txt
