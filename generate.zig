@@ -1,14 +1,12 @@
 const std = @import("std");
 
 const files = [_]type{
-    @import("./scripts/ScriptExtensions.zig"),
-    @import("./scripts/emoji.zig"),
-    @import("./scripts/Blocks.zig"),
     @import("./scripts/ArabicShaping.zig"),
     @import("./scripts/BidiBrackets.zig"),
     @import("./scripts/BidiMirroring.zig"),
-    @import("./scripts/CJKRadicals.zig"),
+    @import("./scripts/Blocks.zig"),
     @import("./scripts/CaseFolding.zig"),
+    @import("./scripts/CJKRadicals.zig"),
     @import("./scripts/CompositionExclusions.zig"),
     @import("./scripts/DerivedAge.zig"),
     @import("./scripts/DerivedCoreProperties.zig"),
@@ -24,8 +22,10 @@ const files = [_]type{
     @import("./scripts/NamedSequences.zig"),
     @import("./scripts/NamedSequencesProv.zig"),
     @import("./scripts/PropList.zig"),
+    @import("./scripts/ScriptExtensions.zig"),
     @import("./scripts/Scripts.zig"),
     @import("./scripts/VerticalOrientation.zig"),
+    @import("./scripts/emoji.zig"),
 };
 
 pub fn main() !void {
