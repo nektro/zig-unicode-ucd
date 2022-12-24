@@ -20,9 +20,6 @@ pub const line_break = @import("./line_break.zig");
 pub const name_aliases = @import("./name_aliases.zig");
 pub const named_sequences = @import("./named_sequences.zig");
 pub const named_sequences_prov = @import("./named_sequences_prov.zig");
-// NamesList.txt
-// NormalizationCorrections.txt        // not likely very useful for us
-// NushuSources.txt
 pub const prop_list = @import("./prop_list.zig");
 // PropertyAliases.txt
 // PropertyValueAliases.txt
@@ -30,7 +27,6 @@ pub const script_extensions = @import("./script_extensions.zig");
 pub const scripts = @import("./scripts.zig");
 // SpecialCasing.txt
 // StandardizedVariants.txt
-// TangutSources.txt
 // USourceData.txt
 // UnicodeData.txt
 pub const vertical_orientation = @import("./vertical_orientation.zig");
