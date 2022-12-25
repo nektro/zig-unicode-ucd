@@ -64,9 +64,7 @@ pub fn Main(comptime T: type) type {
                     continue;
                 }
 
-                if (!(try T.exec(arena.allocator(), line, w))) {
-                    break;
-                }
+                try T.exec(arena.allocator(), line, w);
 
                 std.debug.print("{s}", .{ansi.csi.CursorUp(1)});
                 std.debug.print("{s}", .{ansi.csi.EraseInLine(0)});
@@ -85,7 +83,7 @@ pub fn nullify(input: []const u8) ?[]const u8 {
 
 pub fn RangeEnum(comptime prop: []const u8) type {
     return struct {
-        pub fn exec(alloc: std.mem.Allocator, line: []const u8, writer: anytype) !bool {
+        pub fn exec(alloc: std.mem.Allocator, line: []const u8, writer: anytype) !void {
             _ = alloc;
             var it = std.mem.tokenize(u8, line, "; ");
 
@@ -99,8 +97,6 @@ pub fn RangeEnum(comptime prop: []const u8) type {
             } else {
                 try writer.print("    .{{ .from = 0x{s}, .to = 0x{s}, .{s} = .{s} }},\n", .{ first, first, prop, next });
             }
-
-            return true;
         }
     };
 }

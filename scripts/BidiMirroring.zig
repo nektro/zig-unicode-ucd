@@ -21,7 +21,7 @@ pub usingnamespace common.Main(struct {
         \\
     ;
 
-    pub fn exec(alloc: std.mem.Allocator, line: []const u8, writer: anytype) !bool {
+    pub fn exec(alloc: std.mem.Allocator, line: []const u8, writer: anytype) !void {
         _ = alloc;
         var it = std.mem.tokenize(u8, line, "; #");
         const c = it.next().?;
@@ -29,6 +29,5 @@ pub usingnamespace common.Main(struct {
         const t = it.rest();
 
         try writer.print("    .{{ .codepoint = 0x{s}, .mirror = 0x{s} }}, // {s}\n", .{ c, m, t });
-        return true;
     }
 });

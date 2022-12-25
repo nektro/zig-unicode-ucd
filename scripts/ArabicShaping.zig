@@ -139,7 +139,7 @@ pub usingnamespace common.Main(struct {
         \\
     ;
 
-    pub fn exec(alloc: std.mem.Allocator, line: []const u8, writer: anytype) !bool {
+    pub fn exec(alloc: std.mem.Allocator, line: []const u8, writer: anytype) !void {
         var it = std.mem.split(u8, line, ";");
         const c = std.mem.trim(u8, it.next().?, " ");
         const n = std.mem.trim(u8, it.next().?, " ");
@@ -148,6 +148,5 @@ pub usingnamespace common.Main(struct {
         const g2 = try std.mem.replaceOwned(u8, alloc, g, " ", "_");
 
         try writer.print("    .{{ .codepoint = 0x{s}, .schematic_name = \"{s}\", .joining_type = .{s}, .joining_group = .{s} }},\n", .{ c, n, t, g2 });
-        return true;
     }
 });

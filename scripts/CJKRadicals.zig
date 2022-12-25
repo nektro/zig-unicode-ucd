@@ -23,7 +23,7 @@ pub usingnamespace common.Main(struct {
         \\
     ;
 
-    pub fn exec(alloc: std.mem.Allocator, line: []const u8, writer: anytype) !bool {
+    pub fn exec(alloc: std.mem.Allocator, line: []const u8, writer: anytype) !void {
         _ = alloc;
         var it = std.mem.tokenize(u8, line, "; ");
         var n = it.next().?;
@@ -33,6 +33,5 @@ pub usingnamespace common.Main(struct {
         n = std.mem.trimRight(u8, n, "'");
 
         try writer.print("    .{{ .number = {s}, .simplified = {}, .character = 0x{s}, .ideograph = 0x{s} }},\n", .{ n, s, c, i });
-        return true;
     }
 });

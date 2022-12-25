@@ -23,9 +23,9 @@ pub usingnamespace common.Main(struct {
         \\
     ;
 
-    pub fn exec(alloc: std.mem.Allocator, line: []const u8, writer: anytype) !bool {
+    pub fn exec(alloc: std.mem.Allocator, line: []const u8, writer: anytype) !void {
         _ = alloc;
-        if (std.mem.count(u8, line, " ") > 0) return true;
+        if (std.mem.count(u8, line, " ") > 0) return;
         var it = std.mem.split(u8, line, ";");
         const code = it.next().?;
         // FIXME remove @as and temp vars after switch off stage1
@@ -39,7 +39,5 @@ pub usingnamespace common.Main(struct {
             kddi,
             softbank,
         });
-
-        return true;
     }
 });

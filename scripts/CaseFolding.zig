@@ -36,7 +36,7 @@ pub usingnamespace common.Main(struct {
         \\
     ;
 
-    pub fn exec(alloc: std.mem.Allocator, line: []const u8, writer: anytype) !bool {
+    pub fn exec(alloc: std.mem.Allocator, line: []const u8, writer: anytype) !void {
         _ = alloc;
         var it = std.mem.split(u8, line, "; ");
         const code = it.next().?;
@@ -61,6 +61,5 @@ pub usingnamespace common.Main(struct {
         try writer.writeAll(" } }, // ");
         try writer.writeAll(it.rest());
         try writer.writeAll("\n");
-        return true;
     }
 });

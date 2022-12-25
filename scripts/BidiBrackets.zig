@@ -28,7 +28,7 @@ pub usingnamespace common.Main(struct {
         \\
     ;
 
-    pub fn exec(alloc: std.mem.Allocator, line: []const u8, writer: anytype) !bool {
+    pub fn exec(alloc: std.mem.Allocator, line: []const u8, writer: anytype) !void {
         _ = alloc;
 
         var it = std.mem.split(u8, line, ";");
@@ -37,6 +37,5 @@ pub usingnamespace common.Main(struct {
         const c = std.mem.trim(u8, it.next().?, " ");
 
         try writer.print("    .{{ .codepoint = 0x{s}, .pair = 0x{s}, .type = .{s} }}, // {s}\n", .{ a, b, c[0..1], c[4..] });
-        return true;
     }
 });

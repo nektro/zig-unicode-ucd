@@ -22,7 +22,7 @@ pub usingnamespace common.Main(struct {
         \\
     ;
 
-    pub fn exec(alloc: std.mem.Allocator, line: []const u8, writer: anytype) !bool {
+    pub fn exec(alloc: std.mem.Allocator, line: []const u8, writer: anytype) !void {
         _ = alloc;
 
         var it1 = std.mem.split(u8, line, "; ");
@@ -32,6 +32,5 @@ pub usingnamespace common.Main(struct {
         const name = it1.next().?;
 
         try writer.print("    .{{ .from = 0x{s}, .to = 0x{s}, .name = \"{s}\" }},\n", .{ from, to, name });
-        return true;
     }
 });
