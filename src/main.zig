@@ -31,6 +31,7 @@ pub fn main() !void {
         ucd.vertical_orientation,
         ucd.emoji,
         ucd.script_extensions,
+        ucd.property_aliases,
     };
 
     inline for (data) |b| {

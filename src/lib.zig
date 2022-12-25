@@ -21,7 +21,7 @@ pub const name_aliases = @import("./name_aliases.zig");
 pub const named_sequences = @import("./named_sequences.zig");
 pub const named_sequences_prov = @import("./named_sequences_prov.zig");
 pub const prop_list = @import("./prop_list.zig");
-// PropertyAliases.txt
+pub const property_aliases = @import("./property_aliases.zig");
 // PropertyValueAliases.txt
 pub const script_extensions = @import("./script_extensions.zig");
 pub const scripts = @import("./scripts.zig");
