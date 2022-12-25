@@ -9,15 +9,11 @@ pub usingnamespace common.Main(struct {
     pub const dest_header =
         \\const std = @import("std");
         \\
-        \\pub const data = blk: {
-        \\    @setEvalBranchQuota(4000);
-        \\    const map = std.ComptimeStringMap([]const u8, .{
+        \\pub const data = [_][2][]const u8{
         \\
     ;
 
     pub const dest_footer =
-        \\    });
-        \\    break :blk map;
         \\};
     ;
 
@@ -25,7 +21,7 @@ pub usingnamespace common.Main(struct {
         _ = alloc;
         var it = std.mem.tokenize(u8, line, "; ");
 
-        try writer.print("        .{{ \"{}\", \"{}\" }},\n", .{
+        try writer.print("    .{{ \"{}\", \"{}\" }},\n", .{
             std.zig.fmtEscapes(it.next().?),
             std.zig.fmtEscapes(it.next().?),
         });
