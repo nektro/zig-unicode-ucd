@@ -20,15 +20,6 @@ pub usingnamespace common.Main(struct {
     pub fn exec(alloc: std.mem.Allocator, line: []const u8, writer: anytype) !void {
         _ = alloc;
         var it = std.mem.split(u8, line, " ");
-        try writer.print("    0x{s}, // ", .{it.next().?});
-
-        while (it.next()) |item| {
-            if (item.len == 0) continue;
-            if (std.mem.eql(u8, item, "#")) {
-                try writer.writeAll(std.mem.trimLeft(u8, it.rest(), " "));
-                try writer.writeAll("\n");
-                break;
-            }
-        }
+        try writer.print("    0x{s},\n", .{it.next().?});
     }
 });

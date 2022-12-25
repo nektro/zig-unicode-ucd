@@ -36,6 +36,6 @@ pub usingnamespace common.Main(struct {
         const b = std.mem.trim(u8, it.next().?, " ");
         const c = std.mem.trim(u8, it.next().?, " ");
 
-        try writer.print("    .{{ .codepoint = 0x{s}, .pair = 0x{s}, .type = .{s} }}, // {s}\n", .{ a, b, c[0..1], c[4..] });
+        try writer.print("    .{{ .codepoint = 0x{s}, .pair = 0x{s}, .type = .{s} }},\n", .{ a, b, c[0..1] });
     }
 });

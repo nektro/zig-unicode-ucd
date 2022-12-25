@@ -58,8 +58,6 @@ pub usingnamespace common.Main(struct {
                 try writer.writeAll("}");
             },
         }
-        try writer.writeAll(" } }, // ");
-        try writer.writeAll(it.rest());
-        try writer.writeAll("\n");
+        try writer.writeAll(" } },\n");
     }
 });
