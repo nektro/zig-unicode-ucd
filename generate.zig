@@ -22,6 +22,7 @@ const files = [_]type{
     @import("./scripts/NamedSequences.zig"),
     @import("./scripts/NamedSequencesProv.zig"),
     @import("./scripts/PropertyAliases.zig"),
+    @import("./scripts/PropertyValueAliases.zig"),
     @import("./scripts/PropList.zig"),
     @import("./scripts/ScriptExtensions.zig"),
     @import("./scripts/Scripts.zig"),

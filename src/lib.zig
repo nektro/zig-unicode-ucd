@@ -22,7 +22,7 @@ pub const named_sequences = @import("./named_sequences.zig");
 pub const named_sequences_prov = @import("./named_sequences_prov.zig");
 pub const prop_list = @import("./prop_list.zig");
 pub const property_aliases = @import("./property_aliases.zig");
-// PropertyValueAliases.txt
+pub const property_value_aliases = @import("./property_value_aliases.zig");
 pub const script_extensions = @import("./script_extensions.zig");
 pub const scripts = @import("./scripts.zig");
 // SpecialCasing.txt

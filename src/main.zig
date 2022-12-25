@@ -32,6 +32,7 @@ pub fn main() !void {
         ucd.emoji,
         ucd.script_extensions,
         ucd.property_aliases,
+        ucd.property_value_aliases,
     };
 
     inline for (data) |b| {
