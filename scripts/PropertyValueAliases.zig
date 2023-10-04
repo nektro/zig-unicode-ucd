@@ -20,7 +20,8 @@ pub usingnamespace common.Main(struct {
 
     pub fn exec(alloc: std.mem.Allocator, line: []const u8, writer: anytype) !void {
         _ = alloc;
-        var it = std.mem.tokenize(u8, line, "; ");
+        const end = std.mem.indexOfScalar(u8, line, '#') orelse line.len;
+        var it = std.mem.tokenize(u8, line[0..end], "; ");
 
         var vals = [_][]const u8{
             it.next().?,
