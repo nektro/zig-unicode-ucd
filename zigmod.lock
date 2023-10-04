@@ -1,0 +1,6 @@
+2
+git https://github.com/nektro/iguanaTLS commit-c932f557865abaa1d06cd88e9b22a9f3e583fa59
+git https://github.com/nektro/zfetch commit-f51277414a2309f776fb79f3d55f26e37f9a54da
+git https://github.com/nektro/zig-ansi commit-ac607e4e7ac36d46cc67c8786262578330543a36
+git https://github.com/nektro/zig-fmt-valueliteral commit-ec324a6979145ec8b1b405f5faef811f43ca3726
+git https://github.com/truemedian/hzzp commit-305aca97fce78eb3e787d57691a5eed5512bece7
