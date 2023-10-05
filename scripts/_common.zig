@@ -49,12 +49,15 @@ pub fn Main(comptime T: type) type {
             const r = req.reader();
 
             var line_num: usize = 1;
-            std.debug.print("\n", .{});
+            // std.debug.print("\n", .{});
 
             var arena = std.heap.ArenaAllocator.init(alloc);
             defer arena.deinit();
             while (true) {
-                const line = r.readUntilDelimiterAlloc(alloc, '\n', max_size) catch |e| if (e == error.EndOfStream) break else return e;
+                const line = r.readUntilDelimiterAlloc(alloc, '\n', max_size) catch |err| switch (err) {
+                    error.EndOfStream => break,
+                    else => |e| return e,
+                };
                 defer alloc.free(line);
 
                 if (line.len == 0) {
@@ -66,11 +69,12 @@ pub fn Main(comptime T: type) type {
 
                 try T.exec(arena.allocator(), line, w);
 
-                std.debug.print("{s}", .{ansi.csi.CursorUp(1)});
+                std.debug.print("{s}", .{ansi.csi.CursorHorzAbs(1)});
                 std.debug.print("{s}", .{ansi.csi.EraseInLine(0)});
-                std.debug.print("{d}\n", .{line_num});
+                std.debug.print("{d}", .{line_num});
                 line_num += 1;
             }
+            std.debug.print("\n", .{});
             try w.writeAll(T.dest_footer);
             try bufw.flush();
         }
