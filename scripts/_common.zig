@@ -77,8 +77,10 @@ pub fn Main(comptime T: type) type {
     };
 }
 
-pub fn nullify(input: []const u8) ?[]const u8 {
-    return if (input.len == 0) null else input;
+pub fn nullify(input: ?[]const u8) ?[]const u8 {
+    if (input == null) return null;
+    if (input.?.len == 0) return null;
+    return input;
 }
 
 pub fn RangeEnum(comptime prop: []const u8) type {

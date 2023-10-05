@@ -16,6 +16,7 @@ zig build run -Dstep=run
 ```
 
 ## License
+
 Code here is MIT
 
 Source data files are https://www.unicode.org/license.html

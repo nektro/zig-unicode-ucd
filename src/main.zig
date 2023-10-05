@@ -33,6 +33,7 @@ pub fn main() !void {
         ucd.script_extensions,
         ucd.property_aliases,
         ucd.property_value_aliases,
+        ucd.unicode_data,
     };
 
     inline for (data) |b| {

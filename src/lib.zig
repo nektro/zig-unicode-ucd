@@ -1,3 +1,5 @@
+const std = @import("std");
+
 pub const arabic_shaping = @import("./arabic_shaping.zig");
 pub const bidi_brackets = @import("./bidi_brackets.zig");
 pub const bidi_mirroring = @import("./bidi_mirroring.zig");
@@ -28,6 +30,31 @@ pub const scripts = @import("./scripts.zig");
 // SpecialCasing.txt
 // StandardizedVariants.txt
 // USourceData.txt
-// UnicodeData.txt
+pub const unicode_data = @import("./unicode_data.zig");
 pub const vertical_orientation = @import("./vertical_orientation.zig");
 pub const emoji = @import("./emoji.zig");
+
+/// https://www.unicode.org/reports/tr44/#General_Category_Values
+pub const GeneralCategory = DerivedPropertyEnum("gc");
+
+/// https://www.unicode.org/reports/tr44/#Bidi_Class_Values
+pub const BidiClass = DerivedPropertyEnum("bc");
+
+fn DerivedPropertyEnum(comptime prop: []const u8) type {
+    var fields: []const std.builtin.Type.EnumField = &.{};
+    @setEvalBranchQuota(10_000);
+    for (property_value_aliases.data) |item| {
+        if (std.mem.eql(u8, item[0], prop)) {
+            fields = fields ++ &[_]std.builtin.Type.EnumField{.{
+                .name = item[1],
+                .value = fields.len,
+            }};
+        }
+    }
+    return @Type(.{ .Enum = .{
+        .tag_type = std.math.IntFittingRange(0, fields.len - 1),
+        .fields = fields,
+        .decls = &.{},
+        .is_exhaustive = true,
+    } });
+}
