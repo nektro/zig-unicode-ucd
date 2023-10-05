@@ -172,6 +172,8 @@ pub usingnamespace common.Main(struct {
         \\        Tangsa,
         \\        Toto,
         \\        Vithkuqi,
+        \\        Kawi,
+        \\        Nag_Mundari,
         \\    },
         \\};
         \\

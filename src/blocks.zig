@@ -1,7 +1,7 @@
 // This file is part of the Unicode Character Database
 // For documentation, see http://www.unicode.org/reports/tr44/
 //
-// Based on the source file: https://unicode.org/Public/14.0.0/ucd/Blocks.txt
+// Based on the source file: https://unicode.org/Public/15.0.0/ucd/Blocks.txt
 //
 // zig fmt: off
 
@@ -221,6 +221,7 @@ pub const data = [_]Block{
     .{ .from = 0x10D00, .to = 0x10D3F, .name = "Hanifi Rohingya" },
     .{ .from = 0x10E60, .to = 0x10E7F, .name = "Rumi Numeral Symbols" },
     .{ .from = 0x10E80, .to = 0x10EBF, .name = "Yezidi" },
+    .{ .from = 0x10EC0, .to = 0x10EFF, .name = "Arabic Extended-C" },
     .{ .from = 0x10F00, .to = 0x10F2F, .name = "Old Sogdian" },
     .{ .from = 0x10F30, .to = 0x10F6F, .name = "Sogdian" },
     .{ .from = 0x10F70, .to = 0x10FAF, .name = "Old Uyghur" },
@@ -252,11 +253,13 @@ pub const data = [_]Block{
     .{ .from = 0x11A50, .to = 0x11AAF, .name = "Soyombo" },
     .{ .from = 0x11AB0, .to = 0x11ABF, .name = "Unified Canadian Aboriginal Syllabics Extended-A" },
     .{ .from = 0x11AC0, .to = 0x11AFF, .name = "Pau Cin Hau" },
+    .{ .from = 0x11B00, .to = 0x11B5F, .name = "Devanagari Extended-A" },
     .{ .from = 0x11C00, .to = 0x11C6F, .name = "Bhaiksuki" },
     .{ .from = 0x11C70, .to = 0x11CBF, .name = "Marchen" },
     .{ .from = 0x11D00, .to = 0x11D5F, .name = "Masaram Gondi" },
     .{ .from = 0x11D60, .to = 0x11DAF, .name = "Gunjala Gondi" },
     .{ .from = 0x11EE0, .to = 0x11EFF, .name = "Makasar" },
+    .{ .from = 0x11F00, .to = 0x11F5F, .name = "Kawi" },
     .{ .from = 0x11FB0, .to = 0x11FBF, .name = "Lisu Supplement" },
     .{ .from = 0x11FC0, .to = 0x11FFF, .name = "Tamil Supplement" },
     .{ .from = 0x12000, .to = 0x123FF, .name = "Cuneiform" },
@@ -264,7 +267,7 @@ pub const data = [_]Block{
     .{ .from = 0x12480, .to = 0x1254F, .name = "Early Dynastic Cuneiform" },
     .{ .from = 0x12F90, .to = 0x12FFF, .name = "Cypro-Minoan" },
     .{ .from = 0x13000, .to = 0x1342F, .name = "Egyptian Hieroglyphs" },
-    .{ .from = 0x13430, .to = 0x1343F, .name = "Egyptian Hieroglyph Format Controls" },
+    .{ .from = 0x13430, .to = 0x1345F, .name = "Egyptian Hieroglyph Format Controls" },
     .{ .from = 0x14400, .to = 0x1467F, .name = "Anatolian Hieroglyphs" },
     .{ .from = 0x16800, .to = 0x16A3F, .name = "Bamum Supplement" },
     .{ .from = 0x16A40, .to = 0x16A6F, .name = "Mro" },
@@ -289,6 +292,7 @@ pub const data = [_]Block{
     .{ .from = 0x1D000, .to = 0x1D0FF, .name = "Byzantine Musical Symbols" },
     .{ .from = 0x1D100, .to = 0x1D1FF, .name = "Musical Symbols" },
     .{ .from = 0x1D200, .to = 0x1D24F, .name = "Ancient Greek Musical Notation" },
+    .{ .from = 0x1D2C0, .to = 0x1D2DF, .name = "Kaktovik Numerals" },
     .{ .from = 0x1D2E0, .to = 0x1D2FF, .name = "Mayan Numerals" },
     .{ .from = 0x1D300, .to = 0x1D35F, .name = "Tai Xuan Jing Symbols" },
     .{ .from = 0x1D360, .to = 0x1D37F, .name = "Counting Rod Numerals" },
@@ -296,9 +300,11 @@ pub const data = [_]Block{
     .{ .from = 0x1D800, .to = 0x1DAAF, .name = "Sutton SignWriting" },
     .{ .from = 0x1DF00, .to = 0x1DFFF, .name = "Latin Extended-G" },
     .{ .from = 0x1E000, .to = 0x1E02F, .name = "Glagolitic Supplement" },
+    .{ .from = 0x1E030, .to = 0x1E08F, .name = "Cyrillic Extended-D" },
     .{ .from = 0x1E100, .to = 0x1E14F, .name = "Nyiakeng Puachue Hmong" },
     .{ .from = 0x1E290, .to = 0x1E2BF, .name = "Toto" },
     .{ .from = 0x1E2C0, .to = 0x1E2FF, .name = "Wancho" },
+    .{ .from = 0x1E4D0, .to = 0x1E4FF, .name = "Nag Mundari" },
     .{ .from = 0x1E7E0, .to = 0x1E7FF, .name = "Ethiopic Extended-B" },
     .{ .from = 0x1E800, .to = 0x1E8DF, .name = "Mende Kikakui" },
     .{ .from = 0x1E900, .to = 0x1E95F, .name = "Adlam" },
@@ -328,6 +334,7 @@ pub const data = [_]Block{
     .{ .from = 0x2CEB0, .to = 0x2EBEF, .name = "CJK Unified Ideographs Extension F" },
     .{ .from = 0x2F800, .to = 0x2FA1F, .name = "CJK Compatibility Ideographs Supplement" },
     .{ .from = 0x30000, .to = 0x3134F, .name = "CJK Unified Ideographs Extension G" },
+    .{ .from = 0x31350, .to = 0x323AF, .name = "CJK Unified Ideographs Extension H" },
     .{ .from = 0xE0000, .to = 0xE007F, .name = "Tags" },
     .{ .from = 0xE0100, .to = 0xE01EF, .name = "Variation Selectors Supplement" },
     .{ .from = 0xF0000, .to = 0xFFFFF, .name = "Supplementary Private Use Area-A" },

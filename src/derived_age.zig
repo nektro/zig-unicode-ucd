@@ -1,7 +1,7 @@
 // This file is part of the Unicode Character Database
 // For documentation, see http://www.unicode.org/reports/tr44/
 //
-// Based on the source file: https://unicode.org/Public/14.0.0/ucd/DerivedAge.txt
+// Based on the source file: https://unicode.org/Public/15.0.0/ucd/DerivedAge.txt
 //
 // zig fmt: off
 
@@ -1697,4 +1697,37 @@ pub const data = [_]Age{
     .{ .from = 0x1FAF0, .to = 0x1FAF6, .since = .{ 14,0 } },
     .{ .from = 0x2A6DE, .to = 0x2A6DF, .since = .{ 14,0 } },
     .{ .from = 0x2B735, .to = 0x2B738, .since = .{ 14,0 } },
+    .{ .from = 0x0CF3, .to = 0x0CF3, .since = .{ 15,0 } },
+    .{ .from = 0x0ECE, .to = 0x0ECE, .since = .{ 15,0 } },
+    .{ .from = 0x10EFD, .to = 0x10EFF, .since = .{ 15,0 } },
+    .{ .from = 0x1123F, .to = 0x11241, .since = .{ 15,0 } },
+    .{ .from = 0x11B00, .to = 0x11B09, .since = .{ 15,0 } },
+    .{ .from = 0x11F00, .to = 0x11F10, .since = .{ 15,0 } },
+    .{ .from = 0x11F12, .to = 0x11F3A, .since = .{ 15,0 } },
+    .{ .from = 0x11F3E, .to = 0x11F59, .since = .{ 15,0 } },
+    .{ .from = 0x1342F, .to = 0x1342F, .since = .{ 15,0 } },
+    .{ .from = 0x13439, .to = 0x1343F, .since = .{ 15,0 } },
+    .{ .from = 0x13440, .to = 0x13455, .since = .{ 15,0 } },
+    .{ .from = 0x1B132, .to = 0x1B132, .since = .{ 15,0 } },
+    .{ .from = 0x1B155, .to = 0x1B155, .since = .{ 15,0 } },
+    .{ .from = 0x1D2C0, .to = 0x1D2D3, .since = .{ 15,0 } },
+    .{ .from = 0x1DF25, .to = 0x1DF2A, .since = .{ 15,0 } },
+    .{ .from = 0x1E030, .to = 0x1E06D, .since = .{ 15,0 } },
+    .{ .from = 0x1E08F, .to = 0x1E08F, .since = .{ 15,0 } },
+    .{ .from = 0x1E4D0, .to = 0x1E4F9, .since = .{ 15,0 } },
+    .{ .from = 0x1F6DC, .to = 0x1F6DC, .since = .{ 15,0 } },
+    .{ .from = 0x1F774, .to = 0x1F776, .since = .{ 15,0 } },
+    .{ .from = 0x1F77B, .to = 0x1F77F, .since = .{ 15,0 } },
+    .{ .from = 0x1F7D9, .to = 0x1F7D9, .since = .{ 15,0 } },
+    .{ .from = 0x1FA75, .to = 0x1FA77, .since = .{ 15,0 } },
+    .{ .from = 0x1FA87, .to = 0x1FA88, .since = .{ 15,0 } },
+    .{ .from = 0x1FAAD, .to = 0x1FAAF, .since = .{ 15,0 } },
+    .{ .from = 0x1FABB, .to = 0x1FABD, .since = .{ 15,0 } },
+    .{ .from = 0x1FABF, .to = 0x1FABF, .since = .{ 15,0 } },
+    .{ .from = 0x1FACE, .to = 0x1FACF, .since = .{ 15,0 } },
+    .{ .from = 0x1FADA, .to = 0x1FADB, .since = .{ 15,0 } },
+    .{ .from = 0x1FAE8, .to = 0x1FAE8, .since = .{ 15,0 } },
+    .{ .from = 0x1FAF7, .to = 0x1FAF8, .since = .{ 15,0 } },
+    .{ .from = 0x2B739, .to = 0x2B739, .since = .{ 15,0 } },
+    .{ .from = 0x31350, .to = 0x323AF, .since = .{ 15,0 } },
 };

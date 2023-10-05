@@ -1,7 +1,7 @@
 // This file is part of the Unicode Character Database
 // For documentation, see http://www.unicode.org/reports/tr44/
 //
-// Based on the source file: https://unicode.org/Public/14.0.0/ucd/PropertyValueAliases.txt
+// Based on the source file: https://unicode.org/Public/15.0.0/ucd/PropertyValueAliases.txt
 //
 // zig fmt: off
 
@@ -38,6 +38,7 @@ pub const data = [_][3][]const u8{
     .{ "age", "12.1", "V12_1" },
     .{ "age", "13.0", "V13_0" },
     .{ "age", "14.0", "V14_0" },
+    .{ "age", "15.0", "V15_0" },
     .{ "age", "NA", "Unassigned" },
     .{ "Alpha", "N", "No" },
     .{ "Alpha", "F", "No" },
@@ -95,6 +96,7 @@ pub const data = [_][3][]const u8{
     .{ "blk", "Arabic", "Arabic" },
     .{ "blk", "Arabic_Ext_A", "Arabic_Extended_A" },
     .{ "blk", "Arabic_Ext_B", "Arabic_Extended_B" },
+    .{ "blk", "Arabic_Ext_C", "Arabic_Extended_C" },
     .{ "blk", "Arabic_Math", "Arabic_Mathematical_Alphabetic_Symbols" },
     .{ "blk", "Arabic_PF_A", "Arabic_Presentation_Forms_A" },
     .{ "blk", "Arabic_Presentation_Forms-A", "Arabic_Presentation_Forms_A" },
@@ -140,6 +142,7 @@ pub const data = [_][3][]const u8{
     .{ "blk", "CJK_Ext_E", "CJK_Unified_Ideographs_Extension_E" },
     .{ "blk", "CJK_Ext_F", "CJK_Unified_Ideographs_Extension_F" },
     .{ "blk", "CJK_Ext_G", "CJK_Unified_Ideographs_Extension_G" },
+    .{ "blk", "CJK_Ext_H", "CJK_Unified_Ideographs_Extension_H" },
     .{ "blk", "CJK_Radicals_Sup", "CJK_Radicals_Supplement" },
     .{ "blk", "CJK_Strokes", "CJK_Strokes" },
     .{ "blk", "CJK_Symbols", "CJK_Symbols_And_Punctuation" },
@@ -157,11 +160,13 @@ pub const data = [_][3][]const u8{
     .{ "blk", "Cyrillic_Ext_A", "Cyrillic_Extended_A" },
     .{ "blk", "Cyrillic_Ext_B", "Cyrillic_Extended_B" },
     .{ "blk", "Cyrillic_Ext_C", "Cyrillic_Extended_C" },
+    .{ "blk", "Cyrillic_Ext_D", "Cyrillic_Extended_D" },
     .{ "blk", "Cyrillic_Sup", "Cyrillic_Supplement" },
     .{ "blk", "Cyrillic_Supplementary", "Cyrillic_Supplement" },
     .{ "blk", "Deseret", "Deseret" },
     .{ "blk", "Devanagari", "Devanagari" },
     .{ "blk", "Devanagari_Ext", "Devanagari_Extended" },
+    .{ "blk", "Devanagari_Ext_A", "Devanagari_Extended_A" },
     .{ "blk", "Diacriticals", "Combining_Diacritical_Marks" },
     .{ "blk", "Diacriticals_Ext", "Combining_Diacritical_Marks_Extended" },
     .{ "blk", "Diacriticals_For_Symbols", "Combining_Diacritical_Marks_For_Symbols" },
@@ -224,6 +229,7 @@ pub const data = [_][3][]const u8{
     .{ "blk", "Jamo_Ext_B", "Hangul_Jamo_Extended_B" },
     .{ "blk", "Javanese", "Javanese" },
     .{ "blk", "Kaithi", "Kaithi" },
+    .{ "blk", "Kaktovik_Numerals", "Kaktovik_Numerals" },
     .{ "blk", "Kana_Ext_A", "Kana_Extended_A" },
     .{ "blk", "Kana_Ext_B", "Kana_Extended_B" },
     .{ "blk", "Kana_Sup", "Kana_Supplement" },
@@ -232,6 +238,7 @@ pub const data = [_][3][]const u8{
     .{ "blk", "Kannada", "Kannada" },
     .{ "blk", "Katakana", "Katakana" },
     .{ "blk", "Katakana_Ext", "Katakana_Phonetic_Extensions" },
+    .{ "blk", "Kawi", "Kawi" },
     .{ "blk", "Kayah_Li", "Kayah_Li" },
     .{ "blk", "Kharoshthi", "Kharoshthi" },
     .{ "blk", "Khitan_Small_Script", "Khitan_Small_Script" },
@@ -297,6 +304,7 @@ pub const data = [_][3][]const u8{
     .{ "blk", "Myanmar_Ext_A", "Myanmar_Extended_A" },
     .{ "blk", "Myanmar_Ext_B", "Myanmar_Extended_B" },
     .{ "blk", "Nabataean", "Nabataean" },
+    .{ "blk", "Nag_Mundari", "Nag_Mundari" },
     .{ "blk", "Nandinagari", "Nandinagari" },
     .{ "blk", "NB", "No_Block" },
     .{ "blk", "New_Tai_Lue", "New_Tai_Lue" },
@@ -1234,6 +1242,7 @@ pub const data = [_][3][]const u8{
     .{ "sc", "Java", "Javanese" },
     .{ "sc", "Kali", "Kayah_Li" },
     .{ "sc", "Kana", "Katakana" },
+    .{ "sc", "Kawi", "Kawi" },
     .{ "sc", "Khar", "Kharoshthi" },
     .{ "sc", "Khmr", "Khmer" },
     .{ "sc", "Khoj", "Khojki" },
@@ -1266,6 +1275,7 @@ pub const data = [_][3][]const u8{
     .{ "sc", "Mtei", "Meetei_Mayek" },
     .{ "sc", "Mult", "Multani" },
     .{ "sc", "Mymr", "Myanmar" },
+    .{ "sc", "Nagm", "Nag_Mundari" },
     .{ "sc", "Nand", "Nandinagari" },
     .{ "sc", "Narb", "Old_North_Arabian" },
     .{ "sc", "Nbat", "Nabataean" },

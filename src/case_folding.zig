@@ -1,7 +1,7 @@
 // This file is part of the Unicode Character Database
 // For documentation, see http://www.unicode.org/reports/tr44/
 //
-// Based on the source file: https://unicode.org/Public/14.0.0/ucd/CaseFolding.txt
+// Based on the source file: https://unicode.org/Public/15.0.0/ucd/CaseFolding.txt
 //
 // zig fmt: off
 

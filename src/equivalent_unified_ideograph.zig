@@ -1,7 +1,7 @@
 // This file is part of the Unicode Character Database
 // For documentation, see http://www.unicode.org/reports/tr44/
 //
-// Based on the source file: https://unicode.org/Public/14.0.0/ucd/EquivalentUnifiedIdeograph.txt
+// Based on the source file: https://unicode.org/Public/15.0.0/ucd/EquivalentUnifiedIdeograph.txt
 //
 // zig fmt: off
 
@@ -26,7 +26,7 @@ pub const data = [_][2]u21{
     .{ 0x2E92, 0x5DF3 },
     .{ 0x2E93, 0x5E7A },
     .{ 0x2E94, 0x5F51 },
-    .{ 0x2E95, 0x5F50 },
+    .{ 0x2E95, 0x2B739 },
     .{ 0x2E96, 0x5FC4 },
     .{ 0x2E97, 0x5FC3 },
     .{ 0x2E98, 0x624C },

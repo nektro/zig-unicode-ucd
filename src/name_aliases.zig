@@ -1,7 +1,7 @@
 // This file is part of the Unicode Character Database
 // For documentation, see http://www.unicode.org/reports/tr44/
 //
-// Based on the source file: https://unicode.org/Public/14.0.0/ucd/NameAliases.txt
+// Based on the source file: https://unicode.org/Public/15.0.0/ucd/NameAliases.txt
 //
 // zig fmt: off
 
@@ -79,6 +79,7 @@ pub const data = [_]NameAlias{
     .{ .code = 0x0018, .alias = "CAN", .type = .abbreviation },
     .{ .code = 0x0019, .alias = "END OF MEDIUM", .type = .control },
     .{ .code = 0x0019, .alias = "EOM", .type = .abbreviation },
+    .{ .code = 0x0019, .alias = "EM", .type = .abbreviation },
     .{ .code = 0x001A, .alias = "SUBSTITUTE", .type = .control },
     .{ .code = 0x001A, .alias = "SUB", .type = .abbreviation },
     .{ .code = 0x001B, .alias = "ESCAPE", .type = .control },
@@ -179,6 +180,7 @@ pub const data = [_]NameAlias{
     .{ .code = 0x01A2, .alias = "LATIN CAPITAL LETTER GHA", .type = .correction },
     .{ .code = 0x01A3, .alias = "LATIN SMALL LETTER GHA", .type = .correction },
     .{ .code = 0x034F, .alias = "CGJ", .type = .abbreviation },
+    .{ .code = 0x0616, .alias = "ARABIC SMALL HIGH LIGATURE ALEF WITH YEH BARREE", .type = .correction },
     .{ .code = 0x061C, .alias = "ALM", .type = .abbreviation },
     .{ .code = 0x0709, .alias = "SYRIAC SUBLINEAR COLON SKEWED LEFT", .type = .correction },
     .{ .code = 0x0CDE, .alias = "KANNADA LETTER LLLA", .type = .correction },
@@ -196,6 +198,7 @@ pub const data = [_]NameAlias{
     .{ .code = 0x180D, .alias = "FVS3", .type = .abbreviation },
     .{ .code = 0x180E, .alias = "MVS", .type = .abbreviation },
     .{ .code = 0x180F, .alias = "FVS4", .type = .abbreviation },
+    .{ .code = 0x1BBD, .alias = "SUNDANESE LETTER ARCHAIC I", .type = .correction },
     .{ .code = 0x200B, .alias = "ZWSP", .type = .abbreviation },
     .{ .code = 0x200C, .alias = "ZWNJ", .type = .abbreviation },
     .{ .code = 0x200D, .alias = "ZWJ", .type = .abbreviation },
