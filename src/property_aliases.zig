@@ -1,7 +1,7 @@
 // This file is part of the Unicode Character Database
 // For documentation, see http://www.unicode.org/reports/tr44/
 //
-// Based on the source file: https://unicode.org/Public/15.0.0/ucd/PropertyAliases.txt
+// Based on the source file: https://unicode.org/Public/15.1.0/ucd/PropertyAliases.txt
 //
 // zig fmt: off
 
@@ -12,12 +12,16 @@ pub const data = [_][2][]const u8{
     .{ "cjkOtherNumeric", "kOtherNumeric" },
     .{ "cjkPrimaryNumeric", "kPrimaryNumeric" },
     .{ "nv", "Numeric_Value" },
+    .{ "bmg", "Bidi_Mirroring_Glyph" },
+    .{ "bpb", "Bidi_Paired_Bracket" },
     .{ "cf", "Case_Folding" },
     .{ "cjkCompatibilityVariant", "kCompatibilityVariant" },
     .{ "dm", "Decomposition_Mapping" },
+    .{ "EqUIdeo", "Equivalent_Unified_Ideograph" },
     .{ "FC_NFKC", "FC_NFKC_Closure" },
     .{ "lc", "Lowercase_Mapping" },
     .{ "NFKC_CF", "NFKC_Casefold" },
+    .{ "NFKC_SCF", "NFKC_Simple_Casefold" },
     .{ "scf", "Simple_Case_Folding" },
     .{ "sfc", "Simple_Case_Folding" },
     .{ "slc", "Simple_Lowercase_Mapping" },
@@ -25,8 +29,6 @@ pub const data = [_][2][]const u8{
     .{ "suc", "Simple_Uppercase_Mapping" },
     .{ "tc", "Titlecase_Mapping" },
     .{ "uc", "Uppercase_Mapping" },
-    .{ "bmg", "Bidi_Mirroring_Glyph" },
-    .{ "bpb", "Bidi_Paired_Bracket" },
     .{ "cjkIICore", "kIICore" },
     .{ "cjkIRG_GSource", "kIRG_GSource" },
     .{ "cjkIRG_HSource", "kIRG_HSource" },
@@ -42,7 +44,6 @@ pub const data = [_][2][]const u8{
     .{ "cjkRSUnicode", "kRSUnicode" },
     .{ "Unicode_Radical_Stroke", "kRSUnicode" },
     .{ "URS", "kRSUnicode" },
-    .{ "EqUIdeo", "Equivalent_Unified_Ideograph" },
     .{ "isc", "ISO_Comment" },
     .{ "JSN", "Jamo_Short_Name" },
     .{ "na", "Name" },
@@ -60,6 +61,7 @@ pub const data = [_][2][]const u8{
     .{ "gc", "General_Category" },
     .{ "GCB", "Grapheme_Cluster_Break" },
     .{ "hst", "Hangul_Syllable_Type" },
+    .{ "InCB", "Indic_Conjunct_Break" },
     .{ "InPC", "Indic_Positional_Category" },
     .{ "InSC", "Indic_Syllabic_Category" },
     .{ "jg", "Joining_Group" },
@@ -103,11 +105,14 @@ pub const data = [_][2][]const u8{
     .{ "Gr_Link", "Grapheme_Link" },
     .{ "Hex", "Hex_Digit" },
     .{ "Hyphen", "Hyphen" },
+    .{ "ID_Compat_Math_Continue", "ID_Compat_Math_Continue" },
+    .{ "ID_Compat_Math_Start", "ID_Compat_Math_Start" },
     .{ "IDC", "ID_Continue" },
     .{ "Ideo", "Ideographic" },
     .{ "IDS", "ID_Start" },
     .{ "IDSB", "IDS_Binary_Operator" },
     .{ "IDST", "IDS_Trinary_Operator" },
+    .{ "IDSU", "IDS_Unary_Operator" },
     .{ "Join_C", "Join_Control" },
     .{ "LOE", "Logical_Order_Exception" },
     .{ "Lower", "Lowercase" },

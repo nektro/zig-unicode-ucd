@@ -1,7 +1,7 @@
 // This file is part of the Unicode Character Database
 // For documentation, see http://www.unicode.org/reports/tr44/
 //
-// Based on the source file: https://unicode.org/Public/15.0.0/ucd/Blocks.txt
+// Based on the source file: https://unicode.org/Public/15.1.0/ucd/Blocks.txt
 //
 // zig fmt: off
 
@@ -332,6 +332,7 @@ pub const data = [_]Block{
     .{ .from = 0x2B740, .to = 0x2B81F, .name = "CJK Unified Ideographs Extension D" },
     .{ .from = 0x2B820, .to = 0x2CEAF, .name = "CJK Unified Ideographs Extension E" },
     .{ .from = 0x2CEB0, .to = 0x2EBEF, .name = "CJK Unified Ideographs Extension F" },
+    .{ .from = 0x2EBF0, .to = 0x2EE5F, .name = "CJK Unified Ideographs Extension I" },
     .{ .from = 0x2F800, .to = 0x2FA1F, .name = "CJK Compatibility Ideographs Supplement" },
     .{ .from = 0x30000, .to = 0x3134F, .name = "CJK Unified Ideographs Extension G" },
     .{ .from = 0x31350, .to = 0x323AF, .name = "CJK Unified Ideographs Extension H" },

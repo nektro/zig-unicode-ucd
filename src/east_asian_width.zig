@@ -1,7 +1,7 @@
 // This file is part of the Unicode Character Database
 // For documentation, see http://www.unicode.org/reports/tr44/
 //
-// Based on the source file: https://unicode.org/Public/15.0.0/ucd/EastAsianWidth.txt
+// Based on the source file: https://unicode.org/Public/15.1.0/ucd/EastAsianWidth.txt
 //
 // zig fmt: off
 
@@ -1402,7 +1402,7 @@ pub const data = [_]EastAsianWidth{
     .{ .from = 0x2E80, .to = 0x2E99, .prop = .W },
     .{ .from = 0x2E9B, .to = 0x2EF3, .prop = .W },
     .{ .from = 0x2F00, .to = 0x2FD5, .prop = .W },
-    .{ .from = 0x2FF0, .to = 0x2FFB, .prop = .W },
+    .{ .from = 0x2FF0, .to = 0x2FFF, .prop = .W },
     .{ .from = 0x3000, .to = 0x3000, .prop = .F },
     .{ .from = 0x3001, .to = 0x3003, .prop = .W },
     .{ .from = 0x3004, .to = 0x3004, .prop = .W },
@@ -1461,6 +1461,7 @@ pub const data = [_]EastAsianWidth{
     .{ .from = 0x3196, .to = 0x319F, .prop = .W },
     .{ .from = 0x31A0, .to = 0x31BF, .prop = .W },
     .{ .from = 0x31C0, .to = 0x31E3, .prop = .W },
+    .{ .from = 0x31EF, .to = 0x31EF, .prop = .W },
     .{ .from = 0x31F0, .to = 0x31FF, .prop = .W },
     .{ .from = 0x3200, .to = 0x321E, .prop = .W },
     .{ .from = 0x3220, .to = 0x3229, .prop = .W },
@@ -2574,7 +2575,9 @@ pub const data = [_]EastAsianWidth{
     .{ .from = 0x2B820, .to = 0x2CEA1, .prop = .W },
     .{ .from = 0x2CEA2, .to = 0x2CEAF, .prop = .W },
     .{ .from = 0x2CEB0, .to = 0x2EBE0, .prop = .W },
-    .{ .from = 0x2EBE1, .to = 0x2F7FF, .prop = .W },
+    .{ .from = 0x2EBE1, .to = 0x2EBEF, .prop = .W },
+    .{ .from = 0x2EBF0, .to = 0x2EE5D, .prop = .W },
+    .{ .from = 0x2EE5E, .to = 0x2F7FF, .prop = .W },
     .{ .from = 0x2F800, .to = 0x2FA1D, .prop = .W },
     .{ .from = 0x2FA1E, .to = 0x2FA1F, .prop = .W },
     .{ .from = 0x2FA20, .to = 0x2FFFD, .prop = .W },

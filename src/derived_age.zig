@@ -1,7 +1,7 @@
 // This file is part of the Unicode Character Database
 // For documentation, see http://www.unicode.org/reports/tr44/
 //
-// Based on the source file: https://unicode.org/Public/15.0.0/ucd/DerivedAge.txt
+// Based on the source file: https://unicode.org/Public/15.1.0/ucd/DerivedAge.txt
 //
 // zig fmt: off
 
@@ -1730,4 +1730,7 @@ pub const data = [_]Age{
     .{ .from = 0x1FAF7, .to = 0x1FAF8, .since = .{ 15,0 } },
     .{ .from = 0x2B739, .to = 0x2B739, .since = .{ 15,0 } },
     .{ .from = 0x31350, .to = 0x323AF, .since = .{ 15,0 } },
+    .{ .from = 0x2FFC, .to = 0x2FFF, .since = .{ 15,1 } },
+    .{ .from = 0x31EF, .to = 0x31EF, .since = .{ 15,1 } },
+    .{ .from = 0x2EBF0, .to = 0x2EE5D, .since = .{ 15,1 } },
 };

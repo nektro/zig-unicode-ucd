@@ -10,7 +10,7 @@ pub usingnamespace common.Main(struct {
         \\pub const CJKRadical = struct {
         \\    number: u8,
         \\    simplified: bool,
-        \\    character: u21,
+        \\    character: ?u21,
         \\    ideograph: u21,
         \\};
         \\
@@ -25,13 +25,19 @@ pub usingnamespace common.Main(struct {
 
     pub fn exec(alloc: std.mem.Allocator, line: []const u8, writer: anytype) !void {
         _ = alloc;
-        var it = std.mem.tokenize(u8, line, "; ");
+        var it = std.mem.splitSequence(u8, line, "; ");
         var n = it.next().?;
         const s = std.mem.endsWith(u8, n, "'");
         const c = it.next().?;
         const i = it.next().?;
         n = std.mem.trimRight(u8, n, "'");
 
-        try writer.print("    .{{ .number = {s}, .simplified = {}, .character = 0x{s}, .ideograph = 0x{s} }},\n", .{ n, s, c, i });
+        try writer.writeAll("    .{");
+        try writer.print(" .number = {s},", .{n});
+        try writer.print(" .simplified = {},", .{s});
+        try writer.writeAll(" .character =");
+        if (common.nullify(c)) |res| try common.printCodepoint(writer, res) else try writer.writeAll(" null,");
+        try writer.print(" .ideograph = 0x{s}", .{i});
+        try writer.writeAll(" },\n");
     }
 });

@@ -1,7 +1,7 @@
 // This file is part of the Unicode Character Database
 // For documentation, see http://www.unicode.org/reports/tr44/
 //
-// Based on the source file: https://unicode.org/Public/15.0.0/ucd/UnicodeData.txt
+// Based on the source file: https://unicode.org/Public/15.1.0/ucd/UnicodeData.txt
 //
 // zig fmt: off
 
@@ -11257,6 +11257,10 @@ pub const data = [_]Codepoint{
     .{ 0x2FF9, "IDEOGRAPHIC DESCRIPTION CHARACTER SURROUND FROM UPPER RIGHT", .So, 0, .ON, false, "", "", "", false, null, null, null, },
     .{ 0x2FFA, "IDEOGRAPHIC DESCRIPTION CHARACTER SURROUND FROM LOWER LEFT", .So, 0, .ON, false, "", "", "", false, null, null, null, },
     .{ 0x2FFB, "IDEOGRAPHIC DESCRIPTION CHARACTER OVERLAID", .So, 0, .ON, false, "", "", "", false, null, null, null, },
+    .{ 0x2FFC, "IDEOGRAPHIC DESCRIPTION CHARACTER SURROUND FROM RIGHT", .So, 0, .ON, false, "", "", "", false, null, null, null, },
+    .{ 0x2FFD, "IDEOGRAPHIC DESCRIPTION CHARACTER SURROUND FROM LOWER RIGHT", .So, 0, .ON, false, "", "", "", false, null, null, null, },
+    .{ 0x2FFE, "IDEOGRAPHIC DESCRIPTION CHARACTER HORIZONTAL REFLECTION", .So, 0, .ON, false, "", "", "", false, null, null, null, },
+    .{ 0x2FFF, "IDEOGRAPHIC DESCRIPTION CHARACTER ROTATION", .So, 0, .ON, false, "", "", "", false, null, null, null, },
     .{ 0x3000, "IDEOGRAPHIC SPACE", .Zs, 0, .WS, true, "", "", "", false, null, null, null, },
     .{ 0x3001, "IDEOGRAPHIC COMMA", .Po, 0, .ON, false, "", "", "", false, null, null, null, },
     .{ 0x3002, "IDEOGRAPHIC FULL STOP", .Po, 0, .ON, false, "", "", "", false, null, null, null, },
@@ -11731,6 +11735,7 @@ pub const data = [_]Codepoint{
     .{ 0x31E1, "CJK STROKE HZZZG", .So, 0, .ON, false, "", "", "", false, null, null, null, },
     .{ 0x31E2, "CJK STROKE PG", .So, 0, .ON, false, "", "", "", false, null, null, null, },
     .{ 0x31E3, "CJK STROKE Q", .So, 0, .ON, false, "", "", "", false, null, null, null, },
+    .{ 0x31EF, "IDEOGRAPHIC DESCRIPTION CHARACTER SUBTRACTION", .So, 0, .ON, false, "", "", "", false, null, null, null, },
     .{ 0x31F0, "KATAKANA LETTER SMALL KU", .Lo, 0, .L, false, "", "", "", false, null, null, null, },
     .{ 0x31F1, "KATAKANA LETTER SMALL SI", .Lo, 0, .L, false, "", "", "", false, null, null, null, },
     .{ 0x31F2, "KATAKANA LETTER SMALL SU", .Lo, 0, .L, false, "", "", "", false, null, null, null, },
@@ -34061,6 +34066,8 @@ pub const data = [_]Codepoint{
     .{ 0x2CEA1, "<CJK Ideograph Extension E, Last>", .Lo, 0, .L, false, "", "", "", false, null, null, null, },
     .{ 0x2CEB0, "<CJK Ideograph Extension F, First>", .Lo, 0, .L, false, "", "", "", false, null, null, null, },
     .{ 0x2EBE0, "<CJK Ideograph Extension F, Last>", .Lo, 0, .L, false, "", "", "", false, null, null, null, },
+    .{ 0x2EBF0, "<CJK Ideograph Extension I, First>", .Lo, 0, .L, false, "", "", "", false, null, null, null, },
+    .{ 0x2EE5D, "<CJK Ideograph Extension I, Last>", .Lo, 0, .L, false, "", "", "", false, null, null, null, },
     .{ 0x2F800, "CJK COMPATIBILITY IDEOGRAPH-2F800", .Lo, 0, .L, false, "", "", "", false, null, null, null, },
     .{ 0x2F801, "CJK COMPATIBILITY IDEOGRAPH-2F801", .Lo, 0, .L, false, "", "", "", false, null, null, null, },
     .{ 0x2F802, "CJK COMPATIBILITY IDEOGRAPH-2F802", .Lo, 0, .L, false, "", "", "", false, null, null, null, },

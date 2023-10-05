@@ -1,7 +1,7 @@
 // This file is part of the Unicode Character Database
 // For documentation, see http://www.unicode.org/reports/tr44/
 //
-// Based on the source file: https://unicode.org/Public/15.0.0/ucd/ScriptExtensions.txt
+// Based on the source file: https://unicode.org/Public/15.1.0/ucd/ScriptExtensions.txt
 //
 // zig fmt: off
 
@@ -388,9 +388,9 @@ pub const data = [_]ScriptExtension{
     .{ .code = 0x102F9, .scripts = &.{ .Arab, .Copt, } },
     .{ .code = 0x102FA, .scripts = &.{ .Arab, .Copt, } },
     .{ .code = 0x102FB, .scripts = &.{ .Arab, .Copt, } },
-    .{ .code = 0x06D4, .scripts = &.{ .Arab, .Rohg, } },
     .{ .code = 0xFD3E, .scripts = &.{ .Arab, .Nkoo, } },
     .{ .code = 0xFD3F, .scripts = &.{ .Arab, .Nkoo, } },
+    .{ .code = 0x06D4, .scripts = &.{ .Arab, .Rohg, } },
     .{ .code = 0x64B, .scripts = &.{ .Arab, .Syrc, } },
     .{ .code = 0x64C, .scripts = &.{ .Arab, .Syrc, } },
     .{ .code = 0x64D, .scripts = &.{ .Arab, .Syrc, } },
@@ -664,20 +664,20 @@ pub const data = [_]ScriptExtension{
     .{ .code = 0xFF65, .scripts = &.{ .Bopo, .Hang, .Hani, .Hira, .Kana, .Yiii, } },
     .{ .code = 0x1CDA, .scripts = &.{ .Deva, .Knda, .Mlym, .Orya, .Taml, .Telu, } },
     .{ .code = 0x061F, .scripts = &.{ .Adlm, .Arab, .Nkoo, .Rohg, .Syrc, .Thaa, .Yezi, } },
-    .{ .code = 0x1CF2, .scripts = &.{ .Beng, .Deva, .Gran, .Knda, .Nand, .Orya, .Telu, .Tirh, } },
     .{ .code = 0x0640, .scripts = &.{ .Adlm, .Arab, .Mand, .Mani, .Ougr, .Phlp, .Rohg, .Sogd, .Syrc, } },
+    .{ .code = 0x1CF2, .scripts = &.{ .Beng, .Deva, .Gran, .Knda, .Mlym, .Nand, .Orya, .Sinh, .Telu, .Tirh, } },
     .{ .code = 0xA836, .scripts = &.{ .Deva, .Dogr, .Gujr, .Guru, .Khoj, .Kthi, .Mahj, .Modi, .Sind, .Takr, .Tirh, } },
     .{ .code = 0xA837, .scripts = &.{ .Deva, .Dogr, .Gujr, .Guru, .Khoj, .Kthi, .Mahj, .Modi, .Sind, .Takr, .Tirh, } },
-    .{ .code = 0xA838, .scripts = &.{ .Deva, .Dogr, .Gujr, .Guru, .Khoj, .Kthi, .Mahj, .Modi, .Sind, .Takr, .Tirh, } },
     .{ .code = 0xA839, .scripts = &.{ .Deva, .Dogr, .Gujr, .Guru, .Khoj, .Kthi, .Mahj, .Modi, .Sind, .Takr, .Tirh, } },
     .{ .code = 0x0952, .scripts = &.{ .Beng, .Deva, .Gran, .Gujr, .Guru, .Knda, .Latn, .Mlym, .Orya, .Taml, .Telu, .Tirh, } },
+    .{ .code = 0xA838, .scripts = &.{ .Deva, .Dogr, .Gujr, .Guru, .Khoj, .Kthi, .Mahj, .Modi, .Shrd, .Sind, .Takr, .Tirh, } },
     .{ .code = 0x0951, .scripts = &.{ .Beng, .Deva, .Gran, .Gujr, .Guru, .Knda, .Latn, .Mlym, .Orya, .Shrd, .Taml, .Telu, .Tirh, } },
-    .{ .code = 0xA833, .scripts = &.{ .Deva, .Dogr, .Gujr, .Guru, .Khoj, .Knda, .Kthi, .Mahj, .Modi, .Nand, .Sind, .Takr, .Tirh, } },
-    .{ .code = 0xA834, .scripts = &.{ .Deva, .Dogr, .Gujr, .Guru, .Khoj, .Knda, .Kthi, .Mahj, .Modi, .Nand, .Sind, .Takr, .Tirh, } },
-    .{ .code = 0xA835, .scripts = &.{ .Deva, .Dogr, .Gujr, .Guru, .Khoj, .Knda, .Kthi, .Mahj, .Modi, .Nand, .Sind, .Takr, .Tirh, } },
-    .{ .code = 0xA830, .scripts = &.{ .Deva, .Dogr, .Gujr, .Guru, .Khoj, .Knda, .Kthi, .Mahj, .Mlym, .Modi, .Nand, .Sind, .Takr, .Tirh, } },
-    .{ .code = 0xA831, .scripts = &.{ .Deva, .Dogr, .Gujr, .Guru, .Khoj, .Knda, .Kthi, .Mahj, .Mlym, .Modi, .Nand, .Sind, .Takr, .Tirh, } },
-    .{ .code = 0xA832, .scripts = &.{ .Deva, .Dogr, .Gujr, .Guru, .Khoj, .Knda, .Kthi, .Mahj, .Mlym, .Modi, .Nand, .Sind, .Takr, .Tirh, } },
+    .{ .code = 0xA833, .scripts = &.{ .Deva, .Dogr, .Gujr, .Guru, .Khoj, .Knda, .Kthi, .Mahj, .Modi, .Nand, .Shrd, .Sind, .Takr, .Tirh, } },
+    .{ .code = 0xA834, .scripts = &.{ .Deva, .Dogr, .Gujr, .Guru, .Khoj, .Knda, .Kthi, .Mahj, .Modi, .Nand, .Shrd, .Sind, .Takr, .Tirh, } },
+    .{ .code = 0xA835, .scripts = &.{ .Deva, .Dogr, .Gujr, .Guru, .Khoj, .Knda, .Kthi, .Mahj, .Modi, .Nand, .Shrd, .Sind, .Takr, .Tirh, } },
+    .{ .code = 0xA830, .scripts = &.{ .Deva, .Dogr, .Gujr, .Guru, .Khoj, .Knda, .Kthi, .Mahj, .Mlym, .Modi, .Nand, .Shrd, .Sind, .Takr, .Tirh, } },
+    .{ .code = 0xA831, .scripts = &.{ .Deva, .Dogr, .Gujr, .Guru, .Khoj, .Knda, .Kthi, .Mahj, .Mlym, .Modi, .Nand, .Shrd, .Sind, .Takr, .Tirh, } },
+    .{ .code = 0xA832, .scripts = &.{ .Deva, .Dogr, .Gujr, .Guru, .Khoj, .Knda, .Kthi, .Mahj, .Mlym, .Modi, .Nand, .Shrd, .Sind, .Takr, .Tirh, } },
     .{ .code = 0x0964, .scripts = &.{ .Beng, .Deva, .Dogr, .Gong, .Gonm, .Gran, .Gujr, .Guru, .Knda, .Mahj, .Mlym, .Nand, .Orya, .Sind, .Sinh, .Sylo, .Takr, .Taml, .Telu, .Tirh, } },
     .{ .code = 0x0965, .scripts = &.{ .Beng, .Deva, .Dogr, .Gong, .Gonm, .Gran, .Gujr, .Guru, .Knda, .Limb, .Mahj, .Mlym, .Nand, .Orya, .Sind, .Sinh, .Sylo, .Takr, .Taml, .Telu, .Tirh, } },
 };

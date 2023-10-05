@@ -16,6 +16,7 @@ pub usingnamespace common.Main(struct {
         \\        EM, EX, H2, H3, HL, HY, ID, IN, IS, JL,
         \\        JT, JV, NS, NU, OP, PO, PR, QU, RI, SA,
         \\        SG, SY, XX,
+        \\        AK, VI, AS, VF, AP,
         \\    },
         \\};
         \\

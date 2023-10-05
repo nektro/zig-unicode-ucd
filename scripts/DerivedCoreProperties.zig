@@ -30,6 +30,7 @@ pub usingnamespace common.Main(struct {
         \\        Grapheme_Extend,
         \\        Grapheme_Base,
         \\        Grapheme_Link,
+        \\        InCB,
         \\    },
         \\};
         \\

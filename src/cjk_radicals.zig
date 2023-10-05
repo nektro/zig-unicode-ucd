@@ -1,14 +1,14 @@
 // This file is part of the Unicode Character Database
 // For documentation, see http://www.unicode.org/reports/tr44/
 //
-// Based on the source file: https://unicode.org/Public/15.0.0/ucd/CJKRadicals.txt
+// Based on the source file: https://unicode.org/Public/15.1.0/ucd/CJKRadicals.txt
 //
 // zig fmt: off
 
 pub const CJKRadical = struct {
     number: u8,
     simplified: bool,
-    character: u21,
+    character: ?u21,
     ideograph: u21,
 };
 
@@ -181,7 +181,6 @@ pub const data = [_]CJKRadical{
     .{ .number = 160, .simplified = false, .character = 0x2F9F, .ideograph = 0x8F9B },
     .{ .number = 161, .simplified = false, .character = 0x2FA0, .ideograph = 0x8FB0 },
     .{ .number = 162, .simplified = false, .character = 0x2FA1, .ideograph = 0x8FB5 },
-    .{ .number = 162, .simplified = true, .character = 0x2ECC, .ideograph = 0x8FB6 },
     .{ .number = 163, .simplified = false, .character = 0x2FA2, .ideograph = 0x9091 },
     .{ .number = 164, .simplified = false, .character = 0x2FA3, .ideograph = 0x9149 },
     .{ .number = 165, .simplified = false, .character = 0x2FA4, .ideograph = 0x91C6 },
@@ -208,6 +207,7 @@ pub const data = [_]CJKRadical{
     .{ .number = 181, .simplified = true, .character = 0x2EDA, .ideograph = 0x9875 },
     .{ .number = 182, .simplified = false, .character = 0x2FB5, .ideograph = 0x98A8 },
     .{ .number = 182, .simplified = true, .character = 0x2EDB, .ideograph = 0x98CE },
+    .{ .number = 182, .simplified = true, .character = null, .ideograph = 0x322C4 },
     .{ .number = 183, .simplified = false, .character = 0x2FB6, .ideograph = 0x98DB },
     .{ .number = 183, .simplified = true, .character = 0x2EDC, .ideograph = 0x98DE },
     .{ .number = 184, .simplified = false, .character = 0x2FB7, .ideograph = 0x98DF },
@@ -243,14 +243,19 @@ pub const data = [_]CJKRadical{
     .{ .number = 206, .simplified = false, .character = 0x2FCD, .ideograph = 0x9F0E },
     .{ .number = 207, .simplified = false, .character = 0x2FCE, .ideograph = 0x9F13 },
     .{ .number = 208, .simplified = false, .character = 0x2FCF, .ideograph = 0x9F20 },
+    .{ .number = 208, .simplified = true, .character = null, .ideograph = 0x9F21 },
     .{ .number = 209, .simplified = false, .character = 0x2FD0, .ideograph = 0x9F3B },
     .{ .number = 210, .simplified = false, .character = 0x2FD1, .ideograph = 0x9F4A },
     .{ .number = 210, .simplified = true, .character = 0x2EEC, .ideograph = 0x9F50 },
+    .{ .number = 210, .simplified = true, .character = 0x2EEB, .ideograph = 0x6589 },
     .{ .number = 211, .simplified = false, .character = 0x2FD2, .ideograph = 0x9F52 },
     .{ .number = 211, .simplified = true, .character = 0x2EEE, .ideograph = 0x9F7F },
+    .{ .number = 211, .simplified = true, .character = 0x2EED, .ideograph = 0x6B6F },
     .{ .number = 212, .simplified = false, .character = 0x2FD3, .ideograph = 0x9F8D },
     .{ .number = 212, .simplified = true, .character = 0x2EF0, .ideograph = 0x9F99 },
+    .{ .number = 212, .simplified = true, .character = 0x2EEF, .ideograph = 0x7ADC },
     .{ .number = 213, .simplified = false, .character = 0x2FD4, .ideograph = 0x9F9C },
     .{ .number = 213, .simplified = true, .character = 0x2EF3, .ideograph = 0x9F9F },
+    .{ .number = 213, .simplified = true, .character = 0x2EF2, .ideograph = 0x4E80 },
     .{ .number = 214, .simplified = false, .character = 0x2FD5, .ideograph = 0x9FA0 },
 };

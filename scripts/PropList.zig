@@ -45,6 +45,9 @@ pub usingnamespace common.Main(struct {
         \\        Pattern_Syntax,
         \\        Prepended_Concatenation_Mark,
         \\        Regional_Indicator,
+        \\        IDS_Unary_Operator,
+        \\        ID_Compat_Math_Continue,
+        \\        ID_Compat_Math_Start,
         \\    },
         \\};
         \\

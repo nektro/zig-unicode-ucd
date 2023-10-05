@@ -1,7 +1,7 @@
 // This file is part of the Unicode Character Database
 // For documentation, see http://www.unicode.org/reports/tr44/
 //
-// Based on the source file: https://unicode.org/Public/15.0.0/ucd/Scripts.txt
+// Based on the source file: https://unicode.org/Public/15.1.0/ucd/Scripts.txt
 //
 // zig fmt: off
 
@@ -509,7 +509,7 @@ pub const data = [_]Scripts{
     .{ .from = 0x2E5B, .to = 0x2E5B, .script = .Common },
     .{ .from = 0x2E5C, .to = 0x2E5C, .script = .Common },
     .{ .from = 0x2E5D, .to = 0x2E5D, .script = .Common },
-    .{ .from = 0x2FF0, .to = 0x2FFB, .script = .Common },
+    .{ .from = 0x2FF0, .to = 0x2FFF, .script = .Common },
     .{ .from = 0x3000, .to = 0x3000, .script = .Common },
     .{ .from = 0x3001, .to = 0x3003, .script = .Common },
     .{ .from = 0x3004, .to = 0x3004, .script = .Common },
@@ -551,6 +551,7 @@ pub const data = [_]Scripts{
     .{ .from = 0x3192, .to = 0x3195, .script = .Common },
     .{ .from = 0x3196, .to = 0x319F, .script = .Common },
     .{ .from = 0x31C0, .to = 0x31E3, .script = .Common },
+    .{ .from = 0x31EF, .to = 0x31EF, .script = .Common },
     .{ .from = 0x3220, .to = 0x3229, .script = .Common },
     .{ .from = 0x322A, .to = 0x3247, .script = .Common },
     .{ .from = 0x3248, .to = 0x324F, .script = .Common },
@@ -1570,6 +1571,7 @@ pub const data = [_]Scripts{
     .{ .from = 0x2B740, .to = 0x2B81D, .script = .Han },
     .{ .from = 0x2B820, .to = 0x2CEA1, .script = .Han },
     .{ .from = 0x2CEB0, .to = 0x2EBE0, .script = .Han },
+    .{ .from = 0x2EBF0, .to = 0x2EE5D, .script = .Han },
     .{ .from = 0x2F800, .to = 0x2FA1D, .script = .Han },
     .{ .from = 0x30000, .to = 0x3134A, .script = .Han },
     .{ .from = 0x31350, .to = 0x323AF, .script = .Han },

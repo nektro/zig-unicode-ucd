@@ -1,7 +1,7 @@
 // This file is part of the Unicode Character Database
 // For documentation, see http://www.unicode.org/reports/tr44/
 //
-// Based on the source file: https://unicode.org/Public/15.0.0/ucd/VerticalOrientation.txt
+// Based on the source file: https://unicode.org/Public/15.1.0/ucd/VerticalOrientation.txt
 //
 // zig fmt: off
 
@@ -1128,8 +1128,7 @@ pub const data = [_]VerticalOrientation{
     .{ .from = 0x2F00, .to = 0x2FD5, .orientation = .U },
     .{ .from = 0x2FD6, .to = 0x2FDF, .orientation = .U },
     .{ .from = 0x2FE0, .to = 0x2FEF, .orientation = .U },
-    .{ .from = 0x2FF0, .to = 0x2FFB, .orientation = .U },
-    .{ .from = 0x2FFC, .to = 0x2FFF, .orientation = .U },
+    .{ .from = 0x2FF0, .to = 0x2FFF, .orientation = .U },
     .{ .from = 0x3000, .to = 0x3000, .orientation = .U },
     .{ .from = 0x3001, .to = 0x3002, .orientation = .Tu },
     .{ .from = 0x3003, .to = 0x3003, .orientation = .U },
@@ -1237,7 +1236,8 @@ pub const data = [_]VerticalOrientation{
     .{ .from = 0x3196, .to = 0x319F, .orientation = .U },
     .{ .from = 0x31A0, .to = 0x31BF, .orientation = .U },
     .{ .from = 0x31C0, .to = 0x31E3, .orientation = .U },
-    .{ .from = 0x31E4, .to = 0x31EF, .orientation = .U },
+    .{ .from = 0x31E4, .to = 0x31EE, .orientation = .U },
+    .{ .from = 0x31EF, .to = 0x31EF, .orientation = .U },
     .{ .from = 0x31F0, .to = 0x31FF, .orientation = .Tu },
     .{ .from = 0x3200, .to = 0x321E, .orientation = .U },
     .{ .from = 0x321F, .to = 0x321F, .orientation = .U },
@@ -1442,7 +1442,9 @@ pub const data = [_]VerticalOrientation{
     .{ .from = 0xD7C7, .to = 0xD7CA, .orientation = .U },
     .{ .from = 0xD7CB, .to = 0xD7FB, .orientation = .U },
     .{ .from = 0xD7FC, .to = 0xD7FF, .orientation = .U },
-    .{ .from = 0xD800, .to = 0xDFFF, .orientation = .R },
+    .{ .from = 0xD800, .to = 0xDB7F, .orientation = .R },
+    .{ .from = 0xDB80, .to = 0xDBFF, .orientation = .R },
+    .{ .from = 0xDC00, .to = 0xDFFF, .orientation = .R },
     .{ .from = 0xE000, .to = 0xF8FF, .orientation = .U },
     .{ .from = 0xF900, .to = 0xFA6D, .orientation = .U },
     .{ .from = 0xFA6E, .to = 0xFA6F, .orientation = .U },
@@ -2367,9 +2369,12 @@ pub const data = [_]VerticalOrientation{
     .{ .from = 0x2B820, .to = 0x2CEA1, .orientation = .U },
     .{ .from = 0x2CEA2, .to = 0x2CEAF, .orientation = .U },
     .{ .from = 0x2CEB0, .to = 0x2EBE0, .orientation = .U },
-    .{ .from = 0x2EBE1, .to = 0x2F7FF, .orientation = .U },
+    .{ .from = 0x2EBE1, .to = 0x2EBEF, .orientation = .U },
+    .{ .from = 0x2EBF0, .to = 0x2EE5D, .orientation = .U },
+    .{ .from = 0x2EE5E, .to = 0x2F7FF, .orientation = .U },
     .{ .from = 0x2F800, .to = 0x2FA1D, .orientation = .U },
-    .{ .from = 0x2FA1E, .to = 0x2FFFD, .orientation = .U },
+    .{ .from = 0x2FA1E, .to = 0x2FA1F, .orientation = .U },
+    .{ .from = 0x2FA20, .to = 0x2FFFD, .orientation = .U },
     .{ .from = 0x30000, .to = 0x3134A, .orientation = .U },
     .{ .from = 0x3134B, .to = 0x3134F, .orientation = .U },
     .{ .from = 0x31350, .to = 0x323AF, .orientation = .U },

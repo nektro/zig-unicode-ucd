@@ -1,7 +1,7 @@
 // This file is part of the Unicode Character Database
 // For documentation, see http://www.unicode.org/reports/tr44/
 //
-// Based on the source file: https://unicode.org/Public/15.0.0/ucd/CaseFolding.txt
+// Based on the source file: https://unicode.org/Public/15.1.0/ucd/CaseFolding.txt
 //
 // zig fmt: off
 
@@ -895,6 +895,7 @@ pub const data = [_]CaseFolding{
     .{ .code = 0x1FCC, .status = .S, .mapping = .{ .S = 0x1FC3 } },
     .{ .code = 0x1FD2, .status = .F, .mapping = .{ .F = &[_]u21{0x03B9,0x0308,0x0300,} } },
     .{ .code = 0x1FD3, .status = .F, .mapping = .{ .F = &[_]u21{0x03B9,0x0308,0x0301,} } },
+    .{ .code = 0x1FD3, .status = .S, .mapping = .{ .S = 0x0390 } },
     .{ .code = 0x1FD6, .status = .F, .mapping = .{ .F = &[_]u21{0x03B9,0x0342,} } },
     .{ .code = 0x1FD7, .status = .F, .mapping = .{ .F = &[_]u21{0x03B9,0x0308,0x0342,} } },
     .{ .code = 0x1FD8, .status = .C, .mapping = .{ .C = 0x1FD0 } },
@@ -903,6 +904,7 @@ pub const data = [_]CaseFolding{
     .{ .code = 0x1FDB, .status = .C, .mapping = .{ .C = 0x1F77 } },
     .{ .code = 0x1FE2, .status = .F, .mapping = .{ .F = &[_]u21{0x03C5,0x0308,0x0300,} } },
     .{ .code = 0x1FE3, .status = .F, .mapping = .{ .F = &[_]u21{0x03C5,0x0308,0x0301,} } },
+    .{ .code = 0x1FE3, .status = .S, .mapping = .{ .S = 0x03B0 } },
     .{ .code = 0x1FE4, .status = .F, .mapping = .{ .F = &[_]u21{0x03C1,0x0313,} } },
     .{ .code = 0x1FE6, .status = .F, .mapping = .{ .F = &[_]u21{0x03C5,0x0342,} } },
     .{ .code = 0x1FE7, .status = .F, .mapping = .{ .F = &[_]u21{0x03C5,0x0308,0x0342,} } },
@@ -1294,6 +1296,7 @@ pub const data = [_]CaseFolding{
     .{ .code = 0xFB03, .status = .F, .mapping = .{ .F = &[_]u21{0x0066,0x0066,0x0069,} } },
     .{ .code = 0xFB04, .status = .F, .mapping = .{ .F = &[_]u21{0x0066,0x0066,0x006C,} } },
     .{ .code = 0xFB05, .status = .F, .mapping = .{ .F = &[_]u21{0x0073,0x0074,} } },
+    .{ .code = 0xFB05, .status = .S, .mapping = .{ .S = 0xFB06 } },
     .{ .code = 0xFB06, .status = .F, .mapping = .{ .F = &[_]u21{0x0073,0x0074,} } },
     .{ .code = 0xFB13, .status = .F, .mapping = .{ .F = &[_]u21{0x0574,0x0576,} } },
     .{ .code = 0xFB14, .status = .F, .mapping = .{ .F = &[_]u21{0x0574,0x0565,} } },
