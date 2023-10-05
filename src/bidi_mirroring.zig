@@ -1,7 +1,7 @@
 // This file is part of the Unicode Character Database
 // For documentation, see http://www.unicode.org/reports/tr44/
 //
-// Based on the source file: https://unicode.org/Public/13.0.0/ucd/BidiMirroring.txt
+// Based on the source file: https://unicode.org/Public/14.0.0/ucd/BidiMirroring.txt
 //
 // zig fmt: off
 
@@ -393,6 +393,14 @@ pub const data = [_]Mirroring{
     .{ .codepoint = 0x2E27, .mirror = 0x2E26 },
     .{ .codepoint = 0x2E28, .mirror = 0x2E29 },
     .{ .codepoint = 0x2E29, .mirror = 0x2E28 },
+    .{ .codepoint = 0x2E55, .mirror = 0x2E56 },
+    .{ .codepoint = 0x2E56, .mirror = 0x2E55 },
+    .{ .codepoint = 0x2E57, .mirror = 0x2E58 },
+    .{ .codepoint = 0x2E58, .mirror = 0x2E57 },
+    .{ .codepoint = 0x2E59, .mirror = 0x2E5A },
+    .{ .codepoint = 0x2E5A, .mirror = 0x2E59 },
+    .{ .codepoint = 0x2E5B, .mirror = 0x2E5C },
+    .{ .codepoint = 0x2E5C, .mirror = 0x2E5B },
     .{ .codepoint = 0x3008, .mirror = 0x3009 },
     .{ .codepoint = 0x3009, .mirror = 0x3008 },
     .{ .codepoint = 0x300A, .mirror = 0x300B },

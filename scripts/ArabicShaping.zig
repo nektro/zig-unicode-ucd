@@ -127,6 +127,8 @@ pub usingnamespace common.Main(struct {
         \\        MANICHAEAN_HUNDRED,
         \\        HANIFI_ROHINGYA_PA,
         \\        HANIFI_ROHINGYA_KINNA_YA,
+        \\        THIN_YEH,
+        \\        VERTICAL_TAIL,
         \\    };
         \\};
         \\

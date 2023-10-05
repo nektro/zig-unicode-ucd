@@ -1,7 +1,7 @@
 // This file is part of the Unicode Character Database
 // For documentation, see http://www.unicode.org/reports/tr44/
 //
-// Based on the source file: https://unicode.org/Public/13.0.0/ucd/NameAliases.txt
+// Based on the source file: https://unicode.org/Public/14.0.0/ucd/NameAliases.txt
 //
 // zig fmt: off
 
@@ -195,6 +195,7 @@ pub const data = [_]NameAlias{
     .{ .code = 0x180C, .alias = "FVS2", .type = .abbreviation },
     .{ .code = 0x180D, .alias = "FVS3", .type = .abbreviation },
     .{ .code = 0x180E, .alias = "MVS", .type = .abbreviation },
+    .{ .code = 0x180F, .alias = "FVS4", .type = .abbreviation },
     .{ .code = 0x200B, .alias = "ZWSP", .type = .abbreviation },
     .{ .code = 0x200C, .alias = "ZWNJ", .type = .abbreviation },
     .{ .code = 0x200D, .alias = "ZWJ", .type = .abbreviation },
@@ -218,6 +219,7 @@ pub const data = [_]NameAlias{
     .{ .code = 0x2B7A, .alias = "LEFTWARDS TRIANGLE-HEADED ARROW WITH DOUBLE VERTICAL STROKE", .type = .correction },
     .{ .code = 0x2B7C, .alias = "RIGHTWARDS TRIANGLE-HEADED ARROW WITH DOUBLE VERTICAL STROKE", .type = .correction },
     .{ .code = 0xA015, .alias = "YI SYLLABLE ITERATION MARK", .type = .correction },
+    .{ .code = 0xAA6E, .alias = "MYANMAR LETTER KHAMTI LLA", .type = .correction },
     .{ .code = 0xFE00, .alias = "VS1", .type = .abbreviation },
     .{ .code = 0xFE01, .alias = "VS2", .type = .abbreviation },
     .{ .code = 0xFE02, .alias = "VS3", .type = .abbreviation },

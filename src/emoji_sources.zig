@@ -1,7 +1,7 @@
 // This file is part of the Unicode Character Database
 // For documentation, see http://www.unicode.org/reports/tr44/
 //
-// Based on the source file: https://unicode.org/Public/13.0.0/ucd/EmojiSources.txt
+// Based on the source file: https://unicode.org/Public/14.0.0/ucd/EmojiSources.txt
 //
 // zig fmt: off
 

@@ -1,7 +1,7 @@
 // This file is part of the Unicode Character Database
 // For documentation, see http://www.unicode.org/reports/tr44/
 //
-// Based on the source file: https://unicode.org/Public/13.0.0/ucd/IndicPositionalCategory.txt
+// Based on the source file: https://unicode.org/Public/14.0.0/ucd/IndicPositionalCategory.txt
 //
 // zig fmt: off
 
@@ -127,6 +127,8 @@ pub const data = [_]IndicPositionalCategory{
     .{ .code = 0x109A, .category = .Right },
     .{ .code = 0x109B, .category = .Right },
     .{ .code = 0x109C, .category = .Right },
+    .{ .code = 0x1715, .category = .Right },
+    .{ .code = 0x1734, .category = .Right },
     .{ .code = 0x17B6, .category = .Right },
     .{ .code = 0x17C7, .category = .Right },
     .{ .code = 0x17C8, .category = .Right },
@@ -698,6 +700,9 @@ pub const data = [_]IndicPositionalCategory{
     .{ .code = 0x11044, .category = .Top },
     .{ .code = 0x11045, .category = .Top },
     .{ .code = 0x11046, .category = .Top },
+    .{ .code = 0x11070, .category = .Top },
+    .{ .code = 0x11073, .category = .Top },
+    .{ .code = 0x11074, .category = .Top },
     .{ .code = 0x11080, .category = .Top },
     .{ .code = 0x11081, .category = .Top },
     .{ .code = 0x110B5, .category = .Top },
@@ -876,6 +881,7 @@ pub const data = [_]IndicPositionalCategory{
     .{ .code = 0x0B4D, .category = .Bottom },
     .{ .code = 0xB62, .category = .Bottom },
     .{ .code = 0xB63, .category = .Bottom },
+    .{ .code = 0x0C3C, .category = .Bottom },
     .{ .code = 0x0C56, .category = .Bottom },
     .{ .code = 0xC62, .category = .Bottom },
     .{ .code = 0xC63, .category = .Bottom },
@@ -966,7 +972,6 @@ pub const data = [_]IndicPositionalCategory{
     .{ .code = 0x1713, .category = .Bottom },
     .{ .code = 0x1714, .category = .Bottom },
     .{ .code = 0x1733, .category = .Bottom },
-    .{ .code = 0x1734, .category = .Bottom },
     .{ .code = 0x1753, .category = .Bottom },
     .{ .code = 0x1773, .category = .Bottom },
     .{ .code = 0x17BB, .category = .Bottom },
@@ -1048,6 +1053,7 @@ pub const data = [_]IndicPositionalCategory{
     .{ .code = 0x110B4, .category = .Bottom },
     .{ .code = 0x110B9, .category = .Bottom },
     .{ .code = 0x110BA, .category = .Bottom },
+    .{ .code = 0x110C2, .category = .Bottom },
     .{ .code = 0x1112A, .category = .Bottom },
     .{ .code = 0x1112B, .category = .Bottom },
     .{ .code = 0x11131, .category = .Bottom },

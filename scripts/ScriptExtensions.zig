@@ -75,6 +75,9 @@ pub usingnamespace common.Main(struct {
         \\        Gonm,
         \\        Sinh,
         \\        Limb,
+        \\        Nkoo,
+        \\        Ougr,
+        \\        Cpmn,
         \\    },
         \\};
         \\

@@ -1,7 +1,7 @@
 // This file is part of the Unicode Character Database
 // For documentation, see http://www.unicode.org/reports/tr44/
 //
-// Based on the source file: https://unicode.org/Public/13.0.0/ucd/ScriptExtensions.txt
+// Based on the source file: https://unicode.org/Public/14.0.0/ucd/ScriptExtensions.txt
 //
 // zig fmt: off
 
@@ -73,6 +73,9 @@ pub const ScriptExtension = struct {
         Gonm,
         Sinh,
         Limb,
+        Nkoo,
+        Ougr,
+        Cpmn,
     },
 };
 
@@ -356,6 +359,7 @@ pub const data = [_]ScriptExtension{
     .{ .code = 0x36E, .scripts = &.{ .Latn, } },
     .{ .code = 0x36F, .scripts = &.{ .Latn, } },
     .{ .code = 0x1CFA, .scripts = &.{ .Nand, } },
+    .{ .code = 0x1DFA, .scripts = &.{ .Syrc, } },
     .{ .code = 0x102E0, .scripts = &.{ .Arab, .Copt, } },
     .{ .code = 0x102E1, .scripts = &.{ .Arab, .Copt, } },
     .{ .code = 0x102E2, .scripts = &.{ .Arab, .Copt, } },
@@ -385,6 +389,8 @@ pub const data = [_]ScriptExtension{
     .{ .code = 0x102FA, .scripts = &.{ .Arab, .Copt, } },
     .{ .code = 0x102FB, .scripts = &.{ .Arab, .Copt, } },
     .{ .code = 0x06D4, .scripts = &.{ .Arab, .Rohg, } },
+    .{ .code = 0xFD3E, .scripts = &.{ .Arab, .Nkoo, } },
+    .{ .code = 0xFD3F, .scripts = &.{ .Arab, .Nkoo, } },
     .{ .code = 0x64B, .scripts = &.{ .Arab, .Syrc, } },
     .{ .code = 0x64C, .scripts = &.{ .Arab, .Syrc, } },
     .{ .code = 0x64D, .scripts = &.{ .Arab, .Syrc, } },
@@ -413,8 +419,6 @@ pub const data = [_]ScriptExtension{
     .{ .code = 0x302C, .scripts = &.{ .Bopo, .Hani, } },
     .{ .code = 0x302D, .scripts = &.{ .Bopo, .Hani, } },
     .{ .code = 0xA9CF, .scripts = &.{ .Bugi, .Java, } },
-    .{ .code = 0x10100, .scripts = &.{ .Cprt, .Linb, } },
-    .{ .code = 0x10101, .scripts = &.{ .Cprt, .Linb, } },
     .{ .code = 0x10102, .scripts = &.{ .Cprt, .Linb, } },
     .{ .code = 0x10137, .scripts = &.{ .Cprt, .Linb, } },
     .{ .code = 0x10138, .scripts = &.{ .Cprt, .Linb, } },
@@ -519,6 +523,7 @@ pub const data = [_]ScriptExtension{
     .{ .code = 0xCEE, .scripts = &.{ .Knda, .Nand, } },
     .{ .code = 0xCEF, .scripts = &.{ .Knda, .Nand, } },
     .{ .code = 0x202F, .scripts = &.{ .Latn, .Mong, } },
+    .{ .code = 0x10AF2, .scripts = &.{ .Mani, .Ougr, } },
     .{ .code = 0x1802, .scripts = &.{ .Mong, .Phag, } },
     .{ .code = 0x1803, .scripts = &.{ .Mong, .Phag, } },
     .{ .code = 0x1805, .scripts = &.{ .Mong, .Phag, } },
@@ -553,6 +558,8 @@ pub const data = [_]ScriptExtension{
     .{ .code = 0x1047, .scripts = &.{ .Cakm, .Mymr, .Tale, } },
     .{ .code = 0x1048, .scripts = &.{ .Cakm, .Mymr, .Tale, } },
     .{ .code = 0x1049, .scripts = &.{ .Cakm, .Mymr, .Tale, } },
+    .{ .code = 0x10100, .scripts = &.{ .Cpmn, .Cprt, .Linb, } },
+    .{ .code = 0x10101, .scripts = &.{ .Cpmn, .Cprt, .Linb, } },
     .{ .code = 0x10107, .scripts = &.{ .Cprt, .Lina, .Linb, } },
     .{ .code = 0x10108, .scripts = &.{ .Cprt, .Lina, .Linb, } },
     .{ .code = 0x10109, .scripts = &.{ .Cprt, .Lina, .Linb, } },
@@ -617,9 +624,6 @@ pub const data = [_]ScriptExtension{
     .{ .code = 0x96D, .scripts = &.{ .Deva, .Dogr, .Kthi, .Mahj, } },
     .{ .code = 0x96E, .scripts = &.{ .Deva, .Dogr, .Kthi, .Mahj, } },
     .{ .code = 0x96F, .scripts = &.{ .Deva, .Dogr, .Kthi, .Mahj, } },
-    .{ .code = 0x060C, .scripts = &.{ .Arab, .Rohg, .Syrc, .Thaa, .Yezi, } },
-    .{ .code = 0x061B, .scripts = &.{ .Arab, .Rohg, .Syrc, .Thaa, .Yezi, } },
-    .{ .code = 0x061F, .scripts = &.{ .Arab, .Rohg, .Syrc, .Thaa, .Yezi, } },
     .{ .code = 0x3003, .scripts = &.{ .Bopo, .Hang, .Hani, .Hira, .Kana, } },
     .{ .code = 0x3013, .scripts = &.{ .Bopo, .Hang, .Hani, .Hira, .Kana, } },
     .{ .code = 0x301C, .scripts = &.{ .Bopo, .Hang, .Hani, .Hira, .Kana, } },
@@ -630,6 +634,8 @@ pub const data = [_]ScriptExtension{
     .{ .code = 0x3037, .scripts = &.{ .Bopo, .Hang, .Hani, .Hira, .Kana, } },
     .{ .code = 0xFE45, .scripts = &.{ .Bopo, .Hang, .Hani, .Hira, .Kana, } },
     .{ .code = 0xFE46, .scripts = &.{ .Bopo, .Hang, .Hani, .Hira, .Kana, } },
+    .{ .code = 0x060C, .scripts = &.{ .Arab, .Nkoo, .Rohg, .Syrc, .Thaa, .Yezi, } },
+    .{ .code = 0x061B, .scripts = &.{ .Arab, .Nkoo, .Rohg, .Syrc, .Thaa, .Yezi, } },
     .{ .code = 0x3001, .scripts = &.{ .Bopo, .Hang, .Hani, .Hira, .Kana, .Yiii, } },
     .{ .code = 0x3002, .scripts = &.{ .Bopo, .Hang, .Hani, .Hira, .Kana, .Yiii, } },
     .{ .code = 0x3008, .scripts = &.{ .Bopo, .Hang, .Hani, .Hira, .Kana, .Yiii, } },
@@ -657,8 +663,9 @@ pub const data = [_]ScriptExtension{
     .{ .code = 0xFF64, .scripts = &.{ .Bopo, .Hang, .Hani, .Hira, .Kana, .Yiii, } },
     .{ .code = 0xFF65, .scripts = &.{ .Bopo, .Hang, .Hani, .Hira, .Kana, .Yiii, } },
     .{ .code = 0x1CDA, .scripts = &.{ .Deva, .Knda, .Mlym, .Orya, .Taml, .Telu, } },
-    .{ .code = 0x0640, .scripts = &.{ .Adlm, .Arab, .Mand, .Mani, .Phlp, .Rohg, .Sogd, .Syrc, } },
+    .{ .code = 0x061F, .scripts = &.{ .Adlm, .Arab, .Nkoo, .Rohg, .Syrc, .Thaa, .Yezi, } },
     .{ .code = 0x1CF2, .scripts = &.{ .Beng, .Deva, .Gran, .Knda, .Nand, .Orya, .Telu, .Tirh, } },
+    .{ .code = 0x0640, .scripts = &.{ .Adlm, .Arab, .Mand, .Mani, .Ougr, .Phlp, .Rohg, .Sogd, .Syrc, } },
     .{ .code = 0xA836, .scripts = &.{ .Deva, .Dogr, .Gujr, .Guru, .Khoj, .Kthi, .Mahj, .Modi, .Sind, .Takr, .Tirh, } },
     .{ .code = 0xA837, .scripts = &.{ .Deva, .Dogr, .Gujr, .Guru, .Khoj, .Kthi, .Mahj, .Modi, .Sind, .Takr, .Tirh, } },
     .{ .code = 0xA838, .scripts = &.{ .Deva, .Dogr, .Gujr, .Guru, .Khoj, .Kthi, .Mahj, .Modi, .Sind, .Takr, .Tirh, } },

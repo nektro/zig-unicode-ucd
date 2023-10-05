@@ -167,6 +167,11 @@ pub usingnamespace common.Main(struct {
         \\        Dives_Akuru,
         \\        Khitan_Small_Script,
         \\        Yezidi,
+        \\        Cypro_Minoan,
+        \\        Old_Uyghur,
+        \\        Tangsa,
+        \\        Toto,
+        \\        Vithkuqi,
         \\    },
         \\};
         \\
