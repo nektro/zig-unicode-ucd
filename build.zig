@@ -8,7 +8,7 @@ pub fn build(b: *std.build.Builder) void {
     const step = b.option([]const u8, "step", "") orelse "run";
 
     if (std.mem.eql(u8, step, "run")) {
-        addExeStep(b, target, mode, "zig-unicode-uca", "src/main.zig", "Run the app");
+        addExeStep(b, target, mode, "zig-unicode-ucd", "src/main.zig", "Run the app");
     }
     if (std.mem.eql(u8, step, "generate")) {
         addExeStep(b, target, mode, "generate", "generate.zig", "Generate the bindings");
