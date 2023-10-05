@@ -26,6 +26,7 @@ const files = [_]type{
     @import("./scripts/PropList.zig"),
     @import("./scripts/ScriptExtensions.zig"),
     @import("./scripts/Scripts.zig"),
+    @import("./scripts/SpecialCasing.zig"),
     @import("./scripts/UnicodeData.zig"),
     @import("./scripts/VerticalOrientation.zig"),
     @import("./scripts/emoji.zig"),

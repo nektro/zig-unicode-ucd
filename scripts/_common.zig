@@ -106,3 +106,16 @@ pub fn RangeEnum(comptime prop: []const u8) type {
         }
     };
 }
+
+pub fn printCodepoint(writer: anytype, input: []const u8) !void {
+    try writer.print(" 0x{s},", .{input});
+}
+
+pub fn printSeq(writer: anytype, input: []const u8) !void {
+    var jt = std.mem.tokenize(u8, input, " ");
+    try writer.writeAll(" &.{");
+    while (jt.next()) |jtem| {
+        try printCodepoint(writer, jtem);
+    }
+    try writer.writeAll(" },");
+}

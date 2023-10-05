@@ -34,6 +34,7 @@ pub fn main() !void {
         ucd.property_aliases,
         ucd.property_value_aliases,
         ucd.unicode_data,
+        ucd.special_casing,
     };
 
     inline for (data) |b| {

@@ -27,7 +27,7 @@ pub const property_aliases = @import("./property_aliases.zig");
 pub const property_value_aliases = @import("./property_value_aliases.zig");
 pub const script_extensions = @import("./script_extensions.zig");
 pub const scripts = @import("./scripts.zig");
-// SpecialCasing.txt
+pub const special_casing = @import("./special_casing.zig");
 // StandardizedVariants.txt
 // USourceData.txt
 pub const unicode_data = @import("./unicode_data.zig");
