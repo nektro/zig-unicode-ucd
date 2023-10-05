@@ -7,7 +7,6 @@ pub usingnamespace common.Main(struct {
     pub const dest_file = "src/special_casing.zig";
 
     pub const dest_header =
-        \\
         \\pub const SpecialCasing = struct {
         \\    code: u21,
         \\    lower: []const u21,

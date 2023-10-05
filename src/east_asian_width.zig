@@ -5,10 +5,12 @@
 //
 // zig fmt: off
 
+const ucd = @import("./lib.zig");
+
 pub const EastAsianWidth = struct {
     from: u21,
     to: u21,
-    prop: enum { A, F, H, N, Na, W },
+    prop: ucd.EastAsianWidth,
 };
 
 pub const data = [_]EastAsianWidth{

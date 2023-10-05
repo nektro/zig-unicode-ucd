@@ -40,6 +40,15 @@ pub const GeneralCategory = DerivedPropertyEnum("gc");
 /// https://www.unicode.org/reports/tr44/#Bidi_Class_Values
 pub const BidiClass = DerivedPropertyEnum("bc");
 
+pub const Script = DerivedPropertyEnum("sc");
+pub const ScriptLong = DerivedPropertyLongEnum("sc");
+pub const IndicSyllabicCategory = DerivedPropertyEnum("InSC");
+pub const HangulSyllableType = DerivedPropertyEnum("hst");
+pub const EastAsianWidth = DerivedPropertyEnum("ea");
+pub const VerticalOrientation = DerivedPropertyEnum("vo");
+pub const LineBreak = DerivedPropertyEnum("lb");
+pub const IndicPositionalCategory = DerivedPropertyEnum("InPC");
+
 fn DerivedPropertyEnum(comptime prop: []const u8) type {
     var fields: []const std.builtin.Type.EnumField = &.{};
     @setEvalBranchQuota(10_000);
@@ -50,6 +59,25 @@ fn DerivedPropertyEnum(comptime prop: []const u8) type {
                 .value = fields.len,
             }};
         }
+    }
+    return @Type(.{ .Enum = .{
+        .tag_type = std.math.IntFittingRange(0, fields.len - 1),
+        .fields = fields,
+        .decls = &.{},
+        .is_exhaustive = true,
+    } });
+}
+
+fn DerivedPropertyLongEnum(comptime prop: []const u8) type {
+    var fields: []const std.builtin.Type.EnumField = &.{};
+    @setEvalBranchQuota(10_000);
+    for (property_value_aliases.data) |item| {
+        if (!std.mem.eql(u8, item[0], prop)) continue;
+        if (fields.len > 0 and std.mem.eql(u8, fields[fields.len - 1].name, item[2])) continue;
+        fields = fields ++ &[_]std.builtin.Type.EnumField{.{
+            .name = item[2],
+            .value = fields.len,
+        }};
     }
     return @Type(.{ .Enum = .{
         .tag_type = std.math.IntFittingRange(0, fields.len - 1),

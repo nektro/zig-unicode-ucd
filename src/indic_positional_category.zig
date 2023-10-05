@@ -5,25 +5,11 @@
 //
 // zig fmt: off
 
+const ucd = @import("./lib.zig");
+
 pub const IndicPositionalCategory = struct {
     code: u21,
-    category: enum {
-        Right,
-        Left,
-        Visual_Order_Left,
-        Left_And_Right,
-        Top,
-        Bottom,
-        Top_And_Bottom,
-        Top_And_Right,
-        Top_And_Left,
-        Top_And_Left_And_Right,
-        Bottom_And_Right,
-        Bottom_And_Left,
-        Top_And_Bottom_And_Right,
-        Top_And_Bottom_And_Left,
-        Overstruck,
-    },
+    category: ucd.IndicPositionalCategory,
 };
 
 pub const data = [_]IndicPositionalCategory{

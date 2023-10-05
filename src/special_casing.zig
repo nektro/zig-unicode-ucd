@@ -5,7 +5,6 @@
 //
 // zig fmt: off
 
-
 pub const SpecialCasing = struct {
     code: u21,
     lower: []const u21,

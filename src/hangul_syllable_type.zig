@@ -5,10 +5,12 @@
 //
 // zig fmt: off
 
+const ucd = @import("./lib.zig");
+
 pub const HangulSyllableType = struct {
     from: u21,
     to: u21,
-    prop: enum { L, V, T, LV, LVT },
+    prop: ucd.HangulSyllableType,
 };
 
 pub const data = [_]HangulSyllableType{

@@ -5,15 +5,12 @@
 //
 // zig fmt: off
 
+const ucd = @import("./lib.zig");
+
 pub const VerticalOrientation = struct {
     from: u21,
     to: u21,
-    orientation: enum {
-        R,
-        U,
-        Tr,
-        Tu,
-    },
+    orientation: ucd.VerticalOrientation,
 };
 
 pub const data = [_]VerticalOrientation{
