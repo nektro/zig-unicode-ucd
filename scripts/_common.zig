@@ -49,7 +49,7 @@ pub fn Main(comptime T: type) type {
             const r = req.reader();
 
             var line_num: usize = 1;
-            // std.debug.print("\n", .{});
+            std.debug.print("0", .{});
 
             var arena = std.heap.ArenaAllocator.init(alloc);
             defer arena.deinit();
