@@ -4,5 +4,6 @@ MIT:
 - git https://github.com/nektro/iguanaTLS
 - git https://github.com/nektro/zfetch
 - git https://github.com/nektro/zig-ansi
+- git https://github.com/nektro/zig-extras
 - git https://github.com/nektro/zig-fmt-valueliteral
 - git https://github.com/truemedian/hzzp

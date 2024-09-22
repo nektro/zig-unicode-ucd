@@ -7,7 +7,7 @@
 
 const std = @import("std");
 
-pub const data = [_][3][]const u8{
+pub const data = [_][3][:0]const u8{
     .{ "AHex", "N", "No" },
     .{ "AHex", "F", "No" },
     .{ "AHex", "False", "No" },

@@ -1,7 +1,7 @@
 const std = @import("std");
 const deps = @import("./deps.zig");
 
-pub fn build(b: *std.build.Builder) void {
+pub fn build(b: *std.Build) void {
     const target = b.standardTargetOptions(.{});
     const mode = b.option(std.builtin.Mode, "mode", "") orelse .Debug;
 
@@ -15,10 +15,10 @@ pub fn build(b: *std.build.Builder) void {
     }
 }
 
-fn addExeStep(b: *std.build.Builder, target: std.zig.CrossTarget, mode: std.builtin.Mode, name: []const u8, root_src: []const u8, sdescription: []const u8) void {
+fn addExeStep(b: *std.Build, target: std.Build.ResolvedTarget, mode: std.builtin.Mode, name: []const u8, root_src: []const u8, sdescription: []const u8) void {
     const exe = b.addExecutable(.{
         .name = name,
-        .root_source_file = .{ .path = root_src },
+        .root_source_file = b.path(root_src),
         .target = target,
         .optimize = mode,
     });

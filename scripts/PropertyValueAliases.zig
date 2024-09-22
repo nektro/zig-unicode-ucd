@@ -10,7 +10,7 @@ pub usingnamespace common.Main(struct {
     pub const dest_header =
         \\const std = @import("std");
         \\
-        \\pub const data = [_][3][]const u8{
+        \\pub const data = [_][3][:0]const u8{
         \\
     ;
 
