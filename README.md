@@ -2,7 +2,7 @@
 
 Zig bindings for the Unicode Character Database
 
-Last updated as of Unicode 15.1.0
+Last updated as of Unicode 16.0.0
 
 http://www.unicode.org/reports/tr44/
 

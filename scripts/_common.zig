@@ -3,7 +3,7 @@ const zfetch = @import("zfetch");
 const fmtValueLiteral = @import("fmt-valueliteral").fmtValueLiteral;
 const ansi = @import("ansi");
 
-pub const version = "15.1.0";
+pub const version = "16.0.0";
 
 pub fn Main(comptime T: type) type {
     comptime std.debug.assert(@hasDecl(T, "source_file"));

@@ -1,7 +1,7 @@
 // This file is part of the Unicode Character Database
 // For documentation, see http://www.unicode.org/reports/tr44/
 //
-// Based on the source file: https://unicode.org/Public/15.1.0/ucd/NamedSequencesProv.txt
+// Based on the source file: https://unicode.org/Public/16.0.0/ucd/NamedSequencesProv.txt
 //
 // zig fmt: off
 

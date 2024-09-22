@@ -1,7 +1,7 @@
 // This file is part of the Unicode Character Database
 // For documentation, see http://www.unicode.org/reports/tr44/
 //
-// Based on the source file: https://unicode.org/Public/15.1.0/ucd/CJKRadicals.txt
+// Based on the source file: https://unicode.org/Public/16.0.0/ucd/CJKRadicals.txt
 //
 // zig fmt: off
 
@@ -254,6 +254,7 @@ pub const data = [_]CJKRadical{
     .{ .number = 212, .simplified = false, .character = 0x2FD3, .ideograph = 0x9F8D },
     .{ .number = 212, .simplified = true, .character = 0x2EF0, .ideograph = 0x9F99 },
     .{ .number = 212, .simplified = true, .character = 0x2EEF, .ideograph = 0x7ADC },
+    .{ .number = 212, .simplified = true, .character = null, .ideograph = 0x31DE5 },
     .{ .number = 213, .simplified = false, .character = 0x2FD4, .ideograph = 0x9F9C },
     .{ .number = 213, .simplified = true, .character = 0x2EF3, .ideograph = 0x9F9F },
     .{ .number = 213, .simplified = true, .character = 0x2EF2, .ideograph = 0x4E80 },

@@ -1,7 +1,7 @@
 // This file is part of the Unicode Character Database
 // For documentation, see http://www.unicode.org/reports/tr44/
 //
-// Based on the source file: https://unicode.org/Public/15.1.0/ucd/Blocks.txt
+// Based on the source file: https://unicode.org/Public/16.0.0/ucd/Blocks.txt
 //
 // zig fmt: off
 
@@ -197,6 +197,7 @@ pub const data = [_]Block{
     .{ .from = 0x10500, .to = 0x1052F, .name = "Elbasan" },
     .{ .from = 0x10530, .to = 0x1056F, .name = "Caucasian Albanian" },
     .{ .from = 0x10570, .to = 0x105BF, .name = "Vithkuqi" },
+    .{ .from = 0x105C0, .to = 0x105FF, .name = "Todhri" },
     .{ .from = 0x10600, .to = 0x1077F, .name = "Linear A" },
     .{ .from = 0x10780, .to = 0x107BF, .name = "Latin Extended-F" },
     .{ .from = 0x10800, .to = 0x1083F, .name = "Cypriot Syllabary" },
@@ -219,6 +220,7 @@ pub const data = [_]Block{
     .{ .from = 0x10C00, .to = 0x10C4F, .name = "Old Turkic" },
     .{ .from = 0x10C80, .to = 0x10CFF, .name = "Old Hungarian" },
     .{ .from = 0x10D00, .to = 0x10D3F, .name = "Hanifi Rohingya" },
+    .{ .from = 0x10D40, .to = 0x10D8F, .name = "Garay" },
     .{ .from = 0x10E60, .to = 0x10E7F, .name = "Rumi Numeral Symbols" },
     .{ .from = 0x10E80, .to = 0x10EBF, .name = "Yezidi" },
     .{ .from = 0x10EC0, .to = 0x10EFF, .name = "Arabic Extended-C" },
@@ -238,12 +240,14 @@ pub const data = [_]Block{
     .{ .from = 0x11280, .to = 0x112AF, .name = "Multani" },
     .{ .from = 0x112B0, .to = 0x112FF, .name = "Khudawadi" },
     .{ .from = 0x11300, .to = 0x1137F, .name = "Grantha" },
+    .{ .from = 0x11380, .to = 0x113FF, .name = "Tulu-Tigalari" },
     .{ .from = 0x11400, .to = 0x1147F, .name = "Newa" },
     .{ .from = 0x11480, .to = 0x114DF, .name = "Tirhuta" },
     .{ .from = 0x11580, .to = 0x115FF, .name = "Siddham" },
     .{ .from = 0x11600, .to = 0x1165F, .name = "Modi" },
     .{ .from = 0x11660, .to = 0x1167F, .name = "Mongolian Supplement" },
     .{ .from = 0x11680, .to = 0x116CF, .name = "Takri" },
+    .{ .from = 0x116D0, .to = 0x116FF, .name = "Myanmar Extended-C" },
     .{ .from = 0x11700, .to = 0x1174F, .name = "Ahom" },
     .{ .from = 0x11800, .to = 0x1184F, .name = "Dogra" },
     .{ .from = 0x118A0, .to = 0x118FF, .name = "Warang Citi" },
@@ -254,6 +258,7 @@ pub const data = [_]Block{
     .{ .from = 0x11AB0, .to = 0x11ABF, .name = "Unified Canadian Aboriginal Syllabics Extended-A" },
     .{ .from = 0x11AC0, .to = 0x11AFF, .name = "Pau Cin Hau" },
     .{ .from = 0x11B00, .to = 0x11B5F, .name = "Devanagari Extended-A" },
+    .{ .from = 0x11BC0, .to = 0x11BFF, .name = "Sunuwar" },
     .{ .from = 0x11C00, .to = 0x11C6F, .name = "Bhaiksuki" },
     .{ .from = 0x11C70, .to = 0x11CBF, .name = "Marchen" },
     .{ .from = 0x11D00, .to = 0x11D5F, .name = "Masaram Gondi" },
@@ -268,12 +273,15 @@ pub const data = [_]Block{
     .{ .from = 0x12F90, .to = 0x12FFF, .name = "Cypro-Minoan" },
     .{ .from = 0x13000, .to = 0x1342F, .name = "Egyptian Hieroglyphs" },
     .{ .from = 0x13430, .to = 0x1345F, .name = "Egyptian Hieroglyph Format Controls" },
+    .{ .from = 0x13460, .to = 0x143FF, .name = "Egyptian Hieroglyphs Extended-A" },
     .{ .from = 0x14400, .to = 0x1467F, .name = "Anatolian Hieroglyphs" },
+    .{ .from = 0x16100, .to = 0x1613F, .name = "Gurung Khema" },
     .{ .from = 0x16800, .to = 0x16A3F, .name = "Bamum Supplement" },
     .{ .from = 0x16A40, .to = 0x16A6F, .name = "Mro" },
     .{ .from = 0x16A70, .to = 0x16ACF, .name = "Tangsa" },
     .{ .from = 0x16AD0, .to = 0x16AFF, .name = "Bassa Vah" },
     .{ .from = 0x16B00, .to = 0x16B8F, .name = "Pahawh Hmong" },
+    .{ .from = 0x16D40, .to = 0x16D7F, .name = "Kirat Rai" },
     .{ .from = 0x16E40, .to = 0x16E9F, .name = "Medefaidrin" },
     .{ .from = 0x16F00, .to = 0x16F9F, .name = "Miao" },
     .{ .from = 0x16FE0, .to = 0x16FFF, .name = "Ideographic Symbols and Punctuation" },
@@ -288,6 +296,7 @@ pub const data = [_]Block{
     .{ .from = 0x1B170, .to = 0x1B2FF, .name = "Nushu" },
     .{ .from = 0x1BC00, .to = 0x1BC9F, .name = "Duployan" },
     .{ .from = 0x1BCA0, .to = 0x1BCAF, .name = "Shorthand Format Controls" },
+    .{ .from = 0x1CC00, .to = 0x1CEBF, .name = "Symbols for Legacy Computing Supplement" },
     .{ .from = 0x1CF00, .to = 0x1CFCF, .name = "Znamenny Musical Notation" },
     .{ .from = 0x1D000, .to = 0x1D0FF, .name = "Byzantine Musical Symbols" },
     .{ .from = 0x1D100, .to = 0x1D1FF, .name = "Musical Symbols" },
@@ -305,6 +314,7 @@ pub const data = [_]Block{
     .{ .from = 0x1E290, .to = 0x1E2BF, .name = "Toto" },
     .{ .from = 0x1E2C0, .to = 0x1E2FF, .name = "Wancho" },
     .{ .from = 0x1E4D0, .to = 0x1E4FF, .name = "Nag Mundari" },
+    .{ .from = 0x1E5D0, .to = 0x1E5FF, .name = "Ol Onal" },
     .{ .from = 0x1E7E0, .to = 0x1E7FF, .name = "Ethiopic Extended-B" },
     .{ .from = 0x1E800, .to = 0x1E8DF, .name = "Mende Kikakui" },
     .{ .from = 0x1E900, .to = 0x1E95F, .name = "Adlam" },

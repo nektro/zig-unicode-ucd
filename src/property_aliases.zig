@@ -1,7 +1,7 @@
 // This file is part of the Unicode Character Database
 // For documentation, see http://www.unicode.org/reports/tr44/
 //
-// Based on the source file: https://unicode.org/Public/15.1.0/ucd/PropertyAliases.txt
+// Based on the source file: https://unicode.org/Public/16.0.0/ucd/PropertyAliases.txt
 //
 // zig fmt: off
 
@@ -46,6 +46,11 @@ pub const data = [_][2][]const u8{
     .{ "URS", "kRSUnicode" },
     .{ "isc", "ISO_Comment" },
     .{ "JSN", "Jamo_Short_Name" },
+    .{ "kEH_Cat", "kEH_Cat" },
+    .{ "kEH_Desc", "kEH_Desc" },
+    .{ "kEH_HG", "kEH_HG" },
+    .{ "kEH_IFAO", "kEH_IFAO" },
+    .{ "kEH_JSesh", "kEH_JSesh" },
     .{ "na", "Name" },
     .{ "na1", "Unicode_1_Name" },
     .{ "Name_Alias", "Name_Alias" },
@@ -114,9 +119,12 @@ pub const data = [_][2][]const u8{
     .{ "IDST", "IDS_Trinary_Operator" },
     .{ "IDSU", "IDS_Unary_Operator" },
     .{ "Join_C", "Join_Control" },
+    .{ "kEH_NoMirror", "kEH_NoMirror" },
+    .{ "kEH_NoRotate", "kEH_NoRotate" },
     .{ "LOE", "Logical_Order_Exception" },
     .{ "Lower", "Lowercase" },
     .{ "Math", "Math" },
+    .{ "MCM", "Modifier_Combining_Mark" },
     .{ "NChar", "Noncharacter_Code_Point" },
     .{ "OAlpha", "Other_Alphabetic" },
     .{ "ODI", "Other_Default_Ignorable_Code_Point" },

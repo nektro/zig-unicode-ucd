@@ -1,7 +1,7 @@
 // This file is part of the Unicode Character Database
 // For documentation, see http://www.unicode.org/reports/tr44/
 //
-// Based on the source file: https://unicode.org/Public/15.1.0/ucd/NameAliases.txt
+// Based on the source file: https://unicode.org/Public/16.0.0/ucd/NameAliases.txt
 //
 // zig fmt: off
 
@@ -245,12 +245,16 @@ pub const data = [_]NameAlias{
     .{ .code = 0xFEFF, .alias = "ZWNBSP", .type = .abbreviation },
     .{ .code = 0x122D4, .alias = "CUNEIFORM SIGN NU11 TENU", .type = .correction },
     .{ .code = 0x122D5, .alias = "CUNEIFORM SIGN NU11 OVER NU11 BUR OVER BUR", .type = .correction },
+    .{ .code = 0x12327, .alias = "CUNEIFORM SIGN KALAM", .type = .correction },
+    .{ .code = 0x1680B, .alias = "BAMUM LETTER PHASE-A MAEMGBIEE", .type = .correction },
     .{ .code = 0x16E56, .alias = "MEDEFAIDRIN CAPITAL LETTER H", .type = .correction },
     .{ .code = 0x16E57, .alias = "MEDEFAIDRIN CAPITAL LETTER NG", .type = .correction },
     .{ .code = 0x16E76, .alias = "MEDEFAIDRIN SMALL LETTER H", .type = .correction },
     .{ .code = 0x16E77, .alias = "MEDEFAIDRIN SMALL LETTER NG", .type = .correction },
     .{ .code = 0x1B001, .alias = "HENTAIGANA LETTER E-1", .type = .correction },
     .{ .code = 0x1D0C5, .alias = "BYZANTINE MUSICAL SYMBOL FTHORA SKLIRON CHROMA VASIS", .type = .correction },
+    .{ .code = 0x1E899, .alias = "MENDE KIKAKUI SYLLABLE M172 MBO", .type = .correction },
+    .{ .code = 0x1E89A, .alias = "MENDE KIKAKUI SYLLABLE M174 MBOO", .type = .correction },
     .{ .code = 0xE0100, .alias = "VS17", .type = .abbreviation },
     .{ .code = 0xE0101, .alias = "VS18", .type = .abbreviation },
     .{ .code = 0xE0102, .alias = "VS19", .type = .abbreviation },

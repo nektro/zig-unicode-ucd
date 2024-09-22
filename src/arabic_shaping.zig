@@ -1,7 +1,7 @@
 // This file is part of the Unicode Character Database
 // For documentation, see http://www.unicode.org/reports/tr44/
 //
-// Based on the source file: https://unicode.org/Public/15.1.0/ucd/ArabicShaping.txt
+// Based on the source file: https://unicode.org/Public/16.0.0/ucd/ArabicShaping.txt
 //
 // zig fmt: off
 
@@ -127,6 +127,7 @@ pub const Joining = struct {
         HANIFI_ROHINGYA_KINNA_YA,
         THIN_YEH,
         VERTICAL_TAIL,
+        KASHMIRI_YEH,
     };
 };
 
@@ -139,7 +140,7 @@ pub const data = [_]Shaping{
     .{ .codepoint = 0x0605, .schematic_name = "ARABIC NUMBER MARK ABOVE", .joining_type = .U, .joining_group = .No_Joining_Group },
     .{ .codepoint = 0x0608, .schematic_name = "ARABIC RAY", .joining_type = .U, .joining_group = .No_Joining_Group },
     .{ .codepoint = 0x060B, .schematic_name = "AFGHANI SIGN", .joining_type = .U, .joining_group = .No_Joining_Group },
-    .{ .codepoint = 0x0620, .schematic_name = "DOTLESS YEH WITH SEPARATE RING BELOW", .joining_type = .D, .joining_group = .YEH },
+    .{ .codepoint = 0x0620, .schematic_name = "KASHMIRI YEH", .joining_type = .D, .joining_group = .KASHMIRI_YEH },
     .{ .codepoint = 0x0621, .schematic_name = "HAMZA", .joining_type = .U, .joining_group = .No_Joining_Group },
     .{ .codepoint = 0x0622, .schematic_name = "ALEF WITH MADDA ABOVE", .joining_type = .R, .joining_group = .ALEF },
     .{ .codepoint = 0x0623, .schematic_name = "ALEF WITH HAMZA ABOVE", .joining_type = .R, .joining_group = .ALEF },
@@ -611,7 +612,7 @@ pub const data = [_]Shaping{
     .{ .codepoint = 0x1875, .schematic_name = "MONGOLIAN MANCHU RA", .joining_type = .D, .joining_group = .No_Joining_Group },
     .{ .codepoint = 0x1876, .schematic_name = "MONGOLIAN MANCHU FA", .joining_type = .D, .joining_group = .No_Joining_Group },
     .{ .codepoint = 0x1877, .schematic_name = "MONGOLIAN MANCHU ZHA", .joining_type = .D, .joining_group = .No_Joining_Group },
-    .{ .codepoint = 0x1878, .schematic_name = "MONGOLIAN MANCHU CHA WITH 2 DOTS", .joining_type = .D, .joining_group = .No_Joining_Group },
+    .{ .codepoint = 0x1878, .schematic_name = "MONGOLIAN CHA WITH 2 DOTS", .joining_type = .D, .joining_group = .No_Joining_Group },
     .{ .codepoint = 0x1880, .schematic_name = "MONGOLIAN ALI GALI ANUSVARA ONE", .joining_type = .U, .joining_group = .No_Joining_Group },
     .{ .codepoint = 0x1881, .schematic_name = "MONGOLIAN ALI GALI VISARGA ONE", .joining_type = .U, .joining_group = .No_Joining_Group },
     .{ .codepoint = 0x1882, .schematic_name = "MONGOLIAN ALI GALI DAMARU", .joining_type = .U, .joining_group = .No_Joining_Group },
@@ -816,6 +817,9 @@ pub const data = [_]Shaping{
     .{ .codepoint = 0x10D21, .schematic_name = "HANIFI ROHINGYA VOWEL O", .joining_type = .D, .joining_group = .No_Joining_Group },
     .{ .codepoint = 0x10D22, .schematic_name = "HANIFI ROHINGYA SAKIN", .joining_type = .R, .joining_group = .No_Joining_Group },
     .{ .codepoint = 0x10D23, .schematic_name = "HANIFI ROHINGYA DOTLESS KINNA YA WITH DOT ABOVE", .joining_type = .D, .joining_group = .HANIFI_ROHINGYA_KINNA_YA },
+    .{ .codepoint = 0x10EC2, .schematic_name = "DAL WITH VERTICAL 2 DOTS BELOW", .joining_type = .R, .joining_group = .DAL },
+    .{ .codepoint = 0x10EC3, .schematic_name = "TAH WITH VERTICAL 2 DOTS BELOW", .joining_type = .D, .joining_group = .TAH },
+    .{ .codepoint = 0x10EC4, .schematic_name = "KAF WITH VERTICAL 2 DOTS BELOW", .joining_type = .D, .joining_group = .KAF },
     .{ .codepoint = 0x10F30, .schematic_name = "SOGDIAN ALEPH", .joining_type = .D, .joining_group = .No_Joining_Group },
     .{ .codepoint = 0x10F31, .schematic_name = "SOGDIAN BETH", .joining_type = .D, .joining_group = .No_Joining_Group },
     .{ .codepoint = 0x10F32, .schematic_name = "SOGDIAN GIMEL", .joining_type = .D, .joining_group = .No_Joining_Group },
