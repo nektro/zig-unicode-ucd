@@ -10,7 +10,9 @@ pub usingnamespace common.Main(struct {
         \\pub const PropList = struct {
         \\    from: u21,
         \\    to: u21,
-        \\    property: enum {
+        \\    property: Property,
+        \\
+        \\    pub const Property = enum {
         \\        White_Space,
         \\        Bidi_Control,
         \\        Join_Control,
@@ -49,7 +51,7 @@ pub usingnamespace common.Main(struct {
         \\        ID_Compat_Math_Continue,
         \\        ID_Compat_Math_Start,
         \\        Modifier_Combining_Mark,
-        \\    },
+        \\    };
         \\};
         \\
         \\pub const data = [_]PropList{

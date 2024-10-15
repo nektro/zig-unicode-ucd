@@ -8,14 +8,16 @@
 pub const Emoji = struct {
     from: u21,
     to: u21,
-    category: enum {
+    category: Category,
+
+    pub const Category = enum {
         Emoji,
         Emoji_Presentation,
         Emoji_Modifier,
         Emoji_Modifier_Base,
         Emoji_Component,
         Extended_Pictographic,
-    },
+    };
 };
 
 pub const data = [_]Emoji{

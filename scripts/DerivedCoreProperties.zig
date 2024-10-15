@@ -10,7 +10,9 @@ pub usingnamespace common.Main(struct {
         \\pub const CoreProperty = struct {
         \\    from: u21,
         \\    to: u21,
-        \\    prop: enum {
+        \\    property: Property,
+        \\
+        \\    pub const Property = enum {
         \\        Math,
         \\        Alphabetic,
         \\        Lowercase,
@@ -31,7 +33,7 @@ pub usingnamespace common.Main(struct {
         \\        Grapheme_Base,
         \\        Grapheme_Link,
         \\        InCB,
-        \\    },
+        \\    };
         \\};
         \\
         \\pub const data = [_]CoreProperty{
@@ -57,7 +59,7 @@ pub usingnamespace common.Main(struct {
         }
         {
             const prop = it.next().?;
-            try writer.print(" .prop = .{s} }},\n", .{prop});
+            try writer.print(" .property = .{s} }},\n", .{prop});
         }
     }
 });

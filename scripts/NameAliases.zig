@@ -10,13 +10,15 @@ pub usingnamespace common.Main(struct {
         \\pub const NameAlias = struct {
         \\    code: u21,
         \\    alias: []const u8,
-        \\    type: enum {
+        \\    type: Type,
+        \\
+        \\    pub const Type = enum {
         \\        correction,
         \\        control,
         \\        alternate,
         \\        figment,
         \\        abbreviation,
-        \\    },
+        \\    };
         \\};
         \\
         \\pub const data = [_]NameAlias{
