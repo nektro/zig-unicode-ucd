@@ -48,6 +48,7 @@ pub usingnamespace common.Main(struct {
         \\        IDS_Unary_Operator,
         \\        ID_Compat_Math_Continue,
         \\        ID_Compat_Math_Start,
+        \\        Modifier_Combining_Mark,
         \\    },
         \\};
         \\

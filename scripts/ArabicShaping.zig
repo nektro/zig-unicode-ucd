@@ -129,6 +129,7 @@ pub usingnamespace common.Main(struct {
         \\        HANIFI_ROHINGYA_KINNA_YA,
         \\        THIN_YEH,
         \\        VERTICAL_TAIL,
+        \\        KASHMIRI_YEH,
         \\    };
         \\};
         \\
