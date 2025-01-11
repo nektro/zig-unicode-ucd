@@ -13,6 +13,18 @@ pub fn build(b: *std.Build) void {
     if (std.mem.eql(u8, step, "generate")) {
         addExeStep(b, target, mode, "generate", "generate.zig", "Generate the bindings");
     }
+
+    const tests = b.addTest(.{
+        .root_source_file = b.path("test.zig"),
+        .target = target,
+        .optimize = mode,
+    });
+    deps.addAllTo(tests);
+
+    const test_step = b.step("test", "Run all library tests");
+    const tests_run = b.addRunArtifact(tests);
+    tests_run.has_side_effects = true;
+    test_step.dependOn(&tests_run.step);
 }
 
 fn addExeStep(b: *std.Build, target: std.Build.ResolvedTarget, mode: std.builtin.Mode, name: []const u8, root_src: []const u8, sdescription: []const u8) void {
