@@ -60,7 +60,7 @@ fn DerivedPropertyEnum(comptime prop: []const u8) type {
             }};
         }
     }
-    return @Type(.{ .Enum = .{
+    return @Type(.{ .@"enum" = .{
         .tag_type = std.math.IntFittingRange(0, fields.len - 1),
         .fields = fields,
         .decls = &.{},
@@ -79,7 +79,7 @@ fn DerivedPropertyLongEnum(comptime prop: []const u8) type {
             .value = fields.len,
         }};
     }
-    return @Type(.{ .Enum = .{
+    return @Type(.{ .@"enum" = .{
         .tag_type = std.math.IntFittingRange(0, fields.len - 1),
         .fields = fields,
         .decls = &.{},
