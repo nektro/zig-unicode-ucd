@@ -31,7 +31,7 @@ pub usingnamespace common.Main(struct {
     pub fn exec(alloc: std.mem.Allocator, line: []const u8, writer: anytype) !void {
         _ = alloc;
 
-        var it = std.mem.split(u8, line, ";");
+        var it = std.mem.splitScalar(u8, line, ';');
         const a = std.mem.trim(u8, it.next().?, " ");
         const b = std.mem.trim(u8, it.next().?, " ");
         const c = std.mem.trim(u8, it.next().?, " ");

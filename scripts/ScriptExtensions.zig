@@ -25,7 +25,7 @@ pub usingnamespace common.Main(struct {
 
     pub fn exec(alloc: std.mem.Allocator, line: []const u8, writer: anytype) !void {
         _ = alloc;
-        var it = std.mem.tokenize(u8, line, "; ");
+        var it = std.mem.tokenizeAny(u8, line, "; ");
 
         const first = it.next().?;
 
@@ -54,7 +54,7 @@ fn formatScripts(bytes: []const u8, comptime fmt: []const u8, options: std.fmt.F
     _ = fmt;
     _ = options;
     try writer.writeAll("&.{");
-    var it = std.mem.split(u8, bytes, " ");
+    var it = std.mem.splitScalar(u8, bytes, ' ');
     while (it.next()) |item| {
         if (item.len == 0) continue;
         try writer.print(" .{s},", .{item});

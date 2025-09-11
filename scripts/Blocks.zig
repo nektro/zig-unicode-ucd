@@ -25,8 +25,8 @@ pub usingnamespace common.Main(struct {
     pub fn exec(alloc: std.mem.Allocator, line: []const u8, writer: anytype) !void {
         _ = alloc;
 
-        var it1 = std.mem.split(u8, line, "; ");
-        var it2 = std.mem.split(u8, it1.next().?, "..");
+        var it1 = std.mem.splitSequence(u8, line, "; ");
+        var it2 = std.mem.splitSequence(u8, it1.next().?, "..");
         const from = it2.next().?;
         const to = it2.next().?;
         const name = it1.next().?;

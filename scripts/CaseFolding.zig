@@ -38,7 +38,7 @@ pub usingnamespace common.Main(struct {
 
     pub fn exec(alloc: std.mem.Allocator, line: []const u8, writer: anytype) !void {
         _ = alloc;
-        var it = std.mem.split(u8, line, "; ");
+        var it = std.mem.splitSequence(u8, line, "; ");
         const code = it.next().?;
         const status = it.next().?;
         try writer.print("    .{{ .code = 0x{s}, .status = .{s}, .mapping = .{{ .{s} =", .{ code, status, status });
@@ -50,7 +50,7 @@ pub usingnamespace common.Main(struct {
             },
             .F => {
                 const mapping = it.next().?;
-                var jt = std.mem.split(u8, mapping, " ");
+                var jt = std.mem.splitScalar(u8, mapping, ' ');
                 try writer.writeAll(" &[_]u21{");
                 while (jt.next()) |jtem| {
                     try writer.print("0x{s},", .{jtem});

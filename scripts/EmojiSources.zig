@@ -26,7 +26,7 @@ pub usingnamespace common.Main(struct {
     pub fn exec(alloc: std.mem.Allocator, line: []const u8, writer: anytype) !void {
         _ = alloc;
         if (std.mem.count(u8, line, " ") > 0) return;
-        var it = std.mem.split(u8, line, ";");
+        var it = std.mem.splitScalar(u8, line, ';');
         const code = it.next().?;
         // FIXME remove @as and temp vars after switch off stage1
         const docomo = common.nullify(it.next().?) orelse @as([]const u8, "0");

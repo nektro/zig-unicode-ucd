@@ -91,7 +91,7 @@ pub fn RangeEnum(comptime prop: []const u8) type {
     return struct {
         pub fn exec(alloc: std.mem.Allocator, line: []const u8, writer: anytype) !void {
             _ = alloc;
-            var it = std.mem.tokenize(u8, line, "; ");
+            var it = std.mem.tokenizeAny(u8, line, "; ");
 
             const first = it.next().?;
             const next = std.mem.trimRight(u8, it.next().?, "#");
@@ -112,7 +112,7 @@ pub fn printCodepoint(writer: anytype, input: []const u8) !void {
 }
 
 pub fn printSeq(writer: anytype, input: []const u8) !void {
-    var jt = std.mem.tokenize(u8, input, " ");
+    var jt = std.mem.tokenizeScalar(u8, input, ' ');
     try writer.writeAll(" &.{");
     while (jt.next()) |jtem| {
         try printCodepoint(writer, jtem);

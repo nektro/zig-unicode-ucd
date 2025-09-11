@@ -24,7 +24,7 @@ pub usingnamespace common.Main(struct {
 
     pub fn exec(alloc: std.mem.Allocator, line: []const u8, writer: anytype) !void {
         _ = alloc;
-        var it = std.mem.tokenize(u8, line, "; ");
+        var it = std.mem.tokenizeAny(u8, line, "; ");
 
         {
             const range = it.next().?;
@@ -36,7 +36,7 @@ pub usingnamespace common.Main(struct {
         }
         {
             const added = it.next().?;
-            var jt = std.mem.split(u8, added, ".");
+            var jt = std.mem.splitScalar(u8, added, '.');
             const major = jt.next().?;
             const minor = jt.next().?;
             try writer.print(" .since = .{{ {s},{s} }} }},\n", .{ major, minor });
