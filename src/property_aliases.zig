@@ -1,7 +1,7 @@
 // This file is part of the Unicode Character Database
 // For documentation, see http://www.unicode.org/reports/tr44/
 //
-// Based on the source file: https://unicode.org/Public/16.0.0/ucd/PropertyAliases.txt
+// Based on the source file: https://unicode.org/Public/17.0.0/ucd/PropertyAliases.txt
 //
 // zig fmt: off
 
@@ -41,9 +41,12 @@ pub const data = [_][2][]const u8{
     .{ "cjkIRG_UKSource", "kIRG_UKSource" },
     .{ "cjkIRG_USource", "kIRG_USource" },
     .{ "cjkIRG_VSource", "kIRG_VSource" },
+    .{ "cjkMandarin", "kMandarin" },
     .{ "cjkRSUnicode", "kRSUnicode" },
     .{ "Unicode_Radical_Stroke", "kRSUnicode" },
     .{ "URS", "kRSUnicode" },
+    .{ "cjkTotalStrokes", "kTotalStrokes" },
+    .{ "cjkUnihanCore2020", "kUnihanCore2020" },
     .{ "isc", "ISO_Comment" },
     .{ "JSN", "Jamo_Short_Name" },
     .{ "kEH_Cat", "kEH_Cat" },

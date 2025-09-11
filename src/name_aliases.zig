@@ -1,7 +1,7 @@
 // This file is part of the Unicode Character Database
 // For documentation, see http://www.unicode.org/reports/tr44/
 //
-// Based on the source file: https://unicode.org/Public/16.0.0/ucd/NameAliases.txt
+// Based on the source file: https://unicode.org/Public/17.0.0/ucd/NameAliases.txt
 //
 // zig fmt: off
 
@@ -249,6 +249,10 @@ pub const data = [_]NameAlias{
     .{ .code = 0x122D5, .alias = "CUNEIFORM SIGN NU11 OVER NU11 BUR OVER BUR", .type = .correction },
     .{ .code = 0x12327, .alias = "CUNEIFORM SIGN KALAM", .type = .correction },
     .{ .code = 0x1680B, .alias = "BAMUM LETTER PHASE-A MAEMGBIEE", .type = .correction },
+    .{ .code = 0x16881, .alias = "BAMUM LETTER PHASE-B PUNGGAAM", .type = .correction },
+    .{ .code = 0x1688E, .alias = "BAMUM LETTER PHASE-B NGGOM", .type = .correction },
+    .{ .code = 0x168DC, .alias = "BAMUM LETTER PHASE-C SHETFON", .type = .correction },
+    .{ .code = 0x1697D, .alias = "BAMUM LETTER PHASE-E NGGOP", .type = .correction },
     .{ .code = 0x16E56, .alias = "MEDEFAIDRIN CAPITAL LETTER H", .type = .correction },
     .{ .code = 0x16E57, .alias = "MEDEFAIDRIN CAPITAL LETTER NG", .type = .correction },
     .{ .code = 0x16E76, .alias = "MEDEFAIDRIN SMALL LETTER H", .type = .correction },

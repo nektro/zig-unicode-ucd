@@ -1,7 +1,7 @@
 // This file is part of the Unicode Character Database
 // For documentation, see http://www.unicode.org/reports/tr44/
 //
-// Based on the source file: https://unicode.org/Public/16.0.0/ucd/IndicPositionalCategory.txt
+// Based on the source file: https://unicode.org/Public/17.0.0/ucd/IndicPositionalCategory.txt
 //
 // zig fmt: off
 
@@ -294,6 +294,9 @@ pub const data = [_]IndicPositionalCategory{
     .{ .code = 0x11A57, .category = .Right },
     .{ .code = 0x11A58, .category = .Right },
     .{ .code = 0x11A97, .category = .Right },
+    .{ .code = 0x11B61, .category = .Right },
+    .{ .code = 0x11B65, .category = .Right },
+    .{ .code = 0x11B67, .category = .Right },
     .{ .code = 0x11C2F, .category = .Right },
     .{ .code = 0x11C3E, .category = .Right },
     .{ .code = 0x11CA9, .category = .Right },
@@ -824,7 +827,6 @@ pub const data = [_]IndicPositionalCategory{
     .{ .code = 0x11A36, .category = .Top },
     .{ .code = 0x11A37, .category = .Top },
     .{ .code = 0x11A38, .category = .Top },
-    .{ .code = 0x11A3A, .category = .Top },
     .{ .code = 0x11A51, .category = .Top },
     .{ .code = 0x11A54, .category = .Top },
     .{ .code = 0x11A55, .category = .Top },
@@ -837,6 +839,9 @@ pub const data = [_]IndicPositionalCategory{
     .{ .code = 0x11A89, .category = .Top },
     .{ .code = 0x11A96, .category = .Top },
     .{ .code = 0x11A98, .category = .Top },
+    .{ .code = 0x11B60, .category = .Top },
+    .{ .code = 0x11B64, .category = .Top },
+    .{ .code = 0x11B66, .category = .Top },
     .{ .code = 0x11C30, .category = .Top },
     .{ .code = 0x11C31, .category = .Top },
     .{ .code = 0x11C38, .category = .Top },
@@ -1206,6 +1211,8 @@ pub const data = [_]IndicPositionalCategory{
     .{ .code = 0x11A93, .category = .Bottom },
     .{ .code = 0x11A94, .category = .Bottom },
     .{ .code = 0x11A95, .category = .Bottom },
+    .{ .code = 0x11B62, .category = .Bottom },
+    .{ .code = 0x11B63, .category = .Bottom },
     .{ .code = 0x11C32, .category = .Bottom },
     .{ .code = 0x11C33, .category = .Bottom },
     .{ .code = 0x11C34, .category = .Bottom },

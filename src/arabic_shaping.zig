@@ -1,7 +1,7 @@
 // This file is part of the Unicode Character Database
 // For documentation, see http://www.unicode.org/reports/tr44/
 //
-// Based on the source file: https://unicode.org/Public/16.0.0/ucd/ArabicShaping.txt
+// Based on the source file: https://unicode.org/Public/17.0.0/ucd/ArabicShaping.txt
 //
 // zig fmt: off
 
@@ -128,6 +128,7 @@ pub const Joining = struct {
         THIN_YEH,
         VERTICAL_TAIL,
         KASHMIRI_YEH,
+        THIN_NOON,
     };
 };
 
@@ -476,6 +477,7 @@ pub const data = [_]Shaping{
     .{ .codepoint = 0x088C, .schematic_name = "TAH WITH 3 DOTS BELOW", .joining_type = .D, .joining_group = .TAH },
     .{ .codepoint = 0x088D, .schematic_name = "KEHEH WITH VERTICAL 2 DOTS BELOW", .joining_type = .D, .joining_group = .GAF },
     .{ .codepoint = 0x088E, .schematic_name = "VERTICAL TAIL", .joining_type = .R, .joining_group = .VERTICAL_TAIL },
+    .{ .codepoint = 0x088F, .schematic_name = "DOTLESS NOON WITH SEPARATE RING ABOVE", .joining_type = .D, .joining_group = .NOON },
     .{ .codepoint = 0x0890, .schematic_name = "ARABIC POUND MARK ABOVE", .joining_type = .U, .joining_group = .No_Joining_Group },
     .{ .codepoint = 0x0891, .schematic_name = "ARABIC PIASTRE MARK ABOVE", .joining_type = .U, .joining_group = .No_Joining_Group },
     .{ .codepoint = 0x08A0, .schematic_name = "DOTLESS BEH WITH V BELOW", .joining_type = .D, .joining_group = .BEH },
@@ -820,6 +822,8 @@ pub const data = [_]Shaping{
     .{ .codepoint = 0x10EC2, .schematic_name = "DAL WITH VERTICAL 2 DOTS BELOW", .joining_type = .R, .joining_group = .DAL },
     .{ .codepoint = 0x10EC3, .schematic_name = "TAH WITH VERTICAL 2 DOTS BELOW", .joining_type = .D, .joining_group = .TAH },
     .{ .codepoint = 0x10EC4, .schematic_name = "KAF WITH VERTICAL 2 DOTS BELOW", .joining_type = .D, .joining_group = .KAF },
+    .{ .codepoint = 0x10EC6, .schematic_name = "THIN NOON", .joining_type = .D, .joining_group = .THIN_NOON },
+    .{ .codepoint = 0x10EC7, .schematic_name = "DOTLESS YEH WITH 4 DOTS BELOW", .joining_type = .D, .joining_group = .YEH },
     .{ .codepoint = 0x10F30, .schematic_name = "SOGDIAN ALEPH", .joining_type = .D, .joining_group = .No_Joining_Group },
     .{ .codepoint = 0x10F31, .schematic_name = "SOGDIAN BETH", .joining_type = .D, .joining_group = .No_Joining_Group },
     .{ .codepoint = 0x10F32, .schematic_name = "SOGDIAN GIMEL", .joining_type = .D, .joining_group = .No_Joining_Group },

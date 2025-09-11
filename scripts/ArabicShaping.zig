@@ -130,6 +130,7 @@ pub usingnamespace common.Main(struct {
         \\        THIN_YEH,
         \\        VERTICAL_TAIL,
         \\        KASHMIRI_YEH,
+        \\        THIN_NOON,
         \\    };
         \\};
         \\

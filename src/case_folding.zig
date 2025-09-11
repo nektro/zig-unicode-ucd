@@ -1,7 +1,7 @@
 // This file is part of the Unicode Character Database
 // For documentation, see http://www.unicode.org/reports/tr44/
 //
-// Based on the source file: https://unicode.org/Public/16.0.0/ucd/CaseFolding.txt
+// Based on the source file: https://unicode.org/Public/17.0.0/ucd/CaseFolding.txt
 //
 // zig fmt: off
 
@@ -1209,7 +1209,10 @@ pub const data = [_]CaseFolding{
     .{ .code = 0xA7C9, .status = .C, .mapping = .{ .C = 0xA7CA } },
     .{ .code = 0xA7CB, .status = .C, .mapping = .{ .C = 0x0264 } },
     .{ .code = 0xA7CC, .status = .C, .mapping = .{ .C = 0xA7CD } },
+    .{ .code = 0xA7CE, .status = .C, .mapping = .{ .C = 0xA7CF } },
     .{ .code = 0xA7D0, .status = .C, .mapping = .{ .C = 0xA7D1 } },
+    .{ .code = 0xA7D2, .status = .C, .mapping = .{ .C = 0xA7D3 } },
+    .{ .code = 0xA7D4, .status = .C, .mapping = .{ .C = 0xA7D5 } },
     .{ .code = 0xA7D6, .status = .C, .mapping = .{ .C = 0xA7D7 } },
     .{ .code = 0xA7D8, .status = .C, .mapping = .{ .C = 0xA7D9 } },
     .{ .code = 0xA7DA, .status = .C, .mapping = .{ .C = 0xA7DB } },
@@ -1582,6 +1585,31 @@ pub const data = [_]CaseFolding{
     .{ .code = 0x16E5D, .status = .C, .mapping = .{ .C = 0x16E7D } },
     .{ .code = 0x16E5E, .status = .C, .mapping = .{ .C = 0x16E7E } },
     .{ .code = 0x16E5F, .status = .C, .mapping = .{ .C = 0x16E7F } },
+    .{ .code = 0x16EA0, .status = .C, .mapping = .{ .C = 0x16EBB } },
+    .{ .code = 0x16EA1, .status = .C, .mapping = .{ .C = 0x16EBC } },
+    .{ .code = 0x16EA2, .status = .C, .mapping = .{ .C = 0x16EBD } },
+    .{ .code = 0x16EA3, .status = .C, .mapping = .{ .C = 0x16EBE } },
+    .{ .code = 0x16EA4, .status = .C, .mapping = .{ .C = 0x16EBF } },
+    .{ .code = 0x16EA5, .status = .C, .mapping = .{ .C = 0x16EC0 } },
+    .{ .code = 0x16EA6, .status = .C, .mapping = .{ .C = 0x16EC1 } },
+    .{ .code = 0x16EA7, .status = .C, .mapping = .{ .C = 0x16EC2 } },
+    .{ .code = 0x16EA8, .status = .C, .mapping = .{ .C = 0x16EC3 } },
+    .{ .code = 0x16EA9, .status = .C, .mapping = .{ .C = 0x16EC4 } },
+    .{ .code = 0x16EAA, .status = .C, .mapping = .{ .C = 0x16EC5 } },
+    .{ .code = 0x16EAB, .status = .C, .mapping = .{ .C = 0x16EC6 } },
+    .{ .code = 0x16EAC, .status = .C, .mapping = .{ .C = 0x16EC7 } },
+    .{ .code = 0x16EAD, .status = .C, .mapping = .{ .C = 0x16EC8 } },
+    .{ .code = 0x16EAE, .status = .C, .mapping = .{ .C = 0x16EC9 } },
+    .{ .code = 0x16EAF, .status = .C, .mapping = .{ .C = 0x16ECA } },
+    .{ .code = 0x16EB0, .status = .C, .mapping = .{ .C = 0x16ECB } },
+    .{ .code = 0x16EB1, .status = .C, .mapping = .{ .C = 0x16ECC } },
+    .{ .code = 0x16EB2, .status = .C, .mapping = .{ .C = 0x16ECD } },
+    .{ .code = 0x16EB3, .status = .C, .mapping = .{ .C = 0x16ECE } },
+    .{ .code = 0x16EB4, .status = .C, .mapping = .{ .C = 0x16ECF } },
+    .{ .code = 0x16EB5, .status = .C, .mapping = .{ .C = 0x16ED0 } },
+    .{ .code = 0x16EB6, .status = .C, .mapping = .{ .C = 0x16ED1 } },
+    .{ .code = 0x16EB7, .status = .C, .mapping = .{ .C = 0x16ED2 } },
+    .{ .code = 0x16EB8, .status = .C, .mapping = .{ .C = 0x16ED3 } },
     .{ .code = 0x1E900, .status = .C, .mapping = .{ .C = 0x1E922 } },
     .{ .code = 0x1E901, .status = .C, .mapping = .{ .C = 0x1E923 } },
     .{ .code = 0x1E902, .status = .C, .mapping = .{ .C = 0x1E924 } },
