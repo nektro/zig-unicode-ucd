@@ -34,17 +34,13 @@ pub usingnamespace common.Main(struct {
             const end = try std.fmt.parseInt(u21, first[index + 2 ..], 16);
             var i = start;
             while (i <= end) : (i += 1) {
-                try writer.print("    .{{ .code = 0x{X}, .scripts = {} }},\n", .{ i, fmtScripts(untilComment(it.rest())) });
+                try writer.print("    .{{ .code = 0x{X}, .scripts = {} }},\n", .{ i, fmtScripts(it.rest()) });
             }
         } else {
-            try writer.print("    .{{ .code = 0x{s}, .scripts = {} }},\n", .{ first, fmtScripts(untilComment(it.rest())) });
+            try writer.print("    .{{ .code = 0x{s}, .scripts = {} }},\n", .{ first, fmtScripts(it.rest()) });
         }
     }
 });
-
-fn untilComment(input: []const u8) []const u8 {
-    return input[0..std.mem.indexOfScalar(u8, input, '#').?];
-}
 
 fn fmtScripts(bytes: []const u8) std.fmt.Formatter(formatScripts) {
     return .{ .data = bytes };

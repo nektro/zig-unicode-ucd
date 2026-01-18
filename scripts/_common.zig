@@ -54,16 +54,16 @@ pub fn Main(comptime T: type) type {
             var arena = std.heap.ArenaAllocator.init(alloc);
             defer arena.deinit();
             while (true) {
-                const line = r.readUntilDelimiterAlloc(alloc, '\n', max_size) catch |err| switch (err) {
+                const line_raw = r.readUntilDelimiterAlloc(alloc, '\n', max_size) catch |err| switch (err) {
                     error.EndOfStream => break,
                     else => |e| return e,
                 };
-                defer alloc.free(line);
+                defer alloc.free(line_raw);
+
+                var real = std.mem.splitScalar(u8, line_raw, '#');
+                const line = real.first();
 
                 if (line.len == 0) {
-                    continue;
-                }
-                if (line[0] == '#') {
                     continue;
                 }
 

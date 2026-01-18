@@ -26,9 +26,8 @@ pub usingnamespace common.Main(struct {
         var it = std.mem.tokenizeAny(u8, line, "; ");
 
         const first = it.next().?;
-        const next = it.next().?;
-        const actual = if (std.mem.eql(u8, next, "#")) "" else next;
+        const short = it.next() orelse "";
 
-        try writer.print("    .{{ .code = 0x{s}, .short_name = \"{}\" }},\n", .{ first, std.zig.fmtEscapes(actual) });
+        try writer.print("    .{{ .code = 0x{s}, .short_name = \"{}\" }},\n", .{ first, std.zig.fmtEscapes(short) });
     }
 });
