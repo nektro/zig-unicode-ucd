@@ -15,7 +15,8 @@ pub usingnamespace common.Main(struct {
         \\    ucd.GeneralCategory,
         \\    u8, // Canonical_Combining_Class
         \\    ucd.BidiClass,
-        \\    bool, // decomposes, see UCA
+        \\    Decomposition, // __none for none
+        \\    []const u21, // decomposition mapping, empty for none
         \\    []const u8, // Numeric_Type=Decimal value
         \\    []const u8, // Numeric_Type=Digit value
         \\    []const u8, // Numeric_Type=Numeric value
@@ -23,6 +24,27 @@ pub usingnamespace common.Main(struct {
         \\    ?u21, // Simple_Uppercase_Mapping
         \\    ?u21, // Simple_Lowercase_Mapping
         \\    ?u21, // Simple_Titlecase_Mapping
+        \\};
+        \\
+        \\pub const Decomposition = enum {
+        \\    __none,
+        \\    __canonical,
+        \\    noBreak,
+        \\    compat,
+        \\    super,
+        \\    fraction,
+        \\    sub,
+        \\    font,
+        \\    circle,
+        \\    wide,
+        \\    vertical,
+        \\    square,
+        \\    isolated,
+        \\    final,
+        \\    initial,
+        \\    medial,
+        \\    small,
+        \\    narrow,
         \\};
         \\
         \\pub const data = [_]Codepoint{
@@ -44,7 +66,28 @@ pub usingnamespace common.Main(struct {
         try writer.print(" .{s},", .{it.next().?});
         try writer.print(" {s},", .{it.next().?});
         try writer.print(" .{s},", .{it.next().?});
-        try writer.print(" {},", .{std.mem.startsWith(u8, it.next().?, "<")});
+        {
+            var next = it.next().?;
+            if (next.len > 0) {
+                if (std.mem.indexOfScalar(u8, next, '>')) |idx| {
+                    try writer.print(" .{s},", .{next[1..idx]});
+                    next = next[idx + 2 ..];
+                } else {
+                    try writer.writeAll(" .__canonical,");
+                }
+                var jt = std.mem.splitScalar(u8, next, ' ');
+                try writer.writeAll(" &.{");
+                while (jt.next()) |sp| {
+                    try writer.writeAll("0x");
+                    try writer.writeAll(sp);
+                    if (jt.index != null) try writer.writeAll(",");
+                }
+                try writer.writeAll("},");
+            } else {
+                try writer.writeAll(" .__none,");
+                try writer.writeAll(" &.{},");
+            }
+        }
         try writer.print(" \"{}\",", .{std.zig.fmtEscapes(it.next().?)});
         try writer.print(" \"{}\",", .{std.zig.fmtEscapes(it.next().?)});
         try writer.print(" \"{}\",", .{std.zig.fmtEscapes(it.next().?)});
