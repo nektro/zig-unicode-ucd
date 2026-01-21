@@ -11,6 +11,7 @@ test {
     _ = &ucd.composition_exclusions.data;
     _ = &ucd.derived_age.data;
     _ = &ucd.derived_core_properties.data;
+    std.testing.refAllDeclsRecursive(ucd.derived_normalization_props);
     _ = &ucd.east_asian_width.data;
     _ = &ucd.emoji_sources.data;
     _ = &ucd.equivalent_unified_ideograph.data;

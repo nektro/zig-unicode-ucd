@@ -76,6 +76,7 @@ pub fn Main(comptime T: type) type {
             }
             std.debug.print("\n", .{});
             try w.writeAll(T.dest_footer);
+            if (@hasDecl(T, "after")) try T.after(arena.allocator(), w);
             try bufw.flush();
         }
     };
