@@ -8,6 +8,7 @@ pub usingnamespace common.Main(struct {
 
     pub const dest_header =
         \\const ucd = @import("./lib.zig");
+        \\const std = @import("std");
         \\
         \\pub const Codepoint = struct {
         \\    u21, // U+ code
@@ -46,6 +47,31 @@ pub usingnamespace common.Main(struct {
         \\    small,
         \\    narrow,
         \\};
+        \\
+        \\pub fn find(cp: u21) Codepoint {
+        \\    return data[binarySearchClosest(Codepoint, &data, cp, compare)];
+        \\}
+        \\
+        \\fn binarySearchClosest(comptime T: type, items: []const T, context: anytype, comptime compareFn: fn (@TypeOf(context), T) std.math.Order) usize {
+        \\    var low: usize = 0;
+        \\    var high: usize = items.len;
+        \\    while (low < high) {
+        \\        const mid = low + (high - low) / 2;
+        \\        switch (compareFn(context, items[mid])) {
+        \\            .eq => return mid,
+        \\            .gt => low = mid + 1,
+        \\            .lt => high = mid,
+        \\        }
+        \\    }
+        \\    std.debug.assert(low == high);
+        \\    return high;
+        \\}
+        \\
+        \\pub fn compare(needle: u21, row: Codepoint) std.math.Order {
+        \\    if (needle < row[0]) return .lt;
+        \\    if (needle > row[0]) return .gt;
+        \\    return .eq;
+        \\}
         \\
         \\pub const data = [_]Codepoint{
         \\
