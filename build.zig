@@ -3,7 +3,7 @@ const deps = @import("./deps.zig");
 
 pub fn build(b: *std.Build) void {
     const target = b.standardTargetOptions(.{});
-    const mode = b.option(std.builtin.Mode, "mode", "") orelse .Debug;
+    const mode = b.option(std.builtin.OptimizeMode, "mode", "") orelse .Debug;
     const disable_llvm = b.option(bool, "disable_llvm", "use the non-llvm zig codegen") orelse false;
 
     const step = b.option([]const u8, "step", "") orelse "run";
@@ -16,9 +16,11 @@ pub fn build(b: *std.Build) void {
     }
 
     const tests = b.addTest(.{
-        .root_source_file = b.path("test.zig"),
-        .target = target,
-        .optimize = mode,
+        .root_module = b.createModule(.{
+            .root_source_file = b.path("test.zig"),
+            .target = target,
+            .optimize = mode,
+        }),
     });
     deps.addAllTo(tests);
     tests.use_llvm = !disable_llvm;
@@ -31,12 +33,14 @@ pub fn build(b: *std.Build) void {
     test_step.dependOn(&tests_run.step);
 }
 
-fn addExeStep(b: *std.Build, target: std.Build.ResolvedTarget, mode: std.builtin.Mode, name: []const u8, root_src: []const u8, sdescription: []const u8) void {
+fn addExeStep(b: *std.Build, target: std.Build.ResolvedTarget, mode: std.builtin.OptimizeMode, name: []const u8, root_src: []const u8, sdescription: []const u8) void {
     const exe = b.addExecutable(.{
         .name = name,
-        .root_source_file = b.path(root_src),
-        .target = target,
-        .optimize = mode,
+        .root_module = b.createModule(.{
+            .root_source_file = b.path(root_src),
+            .target = target,
+            .optimize = mode,
+        }),
     });
     deps.addAllTo(exe);
     b.installArtifact(exe);
