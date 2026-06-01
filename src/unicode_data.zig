@@ -7,6 +7,9 @@
 
 const ucd = @import("./lib.zig");
 const std = @import("std");
+const extras = @import("extras");
+
+pub const data_soa = extras.StaticMultiList(Codepoint).initComptime(&data).items;
 
 pub const Codepoint = struct {
     u21, // U+ code
@@ -47,7 +50,7 @@ pub const Decomposition = enum {
 };
 
 pub fn find(cp: u21) Codepoint {
-    return data[binarySearchClosest(Codepoint, &data, cp, compare)];
+    return data[binarySearchClosest(u21, data_soa[0], cp, compare)];
 }
 
 fn binarySearchClosest(comptime T: type, items: []const T, context: anytype, comptime compareFn: fn (@TypeOf(context), T) std.math.Order) usize {
@@ -65,9 +68,9 @@ fn binarySearchClosest(comptime T: type, items: []const T, context: anytype, com
     return high;
 }
 
-pub fn compare(needle: u21, row: Codepoint) std.math.Order {
-    if (needle < row[0]) return .lt;
-    if (needle > row[0]) return .gt;
+pub fn compare(needle: u21, row: u21) std.math.Order {
+    if (needle < row) return .lt;
+    if (needle > row) return .gt;
     return .eq;
 }
 
