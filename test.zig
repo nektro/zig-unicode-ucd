@@ -11,7 +11,12 @@ test {
     _ = &ucd.composition_exclusions.data;
     _ = &ucd.derived_age.data;
     _ = &ucd.derived_core_properties.data;
-    std.testing.refAllDeclsRecursive(ucd.derived_normalization_props);
+    inline for (@typeInfo(ucd.derived_normalization_props).@"struct".decls) |d| {
+        const f = @field(ucd.derived_normalization_props, d.name);
+        if (@typeInfo(f).@"struct".decls.len == 0) _ = &f;
+        if (@typeInfo(f).@"struct".decls.len > 0) _ = &f.data;
+        if (@typeInfo(f).@"struct".decls.len > 0) _ = &f.data_range;
+    }
     _ = &ucd.east_asian_width.data;
     _ = &ucd.emoji_sources.data;
     _ = &ucd.equivalent_unified_ideograph.data;

@@ -50,39 +50,29 @@ pub const LineBreak = DerivedPropertyEnum("lb");
 pub const IndicPositionalCategory = DerivedPropertyEnum("InPC");
 
 fn DerivedPropertyEnum(comptime prop: []const u8) type {
-    var fields: []const std.builtin.Type.EnumField = &.{};
+    var len: usize = 0;
+    var names: []const []const u8 = &.{};
     @setEvalBranchQuota(10_000);
     for (property_value_aliases.data) |item| {
         if (std.mem.eql(u8, item[0], prop)) {
-            fields = fields ++ &[_]std.builtin.Type.EnumField{.{
-                .name = item[1],
-                .value = fields.len,
-            }};
+            len += 1;
+            names = names ++ &[_][]const u8{item[1]};
         }
     }
-    return @Type(.{ .@"enum" = .{
-        .tag_type = std.math.IntFittingRange(0, fields.len - 1),
-        .fields = fields,
-        .decls = &.{},
-        .is_exhaustive = true,
-    } });
+    const Tag = std.math.IntFittingRange(0, names.len - 1);
+    return @Enum(Tag, .exhaustive, names, &std.simd.iota(Tag, names.len));
 }
 
 fn DerivedPropertyLongEnum(comptime prop: []const u8) type {
-    var fields: []const std.builtin.Type.EnumField = &.{};
+    var len: usize = 0;
+    var names: []const []const u8 = &.{};
     @setEvalBranchQuota(10_000);
     for (property_value_aliases.data) |item| {
         if (!std.mem.eql(u8, item[0], prop)) continue;
-        if (fields.len > 0 and std.mem.eql(u8, fields[fields.len - 1].name, item[2])) continue;
-        fields = fields ++ &[_]std.builtin.Type.EnumField{.{
-            .name = item[2],
-            .value = fields.len,
-        }};
+        if (len > 0 and std.mem.eql(u8, names[len - 1], item[2])) continue;
+        len += 1;
+        names = names ++ &[_][]const u8{item[2]};
     }
-    return @Type(.{ .@"enum" = .{
-        .tag_type = std.math.IntFittingRange(0, fields.len - 1),
-        .fields = fields,
-        .decls = &.{},
-        .is_exhaustive = true,
-    } });
+    const Tag = std.math.IntFittingRange(0, names.len - 1);
+    return @Enum(Tag, .exhaustive, names, &std.simd.iota(Tag, names.len));
 }
