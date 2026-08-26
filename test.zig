@@ -35,6 +35,6 @@ test {
     _ = &ucd.script_extensions.data;
     _ = &ucd.property_aliases.data;
     _ = &ucd.property_value_aliases.data;
-    _ = &ucd.unicode_data.data;
+    _ = &ucd.unicode_data.data_code;
     _ = &ucd.special_casing.data;
 }
