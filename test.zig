@@ -11,11 +11,11 @@ test {
     _ = &ucd.composition_exclusions.data;
     _ = &ucd.derived_age.data;
     _ = &ucd.derived_core_properties.data;
-    inline for (@typeInfo(ucd.derived_normalization_props).@"struct".decls) |d| {
-        const f = @field(ucd.derived_normalization_props, d.name);
-        if (@typeInfo(f).@"struct".decls.len == 0) _ = &f;
-        if (@typeInfo(f).@"struct".decls.len > 0) _ = &f.data;
-        if (@typeInfo(f).@"struct".decls.len > 0) _ = &f.data_range;
+    inline for (@typeInfo(ucd.derived_normalization_props).@"struct".decl_names) |d| {
+        const f = @field(ucd.derived_normalization_props, d);
+        if (@typeInfo(f).@"struct".decl_names.len == 0) _ = &f;
+        if (@typeInfo(f).@"struct".decl_names.len > 0) _ = &f.data;
+        if (@typeInfo(f).@"struct".decl_names.len > 0) _ = &f.data_range;
     }
     _ = &ucd.east_asian_width.data;
     _ = &ucd.emoji_sources.data;

@@ -33,7 +33,7 @@ pub fn main() !void {
         ucd.script_extensions,
         ucd.property_aliases,
         ucd.property_value_aliases,
-        ucd.unicode_data,
+        // ucd.unicode_data, // 'data' is not marked 'pub'
         ucd.special_casing,
     };
 
