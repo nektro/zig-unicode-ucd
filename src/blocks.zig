@@ -1,7 +1,7 @@
 // This file is part of the Unicode Character Database
 // For documentation, see http://www.unicode.org/reports/tr44/
 //
-// Based on the source file: https://unicode.org/Public/17.0.0/ucd/Blocks.txt
+// Based on the source file: https://unicode.org/Public/18.0.0/ucd/Blocks.txt
 //
 // zig fmt: off
 
@@ -266,6 +266,7 @@ pub const data = [_]Block{
     .{ .from = 0x11D00, .to = 0x11D5F, .name = "Masaram Gondi" },
     .{ .from = 0x11D60, .to = 0x11DAF, .name = "Gunjala Gondi" },
     .{ .from = 0x11DB0, .to = 0x11DEF, .name = "Tolong Siki" },
+    .{ .from = 0x11DF0, .to = 0x11DFF, .name = "Bengali Supplement" },
     .{ .from = 0x11EE0, .to = 0x11EFF, .name = "Makasar" },
     .{ .from = 0x11F00, .to = 0x11F5F, .name = "Kawi" },
     .{ .from = 0x11FB0, .to = 0x11FBF, .name = "Lisu Supplement" },
@@ -273,6 +274,7 @@ pub const data = [_]Block{
     .{ .from = 0x12000, .to = 0x123FF, .name = "Cuneiform" },
     .{ .from = 0x12400, .to = 0x1247F, .name = "Cuneiform Numbers and Punctuation" },
     .{ .from = 0x12480, .to = 0x1254F, .name = "Early Dynastic Cuneiform" },
+    .{ .from = 0x12550, .to = 0x1268F, .name = "Archaic Cuneiform Numerals" },
     .{ .from = 0x12F90, .to = 0x12FFF, .name = "Cypro-Minoan" },
     .{ .from = 0x13000, .to = 0x1342F, .name = "Egyptian Hieroglyphs" },
     .{ .from = 0x13430, .to = 0x1345F, .name = "Egyptian Hieroglyph Format Controls" },
@@ -294,6 +296,8 @@ pub const data = [_]Block{
     .{ .from = 0x18B00, .to = 0x18CFF, .name = "Khitan Small Script" },
     .{ .from = 0x18D00, .to = 0x18D7F, .name = "Tangut Supplement" },
     .{ .from = 0x18D80, .to = 0x18DFF, .name = "Tangut Components Supplement" },
+    .{ .from = 0x18E00, .to = 0x1919F, .name = "Jurchen" },
+    .{ .from = 0x191A0, .to = 0x191DF, .name = "Jurchen Radicals" },
     .{ .from = 0x1AFF0, .to = 0x1AFFF, .name = "Kana Extended-B" },
     .{ .from = 0x1B000, .to = 0x1B0FF, .name = "Kana Supplement" },
     .{ .from = 0x1B100, .to = 0x1B12F, .name = "Kana Extended-A" },
@@ -307,12 +311,14 @@ pub const data = [_]Block{
     .{ .from = 0x1D000, .to = 0x1D0FF, .name = "Byzantine Musical Symbols" },
     .{ .from = 0x1D100, .to = 0x1D1FF, .name = "Musical Symbols" },
     .{ .from = 0x1D200, .to = 0x1D24F, .name = "Ancient Greek Musical Notation" },
+    .{ .from = 0x1D250, .to = 0x1D28F, .name = "Musical Symbols Supplement" },
     .{ .from = 0x1D2C0, .to = 0x1D2DF, .name = "Kaktovik Numerals" },
     .{ .from = 0x1D2E0, .to = 0x1D2FF, .name = "Mayan Numerals" },
     .{ .from = 0x1D300, .to = 0x1D35F, .name = "Tai Xuan Jing Symbols" },
     .{ .from = 0x1D360, .to = 0x1D37F, .name = "Counting Rod Numerals" },
     .{ .from = 0x1D400, .to = 0x1D7FF, .name = "Mathematical Alphanumeric Symbols" },
     .{ .from = 0x1D800, .to = 0x1DAAF, .name = "Sutton SignWriting" },
+    .{ .from = 0x1DB00, .to = 0x1DBFF, .name = "Miscellaneous Symbols and Arrows Extended" },
     .{ .from = 0x1DF00, .to = 0x1DFFF, .name = "Latin Extended-G" },
     .{ .from = 0x1E000, .to = 0x1E02F, .name = "Glagolitic Supplement" },
     .{ .from = 0x1E030, .to = 0x1E08F, .name = "Cyrillic Extended-D" },
@@ -354,6 +360,7 @@ pub const data = [_]Block{
     .{ .from = 0x30000, .to = 0x3134F, .name = "CJK Unified Ideographs Extension G" },
     .{ .from = 0x31350, .to = 0x323AF, .name = "CJK Unified Ideographs Extension H" },
     .{ .from = 0x323B0, .to = 0x3347F, .name = "CJK Unified Ideographs Extension J" },
+    .{ .from = 0x3D000, .to = 0x3FC3F, .name = "Seal" },
     .{ .from = 0xE0000, .to = 0xE007F, .name = "Tags" },
     .{ .from = 0xE0100, .to = 0xE01EF, .name = "Variation Selectors Supplement" },
     .{ .from = 0xF0000, .to = 0xFFFFF, .name = "Supplementary Private Use Area-A" },

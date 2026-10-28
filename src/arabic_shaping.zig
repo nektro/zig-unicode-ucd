@@ -1,7 +1,7 @@
 // This file is part of the Unicode Character Database
 // For documentation, see http://www.unicode.org/reports/tr44/
 //
-// Based on the source file: https://unicode.org/Public/17.0.0/ucd/ArabicShaping.txt
+// Based on the source file: https://unicode.org/Public/18.0.0/ucd/ArabicShaping.txt
 //
 // zig fmt: off
 
@@ -129,6 +129,16 @@ pub const Joining = struct {
         VERTICAL_TAIL,
         KASHMIRI_YEH,
         THIN_NOON,
+        CROWN_BEH,
+        CROWN_HAH,
+        CROWN_SEEN,
+        CROWN_SAD,
+        CROWN_TAH,
+        CROWN_AIN,
+        CROWN_FEH,
+        CROWN_KAF,
+        CROWN_MEEM,
+        CROWN_HEH,
     };
 };
 
@@ -824,6 +834,28 @@ pub const data = [_]Shaping{
     .{ .codepoint = 0x10EC4, .schematic_name = "KAF WITH VERTICAL 2 DOTS BELOW", .joining_type = .D, .joining_group = .KAF },
     .{ .codepoint = 0x10EC6, .schematic_name = "THIN NOON", .joining_type = .D, .joining_group = .THIN_NOON },
     .{ .codepoint = 0x10EC7, .schematic_name = "DOTLESS YEH WITH 4 DOTS BELOW", .joining_type = .D, .joining_group = .YEH },
+    .{ .codepoint = 0x10ED9, .schematic_name = "CROWN BEH", .joining_type = .L, .joining_group = .CROWN_BEH },
+    .{ .codepoint = 0x10EDA, .schematic_name = "DOTLESS CROWN BEH WITH 3 DOTS BELOW", .joining_type = .L, .joining_group = .CROWN_BEH },
+    .{ .codepoint = 0x10EDB, .schematic_name = "DOTLESS CROWN BEH WITH 2 DOTS ABOVE", .joining_type = .L, .joining_group = .CROWN_BEH },
+    .{ .codepoint = 0x10EDC, .schematic_name = "DOTLESS CROWN BEH WITH 3 DOTS ABOVE", .joining_type = .L, .joining_group = .CROWN_BEH },
+    .{ .codepoint = 0x10EDD, .schematic_name = "CROWN HAH WITH DOT BELOW", .joining_type = .L, .joining_group = .CROWN_HAH },
+    .{ .codepoint = 0x10EDE, .schematic_name = "CROWN HAH", .joining_type = .L, .joining_group = .CROWN_HAH },
+    .{ .codepoint = 0x10EDF, .schematic_name = "CROWN HAH WITH DOT ABOVE", .joining_type = .L, .joining_group = .CROWN_HAH },
+    .{ .codepoint = 0x10EE0, .schematic_name = "CROWN SEEN", .joining_type = .L, .joining_group = .CROWN_SEEN },
+    .{ .codepoint = 0x10EE1, .schematic_name = "CROWN SEEN WITH 3 DOTS ABOVE", .joining_type = .L, .joining_group = .CROWN_SEEN },
+    .{ .codepoint = 0x10EE2, .schematic_name = "CROWN SAD", .joining_type = .L, .joining_group = .CROWN_SAD },
+    .{ .codepoint = 0x10EE3, .schematic_name = "CROWN SAD WITH DOT ABOVE", .joining_type = .L, .joining_group = .CROWN_SAD },
+    .{ .codepoint = 0x10EE4, .schematic_name = "CROWN TAH", .joining_type = .L, .joining_group = .CROWN_TAH },
+    .{ .codepoint = 0x10EE5, .schematic_name = "CROWN TAH WITH DOT ABOVE", .joining_type = .L, .joining_group = .CROWN_TAH },
+    .{ .codepoint = 0x10EE6, .schematic_name = "CROWN AIN", .joining_type = .L, .joining_group = .CROWN_AIN },
+    .{ .codepoint = 0x10EE7, .schematic_name = "CROWN AIN WITH DOT ABOVE", .joining_type = .L, .joining_group = .CROWN_AIN },
+    .{ .codepoint = 0x10EE8, .schematic_name = "CROWN FEH", .joining_type = .L, .joining_group = .CROWN_FEH },
+    .{ .codepoint = 0x10EE9, .schematic_name = "DOTLESS CROWN FEH WITH 2 DOTS ABOVE", .joining_type = .L, .joining_group = .CROWN_FEH },
+    .{ .codepoint = 0x10EEA, .schematic_name = "CROWN KAF", .joining_type = .L, .joining_group = .CROWN_KAF },
+    .{ .codepoint = 0x10EEB, .schematic_name = "CROWN MEEM", .joining_type = .L, .joining_group = .CROWN_MEEM },
+    .{ .codepoint = 0x10EEC, .schematic_name = "DOTLESS CROWN BEH WITH DOT ABOVE", .joining_type = .L, .joining_group = .CROWN_BEH },
+    .{ .codepoint = 0x10EED, .schematic_name = "CROWN HEH", .joining_type = .L, .joining_group = .CROWN_HEH },
+    .{ .codepoint = 0x10EEE, .schematic_name = "DOTLESS CROWN BEH WITH 2 DOTS BELOW", .joining_type = .L, .joining_group = .CROWN_BEH },
     .{ .codepoint = 0x10F30, .schematic_name = "SOGDIAN ALEPH", .joining_type = .D, .joining_group = .No_Joining_Group },
     .{ .codepoint = 0x10F31, .schematic_name = "SOGDIAN BETH", .joining_type = .D, .joining_group = .No_Joining_Group },
     .{ .codepoint = 0x10F32, .schematic_name = "SOGDIAN GIMEL", .joining_type = .D, .joining_group = .No_Joining_Group },

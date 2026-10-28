@@ -1,7 +1,7 @@
 // This file is part of the Unicode Character Database
 // For documentation, see http://www.unicode.org/reports/tr44/
 //
-// Based on the source file: https://unicode.org/Public/17.0.0/ucd/BidiMirroring.txt
+// Based on the source file: https://unicode.org/Public/18.0.0/ucd/BidiMirroring.txt
 //
 // zig fmt: off
 
@@ -42,6 +42,7 @@ pub const data = [_]Mirroring{
     .{ .codepoint = 0x220C, .mirror = 0x2209 },
     .{ .codepoint = 0x220D, .mirror = 0x220A },
     .{ .codepoint = 0x2215, .mirror = 0x29F5 },
+    .{ .codepoint = 0x221D, .mirror = 0x1DB10 },
     .{ .codepoint = 0x221F, .mirror = 0x2BFE },
     .{ .codepoint = 0x2220, .mirror = 0x29A3 },
     .{ .codepoint = 0x2221, .mirror = 0x299B },
@@ -401,6 +402,8 @@ pub const data = [_]Mirroring{
     .{ .codepoint = 0x2E5A, .mirror = 0x2E59 },
     .{ .codepoint = 0x2E5B, .mirror = 0x2E5C },
     .{ .codepoint = 0x2E5C, .mirror = 0x2E5B },
+    .{ .codepoint = 0x2E62, .mirror = 0x2E63 },
+    .{ .codepoint = 0x2E63, .mirror = 0x2E62 },
     .{ .codepoint = 0x3008, .mirror = 0x3009 },
     .{ .codepoint = 0x3009, .mirror = 0x3008 },
     .{ .codepoint = 0x300A, .mirror = 0x300B },
@@ -439,4 +442,11 @@ pub const data = [_]Mirroring{
     .{ .codepoint = 0xFF60, .mirror = 0xFF5F },
     .{ .codepoint = 0xFF62, .mirror = 0xFF63 },
     .{ .codepoint = 0xFF63, .mirror = 0xFF62 },
+    .{ .codepoint = 0x1DB10, .mirror = 0x221D },
+    .{ .codepoint = 0x1DB03, .mirror = 0x1DB04 },
+    .{ .codepoint = 0x1DB04, .mirror = 0x1DB03 },
+    .{ .codepoint = 0x1DB05, .mirror = 0x1DB06 },
+    .{ .codepoint = 0x1DB06, .mirror = 0x1DB05 },
+    .{ .codepoint = 0x1DB08, .mirror = 0x1DB09 },
+    .{ .codepoint = 0x1DB09, .mirror = 0x1DB08 },
 };

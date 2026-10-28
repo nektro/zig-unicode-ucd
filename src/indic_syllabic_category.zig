@@ -1,7 +1,7 @@
 // This file is part of the Unicode Character Database
 // For documentation, see http://www.unicode.org/reports/tr44/
 //
-// Based on the source file: https://unicode.org/Public/17.0.0/ucd/IndicSyllabicCategory.txt
+// Based on the source file: https://unicode.org/Public/18.0.0/ucd/IndicSyllabicCategory.txt
 //
 // zig fmt: off
 
@@ -107,6 +107,7 @@ pub const data = [_]IndicSyllabicCategory{
     .{ .code = 0x11CB6, .category = .Bindu },
     .{ .code = 0x11D40, .category = .Bindu },
     .{ .code = 0x11D95, .category = .Bindu },
+    .{ .code = 0x11DF0, .category = .Bindu },
     .{ .code = 0x11F00, .category = .Bindu },
     .{ .code = 0x11F01, .category = .Bindu },
     .{ .code = 0x1612D, .category = .Bindu },
@@ -785,7 +786,6 @@ pub const data = [_]IndicSyllabicCategory{
     .{ .code = 0x11F0E, .category = .Vowel_Independent },
     .{ .code = 0x11F0F, .category = .Vowel_Independent },
     .{ .code = 0x11F10, .category = .Vowel_Independent },
-    .{ .code = 0x16100, .category = .Vowel_Independent },
     .{ .code = 0x093A, .category = .Vowel_Dependent },
     .{ .code = 0x093B, .category = .Vowel_Dependent },
     .{ .code = 0x93E, .category = .Vowel_Dependent },
@@ -859,6 +859,8 @@ pub const data = [_]IndicSyllabicCategory{
     .{ .code = 0xB48, .category = .Vowel_Dependent },
     .{ .code = 0xB4B, .category = .Vowel_Dependent },
     .{ .code = 0xB4C, .category = .Vowel_Dependent },
+    .{ .code = 0xB53, .category = .Vowel_Dependent },
+    .{ .code = 0xB54, .category = .Vowel_Dependent },
     .{ .code = 0xB55, .category = .Vowel_Dependent },
     .{ .code = 0xB56, .category = .Vowel_Dependent },
     .{ .code = 0x0B57, .category = .Vowel_Dependent },
@@ -3674,6 +3676,7 @@ pub const data = [_]IndicSyllabicCategory{
     .{ .code = 0x11A81, .category = .Consonant },
     .{ .code = 0x11A82, .category = .Consonant },
     .{ .code = 0x11A83, .category = .Consonant },
+    .{ .code = 0x11B0A, .category = .Consonant },
     .{ .code = 0x11C0E, .category = .Consonant },
     .{ .code = 0x11C0F, .category = .Consonant },
     .{ .code = 0x11C10, .category = .Consonant },
@@ -3804,6 +3807,7 @@ pub const data = [_]IndicSyllabicCategory{
     .{ .code = 0x11D87, .category = .Consonant },
     .{ .code = 0x11D88, .category = .Consonant },
     .{ .code = 0x11D89, .category = .Consonant },
+    .{ .code = 0x11DF1, .category = .Consonant },
     .{ .code = 0x11EE0, .category = .Consonant },
     .{ .code = 0x11EE1, .category = .Consonant },
     .{ .code = 0x11EE2, .category = .Consonant },
@@ -3856,6 +3860,7 @@ pub const data = [_]IndicSyllabicCategory{
     .{ .code = 0x11F31, .category = .Consonant },
     .{ .code = 0x11F32, .category = .Consonant },
     .{ .code = 0x11F33, .category = .Consonant },
+    .{ .code = 0x16100, .category = .Consonant },
     .{ .code = 0x16101, .category = .Consonant },
     .{ .code = 0x16102, .category = .Consonant },
     .{ .code = 0x16103, .category = .Consonant },

@@ -131,6 +131,16 @@ pub const do = common.Main(struct {
         \\        VERTICAL_TAIL,
         \\        KASHMIRI_YEH,
         \\        THIN_NOON,
+        \\        CROWN_BEH,
+        \\        CROWN_HAH,
+        \\        CROWN_SEEN,
+        \\        CROWN_SAD,
+        \\        CROWN_TAH,
+        \\        CROWN_AIN,
+        \\        CROWN_FEH,
+        \\        CROWN_KAF,
+        \\        CROWN_MEEM,
+        \\        CROWN_HEH,
         \\    };
         \\};
         \\

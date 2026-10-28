@@ -1,7 +1,7 @@
 // This file is part of the Unicode Character Database
 // For documentation, see http://www.unicode.org/reports/tr44/
 //
-// Based on the source file: https://unicode.org/Public/17.0.0/ucd/PropertyAliases.txt
+// Based on the source file: https://unicode.org/Public/18.0.0/ucd/PropertyAliases.txt
 //
 // zig fmt: off
 
@@ -54,6 +54,13 @@ pub const data = [_][2][]const u8{
     .{ "kEH_HG", "kEH_HG" },
     .{ "kEH_IFAO", "kEH_IFAO" },
     .{ "kEH_JSesh", "kEH_JSesh" },
+    .{ "kJURC_Src", "kJURC_Src" },
+    .{ "kNSHU_DubenSrc", "kNSHU_DubenSrc" },
+    .{ "kSEAL_CCZSrc", "kSEAL_CCZSrc" },
+    .{ "kSEAL_DYCSrc", "kSEAL_DYCSrc" },
+    .{ "kSEAL_QJZSrc", "kSEAL_QJZSrc" },
+    .{ "kSEAL_THXSrc", "kSEAL_THXSrc" },
+    .{ "kTGT_MergedSrc", "kTGT_MergedSrc" },
     .{ "na", "Name" },
     .{ "na1", "Unicode_1_Name" },
     .{ "Name_Alias", "Name_Alias" },

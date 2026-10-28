@@ -1,7 +1,7 @@
 // This file is part of the Unicode Character Database
 // For documentation, see http://www.unicode.org/reports/tr44/
 //
-// Based on the source file: https://unicode.org/Public/17.0.0/ucd/SpecialCasing.txt
+// Based on the source file: https://unicode.org/Public/18.0.0/ucd/SpecialCasing.txt
 //
 // zig fmt: off
 
@@ -23,6 +23,7 @@ pub const data = [_]SpecialCasing{
     .{ .code = 0xFB04, .lower = &.{ 0xFB04, }, .title = &.{ 0x0046, 0x0066, 0x006C, }, .upper = &.{ 0x0046, 0x0046, 0x004C, }, .condition = "" },
     .{ .code = 0xFB05, .lower = &.{ 0xFB05, }, .title = &.{ 0x0053, 0x0074, }, .upper = &.{ 0x0053, 0x0054, }, .condition = "" },
     .{ .code = 0xFB06, .lower = &.{ 0xFB06, }, .title = &.{ 0x0053, 0x0074, }, .upper = &.{ 0x0053, 0x0054, }, .condition = "" },
+    .{ .code = 0x1DF95, .lower = &.{ 0x1DF95, }, .title = &.{ 0x0053, 0x0073, }, .upper = &.{ 0x0053, 0x0053, }, .condition = "" },
     .{ .code = 0x0587, .lower = &.{ 0x0587, }, .title = &.{ 0x0535, 0x0582, }, .upper = &.{ 0x0535, 0x0552, }, .condition = "" },
     .{ .code = 0xFB13, .lower = &.{ 0xFB13, }, .title = &.{ 0x0544, 0x0576, }, .upper = &.{ 0x0544, 0x0546, }, .condition = "" },
     .{ .code = 0xFB14, .lower = &.{ 0xFB14, }, .title = &.{ 0x0544, 0x0565, }, .upper = &.{ 0x0544, 0x0535, }, .condition = "" },

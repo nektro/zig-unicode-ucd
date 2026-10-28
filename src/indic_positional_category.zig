@@ -1,7 +1,7 @@
 // This file is part of the Unicode Character Database
 // For documentation, see http://www.unicode.org/reports/tr44/
 //
-// Based on the source file: https://unicode.org/Public/17.0.0/ucd/IndicPositionalCategory.txt
+// Based on the source file: https://unicode.org/Public/18.0.0/ucd/IndicPositionalCategory.txt
 //
 // zig fmt: off
 
@@ -475,6 +475,8 @@ pub const data = [_]IndicPositionalCategory{
     .{ .code = 0xAFF, .category = .Top },
     .{ .code = 0x0B01, .category = .Top },
     .{ .code = 0x0B3F, .category = .Top },
+    .{ .code = 0xB53, .category = .Top },
+    .{ .code = 0xB54, .category = .Top },
     .{ .code = 0xB55, .category = .Top },
     .{ .code = 0xB56, .category = .Top },
     .{ .code = 0x0B82, .category = .Top },
@@ -868,6 +870,7 @@ pub const data = [_]IndicPositionalCategory{
     .{ .code = 0x11D90, .category = .Top },
     .{ .code = 0x11D91, .category = .Top },
     .{ .code = 0x11D95, .category = .Top },
+    .{ .code = 0x11DF0, .category = .Top },
     .{ .code = 0x11EF3, .category = .Top },
     .{ .code = 0x11F00, .category = .Top },
     .{ .code = 0x11F01, .category = .Top },

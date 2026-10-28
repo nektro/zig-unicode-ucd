@@ -1,7 +1,7 @@
 // This file is part of the Unicode Character Database
 // For documentation, see http://www.unicode.org/reports/tr44/
 //
-// Based on the source file: https://unicode.org/Public/17.0.0/ucd/BidiBrackets.txt
+// Based on the source file: https://unicode.org/Public/18.0.0/ucd/BidiBrackets.txt
 //
 // zig fmt: off
 
@@ -112,6 +112,8 @@ pub const data = [_]BracketPairing{
     .{ .codepoint = 0x2E5A, .pair = 0x2E59, .type = .c },
     .{ .codepoint = 0x2E5B, .pair = 0x2E5C, .type = .o },
     .{ .codepoint = 0x2E5C, .pair = 0x2E5B, .type = .c },
+    .{ .codepoint = 0x2E62, .pair = 0x2E63, .type = .o },
+    .{ .codepoint = 0x2E63, .pair = 0x2E62, .type = .c },
     .{ .codepoint = 0x3008, .pair = 0x3009, .type = .o },
     .{ .codepoint = 0x3009, .pair = 0x3008, .type = .c },
     .{ .codepoint = 0x300A, .pair = 0x300B, .type = .o },
