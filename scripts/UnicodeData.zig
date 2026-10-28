@@ -12,7 +12,21 @@ pub const do = common.Main(struct {
         \\const std = @import("std");
         \\const extras = @import("extras");
         \\
-        \\pub const data_soa = extras.StaticMultiList(Codepoint).initComptime(&data);
+        \\const data_soa = extras.StaticMultiList(Codepoint).initComptime(&data).items;
+        \\pub const data_code = data_soa[0][0..].*;
+        \\pub const data_name = data_soa[1][0..].*;
+        \\pub const data_gc = data_soa[2][0..].*;
+        \\pub const data_ccc = data_soa[3][0..].*;
+        \\pub const data_bc = data_soa[4][0..].*;
+        \\pub const data_decomp = data_soa[5][0..].*;
+        \\pub const data_decomp_map = data_soa[6][0..].*;
+        \\pub const data_nt_dec = data_soa[7][0..].*;
+        \\pub const data_nt_dig = data_soa[8][0..].*;
+        \\pub const data_nt_num = data_soa[9][0..].*;
+        \\pub const data_bm = data_soa[10][0..].*;
+        \\pub const data_sum = data_soa[11][0..].*;
+        \\pub const data_slm = data_soa[12][0..].*;
+        \\pub const data_stm = data_soa[13][0..].*;
         \\
         \\pub const Codepoint = struct {
         \\    u21, // U+ code
@@ -52,8 +66,8 @@ pub const do = common.Main(struct {
         \\    narrow,
         \\};
         \\
-        \\pub fn find(cp: u21) Codepoint {
-        \\    return data[binarySearchClosest(u21, data_soa[0], cp, compare)];
+        \\pub fn find(cp: u21) usize {
+        \\    return binarySearchClosest(u21, &data_code, cp, compare);
         \\}
         \\
         \\fn binarySearchClosest(comptime T: type, items: []const T, context: anytype, comptime compareFn: fn (@TypeOf(context), T) std.math.Order) usize {
@@ -77,7 +91,7 @@ pub const do = common.Main(struct {
         \\    return .eq;
         \\}
         \\
-        \\pub const data = [_]Codepoint{
+        \\const data = [_]Codepoint{
         \\
     ;
 
