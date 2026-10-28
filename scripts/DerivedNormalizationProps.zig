@@ -1,7 +1,7 @@
 const std = @import("std");
 const common = @import("./_common.zig");
 
-pub usingnamespace common.Main(struct {
+pub const do = common.Main(struct {
     pub const source_file = "DerivedNormalizationProps";
 
     pub const dest_file = "src/derived_normalization_props.zig";
@@ -28,7 +28,7 @@ pub usingnamespace common.Main(struct {
         const rest = it.rest();
 
         const gop = try sections.getOrPut(alloc, try alloc.dupe(u8, rest));
-        if (!gop.found_existing) gop.value_ptr.* = .{};
+        if (!gop.found_existing) gop.value_ptr.* = .empty;
         try gop.value_ptr.append(alloc, try alloc.dupe(u8, cp_range));
     }
 

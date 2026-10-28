@@ -1,7 +1,8 @@
 const std = @import("std");
 const common = @import("./_common.zig");
+const altStringEscape = @import("fmt-valueliteral").altStringEscape;
 
-pub usingnamespace common.Main(struct {
+pub const do = common.Main(struct {
     pub const source_file = "UnicodeData";
 
     pub const dest_file = "src/unicode_data.zig";
@@ -91,7 +92,7 @@ pub usingnamespace common.Main(struct {
 
         try writer.writeAll("    .{");
         try writer.print(" 0x{s},", .{it.next().?});
-        try writer.print(" \"{}\",", .{std.zig.fmtEscapes(it.next().?)});
+        try writer.print(" \"{}\",", .{altStringEscape(it.next().?)});
         try writer.print(" .{s},", .{it.next().?});
         try writer.print(" {s},", .{it.next().?});
         try writer.print(" .{s},", .{it.next().?});
@@ -117,9 +118,9 @@ pub usingnamespace common.Main(struct {
                 try writer.writeAll(" &.{},");
             }
         }
-        try writer.print(" \"{}\",", .{std.zig.fmtEscapes(it.next().?)});
-        try writer.print(" \"{}\",", .{std.zig.fmtEscapes(it.next().?)});
-        try writer.print(" \"{}\",", .{std.zig.fmtEscapes(it.next().?)});
+        try writer.print(" \"{}\",", .{altStringEscape(it.next().?)});
+        try writer.print(" \"{}\",", .{altStringEscape(it.next().?)});
+        try writer.print(" \"{}\",", .{altStringEscape(it.next().?)});
         try writer.print(" {},", .{std.mem.eql(u8, it.next().?, "Y")});
         _ = it.next().?; // [skip] Unicode_1_Name (Obsolete as of 6.2.0)
         _ = it.next().?; // [skip] ISO_Comment (Obsolete as of 5.2.0; Deprecated and Stabilized as of 6.0.0)

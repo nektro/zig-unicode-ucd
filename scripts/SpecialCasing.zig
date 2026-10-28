@@ -1,7 +1,8 @@
 const std = @import("std");
 const common = @import("./_common.zig");
+const altStringEscape = @import("fmt-valueliteral").altStringEscape;
 
-pub usingnamespace common.Main(struct {
+pub const do = common.Main(struct {
     pub const source_file = "SpecialCasing";
 
     pub const dest_file = "src/special_casing.zig";
@@ -38,7 +39,7 @@ pub usingnamespace common.Main(struct {
         try common.printSeq(writer, it.next().?);
         try writer.writeAll(" .upper =");
         try common.printSeq(writer, it.next().?);
-        try writer.print(" .condition = \"{}\"", .{std.zig.fmtEscapes(it.next().?)});
+        try writer.print(" .condition = \"{}\"", .{altStringEscape(it.next().?)});
         try writer.writeAll(" },\n");
     }
 });

@@ -2,7 +2,7 @@ const std = @import("std");
 const common = @import("./_common.zig");
 const extras = @import("extras");
 
-pub usingnamespace common.Main(struct {
+pub const do = common.Main(struct {
     pub const source_file = "CompositionExclusions";
 
     pub const dest_file = "src/composition_exclusions.zig";

@@ -1,7 +1,7 @@
 const std = @import("std");
 const common = @import("./_common.zig");
 
-pub usingnamespace common.Main(struct {
+pub const do = common.Main(struct {
     pub const source_file = "ScriptExtensions";
 
     pub const dest_file = "src/script_extensions.zig";
@@ -42,18 +42,19 @@ pub usingnamespace common.Main(struct {
     }
 });
 
-fn fmtScripts(bytes: []const u8) std.fmt.Formatter(formatScripts) {
+fn fmtScripts(bytes: []const u8) FormatScripts {
     return .{ .data = bytes };
 }
+const FormatScripts = struct {
+    data: []const u8,
 
-fn formatScripts(bytes: []const u8, comptime fmt: []const u8, options: std.fmt.FormatOptions, writer: anytype) !void {
-    _ = fmt;
-    _ = options;
-    try writer.writeAll("&.{");
-    var it = std.mem.splitScalar(u8, bytes, ' ');
-    while (it.next()) |item| {
-        if (item.len == 0) continue;
-        try writer.print(" .{s},", .{item});
+    pub fn nprint(self: FormatScripts, writer: anytype) !void {
+        try writer.writeAll("&.{");
+        var it = std.mem.splitScalar(u8, self.data, ' ');
+        while (it.next()) |item| {
+            if (item.len == 0) continue;
+            try writer.print(" .{s},", .{item});
+        }
+        try writer.writeAll(" }");
     }
-    try writer.writeAll(" }");
-}
+};

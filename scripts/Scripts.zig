@@ -1,7 +1,7 @@
 const std = @import("std");
 const common = @import("./_common.zig");
 
-pub usingnamespace common.Main(struct {
+pub const do = common.Main(struct {
     pub const source_file = "Scripts";
 
     pub const dest_file = "src/scripts.zig";
@@ -24,5 +24,5 @@ pub usingnamespace common.Main(struct {
         \\
     ;
 
-    pub usingnamespace common.RangeEnum("script");
+    pub const exec = common.RangeEnum("script");
 });

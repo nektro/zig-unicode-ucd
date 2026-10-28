@@ -1,9 +1,14 @@
 MIT:
 = https://spdx.org/licenses/MIT
 - This
-- git https://github.com/nektro/iguanaTLS
-- git https://github.com/nektro/zfetch
+- git https://git.nektro.net/lib/zig/sys/
 - git https://github.com/nektro/zig-ansi
+- git https://github.com/nektro/zig-expect
 - git https://github.com/nektro/zig-extras
 - git https://github.com/nektro/zig-fmt-valueliteral
-- git https://github.com/truemedian/hzzp
+- git https://github.com/nektro/zig-time
+
+MPL-2.0:
+= https://spdx.org/licenses/MPL-2.0
+- git https://github.com/nektro/zig-nfs
+- git https://github.com/nektro/zig-nio

@@ -1,7 +1,7 @@
 const std = @import("std");
 const common = @import("./_common.zig");
 
-pub usingnamespace common.Main(struct {
+pub const do = common.Main(struct {
     pub const source_file = "CJKRadicals";
 
     pub const dest_file = "src/cjk_radicals.zig";
@@ -30,7 +30,7 @@ pub usingnamespace common.Main(struct {
         const s = std.mem.endsWith(u8, n, "'");
         const c = it.next().?;
         const i = it.next().?;
-        n = std.mem.trimRight(u8, n, "'");
+        n = std.mem.trimEnd(u8, n, "'");
 
         try writer.writeAll("    .{");
         try writer.print(" .number = {s},", .{n});

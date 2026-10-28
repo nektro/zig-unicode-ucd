@@ -1,32 +1,32 @@
 const std = @import("std");
-const zfetch = @import("zfetch");
 const fmtValueLiteral = @import("fmt-valueliteral").fmtValueLiteral;
 const ansi = @import("ansi");
+const nfs = @import("nfs");
+const nio = @import("nio");
 
 pub const version = "17.0.0";
 
-pub fn Main(comptime T: type) type {
+pub fn Main(comptime T: type) fn (std.Io) anyerror!void {
     comptime std.debug.assert(@hasDecl(T, "source_file"));
     comptime std.debug.assert(@hasDecl(T, "dest_file"));
     comptime std.debug.assert(@hasDecl(T, "dest_header"));
     comptime std.debug.assert(@hasDecl(T, "dest_footer"));
     comptime std.debug.assert(@hasDecl(T, "exec"));
-    return struct {
-        pub fn do() !void {
-            var gpa = std.heap.GeneralPurposeAllocator(.{}){};
+    const S = struct {
+        pub fn do(io: std.Io) !void {
+            var gpa = std.heap.DebugAllocator(.{}){};
             const alloc = gpa.allocator();
             defer _ = gpa.deinit();
 
-            const max_size = std.math.maxInt(usize);
             const source_url = "https://unicode.org/Public/" ++ version ++ "/ucd/" ++ T.source_file ++ ".txt";
 
             //
             std.log.info("{s}", .{T.dest_file});
 
-            const file = try std.fs.cwd().createFile(T.dest_file, .{});
+            const file = try nfs.cwd().createFile(T.dest_file, .{});
             defer file.close();
-            var bufw = std.io.bufferedWriter(file.writer());
-            const w = bufw.writer();
+            var bufw = nio.BufferedWriter(4096, nfs.File).init(file);
+            const w = &bufw;
 
             try w.writeAll(
                 \\// This file is part of the Unicode Character Database
@@ -43,23 +43,27 @@ pub fn Main(comptime T: type) type {
             , .{source_url});
             try w.writeAll(T.dest_header);
 
-            const req = try zfetch.Request.init(alloc, source_url, null);
+            var buf: [4096]u8 = @splat(0);
+            var http_client: std.http.Client = .{ .allocator = alloc, .io = io };
+            defer http_client.deinit();
+
+            var req = try http_client.request(.GET, try std.Uri.parse(source_url), .{
+                .headers = .{ .accept_encoding = .{ .override = "identity" } },
+                .redirect_behavior = .not_allowed,
+            });
             defer req.deinit();
-            try req.do(.GET, null, null);
-            const r = req.reader();
+            try req.sendBodiless();
+            var resp = try req.receiveHead(&.{});
+            const body_content = try resp.reader(&buf).allocRemaining(alloc, .limited(1024 * 1024 * 5));
+            defer alloc.free(body_content);
 
             var line_num: usize = 1;
             std.debug.print("0", .{});
+            var iter = std.mem.splitScalar(u8, body_content, '\n');
 
             var arena = std.heap.ArenaAllocator.init(alloc);
             defer arena.deinit();
-            while (true) {
-                const line_raw = r.readUntilDelimiterAlloc(alloc, '\n', max_size) catch |err| switch (err) {
-                    error.EndOfStream => break,
-                    else => |e| return e,
-                };
-                defer alloc.free(line_raw);
-
+            while (iter.next()) |line_raw| {
                 var real = std.mem.splitScalar(u8, line_raw, '#');
                 const line = real.first();
 
@@ -80,6 +84,7 @@ pub fn Main(comptime T: type) type {
             try bufw.flush();
         }
     };
+    return S.do;
 }
 
 pub fn nullify(input: ?[]const u8) ?[]const u8 {
@@ -88,14 +93,14 @@ pub fn nullify(input: ?[]const u8) ?[]const u8 {
     return input;
 }
 
-pub fn RangeEnum(comptime prop: []const u8) type {
-    return struct {
+pub fn RangeEnum(comptime prop: []const u8) fn (std.mem.Allocator, []const u8, anytype) anyerror!void {
+    const S = struct {
         pub fn exec(alloc: std.mem.Allocator, line: []const u8, writer: anytype) !void {
             _ = alloc;
             var it = std.mem.tokenizeAny(u8, line, "; ");
 
             const first = it.next().?;
-            const next = std.mem.trimRight(u8, it.next().?, "#");
+            const next = std.mem.trimEnd(u8, it.next().?, "#");
 
             if (std.mem.indexOf(u8, first, "..")) |index| {
                 const start = first[0..index];
@@ -106,6 +111,7 @@ pub fn RangeEnum(comptime prop: []const u8) type {
             }
         }
     };
+    return S.exec;
 }
 
 pub fn printCodepoint(writer: anytype, input: []const u8) !void {

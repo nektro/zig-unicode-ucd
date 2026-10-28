@@ -1,8 +1,9 @@
 const std = @import("std");
 const common = @import("./_common.zig");
 const extras = @import("extras");
+const altStringEscape = @import("fmt-valueliteral").altStringEscape;
 
-pub usingnamespace common.Main(struct {
+pub const do = common.Main(struct {
     pub const source_file = "PropertyValueAliases";
 
     pub const dest_file = "src/property_value_aliases.zig";
@@ -34,16 +35,16 @@ pub usingnamespace common.Main(struct {
         };
 
         try writer.print("    .{{ \"{}\", \"{}\", \"{}\" }},\n", .{
-            std.zig.fmtEscapes(vals[0]),
-            std.zig.fmtEscapes(vals[1]),
-            std.zig.fmtEscapes(vals[2]),
+            altStringEscape(vals[0]),
+            altStringEscape(vals[1]),
+            altStringEscape(vals[2]),
         });
 
         while (it.next()) |more| {
             try writer.print("    .{{ \"{}\", \"{}\", \"{}\" }},\n", .{
-                std.zig.fmtEscapes(vals[0]),
-                std.zig.fmtEscapes(more),
-                std.zig.fmtEscapes(vals[2]),
+                altStringEscape(vals[0]),
+                altStringEscape(more),
+                altStringEscape(vals[2]),
             });
         }
     }

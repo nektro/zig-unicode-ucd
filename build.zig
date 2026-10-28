@@ -44,6 +44,7 @@ fn addExeStep(b: *std.Build, target: std.Build.ResolvedTarget, optimize: std.bui
         }),
     });
     deps.addAllTo(exe);
+    exe.root_module.link_libc = true;
     b.installArtifact(exe);
 
     const cmd = b.addRunArtifact(exe);

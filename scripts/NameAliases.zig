@@ -1,7 +1,8 @@
 const std = @import("std");
 const common = @import("./_common.zig");
+const altStringEscape = @import("fmt-valueliteral").altStringEscape;
 
-pub usingnamespace common.Main(struct {
+pub const do = common.Main(struct {
     pub const source_file = "NameAliases";
 
     pub const dest_file = "src/name_aliases.zig";
@@ -36,7 +37,7 @@ pub usingnamespace common.Main(struct {
 
         try writer.print("    .{{ .code = 0x{s}, .alias = \"{}\", .type = .{s} }},\n", .{
             it.next().?,
-            std.zig.fmtEscapes(it.next().?),
+            altStringEscape(it.next().?),
             it.next().?,
         });
     }

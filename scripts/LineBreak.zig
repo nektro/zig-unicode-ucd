@@ -1,7 +1,7 @@
 const std = @import("std");
 const common = @import("./_common.zig");
 
-pub usingnamespace common.Main(struct {
+pub const do = common.Main(struct {
     pub const source_file = "LineBreak";
 
     pub const dest_file = "src/line_break.zig";
@@ -24,5 +24,5 @@ pub usingnamespace common.Main(struct {
         \\
     ;
 
-    pub usingnamespace common.RangeEnum("category");
+    pub const exec = common.RangeEnum("category");
 });

@@ -33,8 +33,20 @@ const files = [_]type{
     @import("./scripts/emoji.zig"),
 };
 
-pub fn main() !void {
+pub fn main(init: std.process.Init.Minimal) !void {
+    const allocator = std.heap.c_allocator;
+
+    var envmap = try init.environ.createMap(allocator);
+    defer envmap.deinit();
+
+    var threaded: std.Io.Threaded = .init(allocator, .{
+        .argv0 = .init(init.args),
+        .environ = init.environ,
+    });
+    defer threaded.deinit();
+    const io = threaded.io();
+
     inline for (files) |f| {
-        try f.do();
+        try f.do(io);
     }
 }

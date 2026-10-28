@@ -1,7 +1,8 @@
 const std = @import("std");
 const common = @import("./_common.zig");
+const altStringEscape = @import("fmt-valueliteral").altStringEscape;
 
-pub usingnamespace common.Main(struct {
+pub const do = common.Main(struct {
     pub const source_file = "Jamo";
 
     pub const dest_file = "src/jamo.zig";
@@ -28,6 +29,6 @@ pub usingnamespace common.Main(struct {
         const first = it.next().?;
         const short = it.next() orelse "";
 
-        try writer.print("    .{{ .code = 0x{s}, .short_name = \"{}\" }},\n", .{ first, std.zig.fmtEscapes(short) });
+        try writer.print("    .{{ .code = 0x{s}, .short_name = \"{}\" }},\n", .{ first, altStringEscape(short) });
     }
 });
